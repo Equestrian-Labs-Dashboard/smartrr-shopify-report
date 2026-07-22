@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Corro — Subscriptions Report</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #4f46e5;
+    --success: #16a34a;
+    --warning: #d97706;
+    --danger: #dc2626;
+  }
+  [data-theme="dark"] {
+    --bg: #0f1117;
+    --card-bg: #1a1d27;
+    --text: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border: #2b2f3a;
+    --accent: #818cf8;
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --danger: #f87171;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.2s, color 0.2s;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 20px; margin: 0; }
+  header .subtitle { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+  .toggle-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+  }
+  main { padding: 24px 32px; max-width: 1300px; margin: 0 auto; }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .card .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+  .card .value { font-size: 26px; font-weight: 700; margin-top: 6px; }
+  .chart-wrap {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    height: 300px;
+  }
+  .controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  input[type="text"], select {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  input[type="text"] { flex: 1; min-width: 200px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; }
+  tr:last-child td { border-bottom: none; }
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .badge.active { background: rgba(22,163,74,0.15); color: var(--success); }
+  .badge.paused { background: rgba(217,119,6,0.15); color: var(--warning); }
+  .badge.cancelled { background: rgba(220,38,38,0.15); color: var(--danger); }
+  .badge.unknown { background: rgba(107,114,128,0.15); color: var(--text-muted); }
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+  }
+  .empty-state code {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Subscriptions Report</h1>
+    <div class="subtitle" id="lastUpdated">Loading data…</div>
+  </div>
+  <button class="toggle-btn" id="themeToggle">🌙 Dark mode</button>
+</header>
+
+<main>
+  <div id="content">
+    <div class="empty-state">Loading…</div>
+  </div>
+</main>
+
+<script>
+const DATA_URL = "data/subscriptions_report.json";
+let allRows = [];
+
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("Not found");
+    allRows = await res.json();
+    render();
+  } catch (err) {
+    document.getElementById("content").innerHTML = `
+      <div class="empty-state">
+        No data found yet.<br><br>
+        This page reads <code>${DATA_URL}</code>, which is written by the ETL workflow.<br>
+        Run the "Subscriptions ETL" workflow at least once (Actions tab → Run workflow),
+        then reload this page.
+      </div>`;
+    document.getElementById("lastUpdated").textContent = "No data";
+  }
+}
+
+function statusClass(status) {
+  if (!status) return "unknown";
+  const s = String(status).toLowerCase();
+  if (s.includes("active")) return "active";
+  if (s.includes("pause")) return "paused";
+  if (s.includes("cancel")) return "cancelled";
+  return "unknown";
+}
+
+function render(filterText = "", statusFilter = "all") {
+  const content = document.getElementById("content");
+
+  const filtered = allRows.filter(r => {
+    const matchesText = !filterText || JSON.stringify(r).toLowerCase().includes(filterText.toLowerCase());
+    const matchesStatus = statusFilter === "all" || statusClass(r.status) === statusFilter;
+    return matchesText && matchesStatus;
+  });
+
+  const totalOrders = new Set(allRows.map(r => r.order_id)).size;
+  const totalRevenue = allRows.reduce((sum, r) => sum + (parseFloat(r.total_price) || 0), 0);
+  const activeCount = allRows.filter(r => statusClass(r.status) === "active").length;
+  const uniqueCustomers = new Set(allRows.map(r => r.customer_email)).size;
+
+  content.innerHTML = `
+    <div class="cards">
+      <div class="card"><div class="label">Subscription Orders</div><div class="value">${totalOrders}</div></div>
+      <div class="card"><div class="label">Unique Customers</div><div class="value">${uniqueCustomers}</div></div>
+      <div class="card"><div class="label">Active Subscriptions</div><div class="value">${activeCount}</div></div>
+      <div class="card"><div class="label">Total Revenue</div><div class="value">$${totalRevenue.toFixed(2)}</div></div>
+    </div>
+
+    <div class="chart-wrap"><canvas id="statusChart"></canvas></div>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search by email, order, subscription id..." value="${filterText}" />
+      <select id="statusSelect">
+        <option value="all">All statuses</option>
+        <option value="active">Active</option>
+        <option value="paused">Paused</option>
+        <option value="cancelled">Cancelled</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Order</th>
+          <th>Customer Email</th>
+          <th>Total</th>
+          <th>Status</th>
+          <th>Next Order Date</th>
+          <th>Created At</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${filtered.map(r => `
+          <tr>
+            <td>${r.order_name || r.order_id || "—"}</td>
+            <td>${r.customer_email || "—"}</td>
+            <td>$${r.total_price ?? "—"}</td>
+            <td><span class="badge ${statusClass(r.status)}">${r.status || "unknown"}</span></td>
+            <td>${r.next_order_date || "—"}</td>
+            <td>${r.created_at ? new Date(r.created_at).toLocaleDateString() : "—"}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+  document.getElementById("searchInput").addEventListener("input", (e) => render(e.target.value, statusFilter));
+  document.getElementById("statusSelect").value = statusFilter;
+  document.getElementById("statusSelect").addEventListener("change", (e) => render(filterText, e.target.value));
+
+  drawChart(allRows);
+  document.getElementById("lastUpdated").textContent = `${allRows.length} records loaded`;
+}
+
+function drawChart(rows) {
+  const counts = { active: 0, paused: 0, cancelled: 0, unknown: 0 };
+  rows.forEach(r => counts[statusClass(r.status)]++);
+
+  const canvas = document.getElementById("statusChart");
+  if (!canvas) return;
+  if (window._chart) window._chart.destroy();
+
+  window._chart = new Chart(canvas, {
+    type: "bar",
+    data: {
+      labels: ["Active", "Paused", "Cancelled", "Unknown"],
+      datasets: [{
+        data: [counts.active, counts.paused, counts.cancelled, counts.unknown],
+        backgroundColor: ["#16a34a", "#d97706", "#dc2626", "#6b7280"],
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, title: { display: true, text: "Subscriptions by status" } },
+      scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+    }
+  });
+}
+
+// Theme toggle, persisted for the session (no localStorage per artifact rules,
+// but this is a plain static site outside the artifacts sandbox so localStorage is fine here)
+const themeToggle = document.getElementById("themeToggle");
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.textContent = theme === "dark" ? "☀️ Light mode" : "🌙 Dark mode";
+  localStorage.setItem("smartrr-dashboard-theme", theme);
+}
+themeToggle.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(current);
+});
+applyTheme(localStorage.getItem("smartrr-dashboard-theme") || "light");
+
+loadData();
+</script>
+</body>
+</html>

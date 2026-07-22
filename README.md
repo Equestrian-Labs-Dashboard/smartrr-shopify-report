@@ -53,7 +53,23 @@ sentido. Si salen vacías o con nombres raros, agregá un `print(raw)` temporal 
 `get_customer_subscriptions` para ver el JSON crudo y ajustamos el mapeo en
 `parse_subscriptions`.
 
-## 5. Escalar esto
+## 5. Prender el dashboard web (GitHub Pages)
+
+`index.html` ya está en la raíz del repo y lee `data/subscriptions_report.json` — solo
+falta prender Pages:
+
+1. En el repo: **Settings > Pages**
+2. En "Build and deployment" > Source: **Deploy from a branch**
+3. Branch: **main**, carpeta: **/ (root)** → **Save**
+4. Esperá 1-2 minutos, GitHub te da la URL (algo como
+   `https://equestrian-labs-dashboard.github.io/smartrr-shopify-report/`)
+
+Importante: para que el dashboard tenga algo que mostrar, primero tiene que haber corrido
+el workflow "Subscriptions ETL" al menos una vez (Actions → Run workflow) para que exista
+`data/subscriptions_report.json` en el repo. Si entrás a la página y no ves datos, ese es
+el motivo — correlo y refrescá.
+
+## 6. Escalar esto
 
 - `shopify_client.py` y `smartrr_client.py` son independientes — si mañana Smartrr te da
   un endpoint bulk o webhooks, solo tocás `smartrr_client.py`, el resto del pipeline no cambia.
