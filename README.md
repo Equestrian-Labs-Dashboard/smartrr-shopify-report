@@ -69,7 +69,39 @@ el workflow "Subscriptions ETL" al menos una vez (Actions → Run workflow) para
 `data/subscriptions_report.json` en el repo. Si entrás a la página y no ves datos, ese es
 el motivo — correlo y refrescá.
 
-## 6. Escalar esto
+## 6. Google Sheets (opcional pero recomendado)
+
+Esto te arma un Google Sheet con:
+- Tab **"Live"**: se pisa entero cada corrida, siempre el estado actual.
+- Tabs **"2025"**, **"2026"**, etc.: van acumulando histórico sin duplicar (dedupe por
+  order_id + subscription_id), así podés descargar/filtrar por año.
+
+**Setup (una sola vez):**
+
+1. Andá a [console.cloud.google.com](https://console.cloud.google.com) → creá un proyecto
+   (o usá uno existente).
+2. **APIs & Services > Library** → buscá "Google Sheets API" → **Enable**.
+3. **APIs & Services > Credentials** → **Create Credentials > Service Account** → ponele
+   un nombre (ej. `smartrr-etl`) → Create.
+4. Entrá al service account creado → tab **Keys** → **Add Key > Create new key > JSON** →
+   se descarga un archivo `.json`. Ese archivo completo es tu `GOOGLE_SERVICE_ACCOUNT_JSON`.
+5. Copiá el email del service account (algo como
+   `smartrr-etl@tu-proyecto.iam.gserviceaccount.com`, lo ves en la misma pantalla).
+6. Creá un Google Sheet nuevo (o usá uno existente) → botón **Share** → pegá ese email
+   → dale permiso de **Editor**.
+7. De la URL del Sheet, copiá el ID: `https://docs.google.com/spreadsheets/d/`**`ESTE_ID`**`/edit`
+
+**Cargar en GitHub:**
+
+| Va en | Nombre | Valor |
+|---|---|---|
+| Secret | `GOOGLE_SERVICE_ACCOUNT_JSON` | Pegá el contenido COMPLETO del archivo `.json` descargado |
+| Variable | `SPREADSHEET_ID` | El ID que copiaste de la URL |
+
+Si estos dos no están cargados, el pipeline simplemente se salta el export a Sheets (no
+rompe nada) — vas a ver en el log "Skipping Google Sheets export".
+
+## 7. Escalar esto
 
 - `shopify_client.py` y `smartrr_client.py` son independientes — si mañana Smartrr te da
   un endpoint bulk o webhooks, solo tocás `smartrr_client.py`, el resto del pipeline no cambia.

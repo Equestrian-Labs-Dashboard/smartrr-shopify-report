@@ -88,7 +88,7 @@ if __name__ == "__main__":
     client = ShopifyClient(
         store_domain=os.environ["SHOPIFY_STORE_DOMAIN"],
         access_token=os.environ["SHOPIFY_ACCESS_TOKEN"],
-        api_version=os.environ.get("SHOPIFY_API_VERSION", "2025-01"),
+        api_version=os.environ.get("SHOPIFY_API_VERSION") or "2025-01",
     )
     subs = client.get_subscription_orders()
     print(f"Found {len(subs)} subscription-tagged orders")
