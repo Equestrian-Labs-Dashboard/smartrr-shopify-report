@@ -22,6 +22,24 @@ from google.oauth2.service_account import Credentials
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
+def _clean_cell(value):
+    """
+    Converts any pandas/numpy value into a JSON-safe string for the Sheets API.
+    Handles NaN, None, inf, and any other non-JSON-compliant value by turning
+    it into an empty string instead of letting it reach the request as a raw float.
+    """
+    if pd.isna(value):
+        return ""
+    return str(value)
+
+
+def _df_to_values(df: pd.DataFrame):
+    """Header row + all data rows, with every cell sanitized."""
+    header = df.columns.tolist()
+    rows = [[_clean_cell(v) for v in row] for row in df.itertuples(index=False, name=None)]
+    return [header] + rows
+
+
 class SheetsClient:
     def __init__(self, service_account_json: str, spreadsheet_id: str):
         creds_dict = json.loads(service_account_json)
@@ -42,8 +60,7 @@ class SheetsClient:
         if df.empty:
             ws.update([["No data"]])
             return
-        values = [df.columns.tolist()] + df.astype(str).values.tolist()
-        ws.update(values)
+        ws.update(_df_to_values(df))
 
     def upsert_by_year(self, df: pd.DataFrame, key_cols=("order_id", "subscription_id")):
         """
@@ -77,6 +94,5 @@ class SheetsClient:
                 combined = combined.drop_duplicates(subset=key_cols_present, keep="last")
 
             ws.clear()
-            values = [combined.columns.tolist()] + combined.values.tolist()
-            ws.update(values)
+            ws.update(_df_to_values(combined))
             print(f"  Sheet tab '{tab_name}': {len(combined)} total rows", flush=True)
