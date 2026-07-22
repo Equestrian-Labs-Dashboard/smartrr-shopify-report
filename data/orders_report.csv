@@ -1,0 +1,160 @@
+order_id,order_name,customer_email,total_price,currency,created_at,financial_status,fulfillment_status,tags,report_updated_at
+6378786914362,154087,allison@rosehillequestriancenter.com,63.98,USD,2026-07-21T10:23:55-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6378786684986,154086,allison@rosehillequestriancenter.com,38.78,USD,2026-07-21T10:23:50-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6378786357306,154085,allison@rosehillequestriancenter.com,27.08,USD,2026-07-21T10:23:45-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6378786291770,154084,allison@rosehillequestriancenter.com,52.99,USD,2026-07-21T10:23:45-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6377492086842,154078,jhenigman1@gmail.com,76.35,USD,2026-07-20T10:09:34-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6364540731450,153918,kathagatto@gmail.com,183.80,USD,2026-07-12T11:23:17-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6354950520890,153843,tammysmith8863@gmails.com,169.99,USD,2026-07-07T07:42:37-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6353980293178,153836,laurenbritton33@gmail.com,169.99,USD,2026-07-06T17:09:46-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6353184653370,153829,katlin.m.spero@gmail.com,169.99,USD,2026-07-06T09:56:40-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6351395913786,153817,shannon.o.swift@gmail.com,99.98,USD,2026-07-05T10:16:21-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6351395455034,153816,jaimetorrediaz@gmail.com,112.39,USD,2026-07-05T10:16:05-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6351395127354,153815,shannon.o.swift@gmail.com,59.48,USD,2026-07-05T10:15:50-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6344722874426,153746,sonart.mhr@gmail.com,45.76,USD,2026-07-01T10:16:23-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6344722251834,153745,victiriam221@gmail.com,50.00,USD,2026-07-01T10:15:50-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6344722153530,153744,shannonalvey9@gmail.com,81.08,USD,2026-07-01T10:15:45-04:00,paid,fulfilled,"DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6343382335546,153730,monaddresse2004@yahoo.com,83.32,USD,2026-06-30T10:16:23-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6338165735482,153693,bbfarm10501@gmail.com,85.95,USD,2026-06-26T10:02:58-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6335592923194,153678,phileda07@gmail.com,288.33,USD,2026-06-24T10:16:44-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6333117857850,153659,jhenigman1@gmail.com,76.35,USD,2026-06-22T10:15:46-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6331918254138,153652,jjb_log@yahoo.com,168.92,USD,2026-06-21T10:16:06-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6330710753338,153646,clarkandclark@yahoo.com,131.82,USD,2026-06-20T11:49:46-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6327404462138,153624,kiley.dill@gmail.com,154.48,USD,2026-06-18T08:42:50-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6323036061754,153587,jami.brokaw@me.com,45.98,USD,2026-06-15T10:21:46-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6315163353146,153486,mandy.akins@gmail.com,198.05,USD,2026-06-09T15:09:27-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6314755981370,153483,cameron.wyman19@gmail.com,171.17,USD,2026-06-09T10:16:04-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6308461477946,153446,korora@charter.net,36.33,USD,2026-06-06T10:16:54-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6290117558330,153410,laurenjlouw@gmail.com,102.07,USD,2026-06-04T15:28:22-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6289745510458,153402,cameron.stout.miller@gmail.com,61.25,USD,2026-06-04T10:16:11-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6284887457850,153344,equihands2@gmail.com,62.68,USD,2026-05-31T12:28:23-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6283526930490,153331,allison.postier@me.com,43.63,USD,2026-05-30T10:31:16-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6282256908346,153318,sherryharker@yahoo.com,63.31,USD,2026-05-29T10:15:36-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6277919539258,153289,bbfarm10501@gmail.com,85.95,USD,2026-05-27T10:15:52-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6272577011770,153229,jhenigman1@gmail.com,76.35,USD,2026-05-25T10:16:07-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6271265996858,153192,trudymnoll@gmail.com,38.86,USD,2026-05-24T14:01:01-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6265462063162,153123,kiowa5255@yahoo.com,56.12,USD,2026-05-21T10:15:47-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6262843670586,153120,sparotl@icloud.com,109.18,USD,2026-05-20T10:15:59-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6261367799866,153112,darby.toben@gmail.com,134.48,USD,2026-05-19T10:15:49-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6261354201146,153111,lindevk89@gmail.com,50.73,USD,2026-05-19T10:02:15-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6260054491194,153101,lindevk89@gmail.com,50.73,USD,2026-05-18T10:17:17-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6260054163514,153100,lindevk89@gmail.com,36.98,USD,2026-05-18T10:16:59-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6256085991482,153072,victiriam221@gmail.com,50.00,USD,2026-05-15T10:16:51-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6254746599482,153063,lisarmclean@gmail.com,85.98,USD,2026-05-14T10:16:03-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6253612204090,153049,heartofthehorsetherapy@gmail.com,69.85,USD,2026-05-13T10:45:50-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6252269338682,153031,cameron.wyman19@gmail.com,169.82,USD,2026-05-12T10:27:14-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6249839755322,152995,nascarkitty359@aol.com,59.48,USD,2026-05-10T10:34:52-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6249739976762,152993,bethany.march@gmail.com,82.53,USD,2026-05-10T08:49:05-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6242450636858,152909,jaimetorrediaz@gmail.com,49.58,USD,2026-05-05T10:18:06-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6241597456442,152899,sstenbeck@gmail.com,125.96,USD,2026-05-04T16:04:48-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6241174618170,152891,bansbachequestrian@gmail.com,86.51,USD,2026-05-04T10:16:09-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6239837225018,152868,akbock621@gmail.com,201.29,USD,2026-05-03T10:16:49-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6237155885114,152840,victiriam221@gmail.com,50.00,USD,2026-05-01T10:47:18-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6234272137274,152797,phileda07@gmail.com,272.32,USD,2026-04-29T12:42:21-04:00,paid,fulfilled,"Concierge, DG, EliteCartGift, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6234101415994,152793,bbfarm10501@gmail.com,85.95,USD,2026-04-29T10:30:52-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6230064267322,152763,gretchenfavaloro@yahoo.com,162.51,USD,2026-04-27T22:33:43-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6229247918138,152751,jhenigman1@gmail.com,21.27,USD,2026-04-27T10:16:10-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6227950501946,152735,drnoasafra@gmail.com,38.01,USD,2026-04-26T10:15:58-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6223790669882,152670,kiowa5255@yahoo.com,56.12,USD,2026-04-23T10:16:26-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6222192869434,152652,shannonalvey9@gmail.com,77.13,USD,2026-04-22T10:35:43-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6222171865146,152650,mlsaettler@gmail.com,135.00,USD,2026-04-22T10:15:57-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6221457817658,152642,celectronics100@gmail.com,458.40,USD,2026-04-21T16:42:38-04:00,paid,fulfilled,"EliteCartGift, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6221040353338,152633,darby.toben@gmail.com,134.48,USD,2026-04-21T10:16:43-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6221040091194,152632,mettafarms@yahoo.com,54.16,USD,2026-04-21T10:16:25-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6213195694138,152554,kaylee@hmi1928.com,175.00,USD,2026-04-16T10:15:42-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6210841608250,152527,kathleen.dressel@sbcglobal.net,122.15,USD,2026-04-14T11:18:15-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6210738913338,152523,vabmouse@yahoo.com,196.50,USD,2026-04-14T10:01:03-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6193686839354,152438,azhot2001@outlook.com,161.98,USD,2026-04-06T10:15:43-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6191269511226,152423,cameron.stout.miller@gmail.com,61.25,USD,2026-04-04T10:16:52-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6190045003834,152413,sherryharker@yahoo.com,63.31,USD,2026-04-03T10:16:00-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6188898418746,152399,sonart.mhr@gmail.com,36.09,USD,2026-04-02T10:30:42-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6187664474170,152388,bbfarm10501@gmail.com,85.95,USD,2026-04-01T10:17:04-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6186408083514,152378,porathk@outlook.com,143.78,USD,2026-03-31T10:15:49-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6185154248762,152366,jhenigman1@gmail.com,54.56,USD,2026-03-30T10:16:15-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6185154052154,152365,allison.postier@me.com,22.87,USD,2026-03-30T10:16:02-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6179827253306,152335,kiowa5255@yahoo.com,56.12,USD,2026-03-26T10:16:04-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6171192852538,152304,lindseyk431@aol.com,252.62,USD,2026-03-19T19:52:12-04:00,paid,fulfilled,"Concierge, DG, EliteCartGift, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6170529267770,152298,minvi@aol.com,195.37,USD,2026-03-19T10:16:07-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6170513047610,152297,raulangelriveronbenedi@gmail.com,52.81,USD,2026-03-19T10:01:40-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6167433281594,152259,alexandraksemail@gmail.com,209.90,USD,2026-03-16T17:21:06-04:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6163135266874,152220,rose.gagnon@yahoo.com,27.98,USD,2026-03-13T10:17:04-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6163135168570,152219,rose.gagnon@yahoo.com,80.14,USD,2026-03-13T10:16:56-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6161889296442,152206,victiriam221@gmail.com,50.00,USD,2026-03-12T10:15:47-04:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6158139523130,152172,azhot2001@outlook.com,161.98,USD,2026-03-09T10:30:47-04:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6154144907322,152155,sherryharker@yahoo.com,63.31,USD,2026-03-06T09:15:49-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6154128851002,152154,jaimetorrediaz@gmail.com,138.57,USD,2026-03-06T09:00:50-05:00,partially_refunded,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6150453067834,152123,akbock621@gmail.com,206.40,USD,2026-03-03T10:38:10-05:00,paid,fulfilled,"JS, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6150377963578,152122,aplusblinds@cox.net,117.89,USD,2026-03-03T09:16:16-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6149229477946,152108,jhenigman1@gmail.com,43.28,USD,2026-03-02T09:15:54-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6149216272442,152107,tessdvs@gmail.com,74.77,USD,2026-03-02T09:00:55-05:00,paid,fulfilled,"Concierge, JS, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6146740781114,152094,omit-49.spoon@icloud.com,229.20,USD,2026-02-28T09:56:41-05:00,paid,fulfilled,"Concierge, JS, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6146730393658,152093,dsablan02@gmail.com,155.51,USD,2026-02-28T09:47:08-05:00,paid,fulfilled,"Concierge, JS, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6145387364410,152083,patricedo@msn.com,112.82,USD,2026-02-27T09:15:58-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6144062423098,152073,victiriam221@gmail.com,50.00,USD,2026-02-26T09:15:34-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6142886379578,152063,roperbs@bellsouth.net,102.56,USD,2026-02-25T09:31:27-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6135663001658,152002,treigel1170@gmail.com,154.23,USD,2026-02-18T16:54:57-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6135225548858,151995,raulangelriveronbenedi@gmail.com,52.81,USD,2026-02-18T09:15:50-05:00,partially_refunded,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6129672454202,151932,vabmouse@yahoo.com,196.50,USD,2026-02-13T09:21:03-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6129667047482,151930,lhequestrian1@gmail.com,35.18,USD,2026-02-13T09:16:19-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6128513679418,151916,victiriam221@gmail.com,50.00,USD,2026-02-12T09:16:08-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6128513581114,151915,tonto70@aol.com,142.14,USD,2026-02-12T09:16:00-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6127305293882,151907,mendozadressage@gmail.com,95.94,USD,2026-02-11T09:19:49-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6122649452602,151870,azhot2001@outlook.com,125.30,USD,2026-02-09T09:17:42-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6120202469434,151837,mandy.akins@gmail.com,178.50,USD,2026-02-07T11:31:59-05:00,paid,fulfilled,"Concierge, JS, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6118604537914,151813,sherryharker@yahoo.com,53.03,USD,2026-02-06T09:15:35-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6115832627258,151757,jami.brokaw@me.com,37.89,USD,2026-02-04T09:20:43-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6114736734266,151742,nascarkitty359@aol.com,59.48,USD,2026-02-03T09:21:10-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6114736635962,151741,johnnyortiz23@gmail.com,25.71,USD,2026-02-03T09:21:00-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6113574879290,151729,theplayersgroup@hotmail.com,63.73,USD,2026-02-02T09:23:40-05:00,refunded,,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6113574715450,151728,jhenigman1@gmail.com,54.56,USD,2026-02-02T09:23:18-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6112460636218,151707,elainecornwall@ymail.com,121.68,USD,2026-02-01T09:23:06-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6112460603450,151706,drnoasafra@gmail.com,38.01,USD,2026-02-01T09:23:04-05:00,refunded,,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6112460144698,151705,briar_glen_riding@yahoo.com,196.50,USD,2026-02-01T09:22:23-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6109462167610,151653,lhequestrian1@gmail.com,35.18,USD,2026-01-30T09:29:42-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6109461381178,151652,allison.postier@me.com,22.87,USD,2026-01-30T09:29:22-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6108123332666,151629,michelle@mywisconsinrealtor.com,134.97,USD,2026-01-29T09:20:56-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6108123201594,151628,victiriam221@gmail.com,50.00,USD,2026-01-29T09:20:50-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6108123037754,151627,kiowa5255@yahoo.com,56.12,USD,2026-01-29T09:20:36-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6107007942714,151604,jeffreypostonb4@gmail.com,30.39,USD,2026-01-28T09:16:31-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6107007680570,151603,mtnirenstein@gmail.com,21.71,USD,2026-01-28T09:16:18-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6105825312826,151588,krav419@aol.com,45.95,USD,2026-01-27T09:18:50-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6105825050682,151587,rose.gagnon@yahoo.com,114.25,USD,2026-01-27T09:18:32-05:00,refunded,,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6105698238522,151585,darby.toben@gmail.com,127.00,USD,2026-01-27T05:48:53-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6104787222586,151558,jtjohnaustin@gmail.com,50.44,USD,2026-01-26T09:16:31-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6100467744826,151480,mlsaettler@gmail.com,127.50,USD,2026-01-22T15:47:55-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6100105330746,151466,lori2554@gmail.com,178.21,USD,2026-01-22T09:15:50-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6100095795258,151465,lberlins@yahoo.com,32.15,USD,2026-01-22T09:02:16-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6099082805306,151433,allison@rosehillequestriancenter.com,41.41,USD,2026-01-21T09:16:55-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6099082608698,151432,allison@rosehillequestriancenter.com,35.65,USD,2026-01-21T09:16:49-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6099082543162,151431,raulangelriveronbenedi@gmail.com,38.81,USD,2026-01-21T09:16:47-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6099082215482,151430,allison@rosehillequestriancenter.com,24.59,USD,2026-01-21T09:16:24-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6099082051642,151429,allison@rosehillequestriancenter.com,50.73,USD,2026-01-21T09:16:14-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6097345839162,151403,madjalark786@gmail.com,25.54,USD,2026-01-19T23:15:48-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6096938827834,151393,theplayersgroup@hotmail.com,132.66,USD,2026-01-19T14:55:06-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6094450851898,151327,c3wahlert@gmail.com,111.16,USD,2026-01-17T07:48:44-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6093442023482,151312,lhequestrian1@gmail.com,35.18,USD,2026-01-16T09:31:03-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6092667879482,151294,taids1997@gmail.com,69.48,USD,2026-01-15T14:32:47-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6092632686650,151292,michelle@mywisconsinrealtor.com,127.47,USD,2026-01-15T13:57:31-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6092180324410,151280,tonto70@aol.com,134.24,USD,2026-01-15T03:27:25-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6091335073850,151267,mendozadressage@gmail.com,95.94,USD,2026-01-14T09:46:32-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6091288641594,151265,porathk@outlook.com,135.79,USD,2026-01-14T08:48:32-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6090253107258,151246,cheyennesummer1224@gmail.com,93.19,USD,2026-01-13T10:21:02-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6090252681274,151245,jhenigman1@gmail.com,21.27,USD,2026-01-13T10:20:44-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6089224290362,151234,azhot2001@outlook.com,125.30,USD,2026-01-12T09:15:48-05:00,paid,fulfilled,"Concierge, DG, Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6088227553338,151223,laura.g.butler@gmail.com,88.99,USD,2026-01-11T09:32:53-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6087552368698,151219,suemerrittfab1937@gmail.com,101.67,USD,2026-01-10T15:36:16-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6087113965626,151216,ttc4612@gmail.com,67.32,USD,2026-01-10T09:34:08-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6087113801786,151215,bbfarm10501@gmail.com,77.60,USD,2026-01-10T09:34:01-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6084742185018,151195,lisarmclean@gmail.com,85.98,USD,2026-01-08T09:15:37-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6084732518458,151194,tessdvs@gmail.com,188.74,USD,2026-01-08T09:04:32-05:00,paid,fulfilled,"JS, Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6083643506746,151183,jbsoucy@icloud.com,18.98,USD,2026-01-07T10:17:18-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6082335899706,151167,johnnyortiz23@gmail.com,25.71,USD,2026-01-06T09:18:32-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6081232175162,151133,shannon.o.swift@gmail.com,69.98,USD,2026-01-05T09:17:57-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6081232142394,151132,shannon.o.swift@gmail.com,41.78,USD,2026-01-05T09:17:56-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6080992575546,151129,jaimetorrediaz@gmail.com,130.87,USD,2026-01-05T01:27:40-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6080537690170,151125,drnoasafra@gmail.com,36.45,USD,2026-01-04T15:42:08-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6080181010490,151117,rpatter590@aol.com,188.13,USD,2026-01-04T09:20:16-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6077957210170,151096,lhequestrian1@gmail.com,35.18,USD,2026-01-02T09:16:06-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6077957177402,151095,mmckeown@mkpcpa.com,18.08,USD,2026-01-02T09:16:05-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
+6077069492282,151086,kiowa5255@yahoo.com,53.55,USD,2026-01-01T12:23:39-05:00,paid,fulfilled,"Subscription, Subscription First Order",2026-07-22T05:34:47+00:00
+6076912402490,151084,victiriam221@gmail.com,50.00,USD,2026-01-01T09:16:01-05:00,paid,fulfilled,"Subscription, Subscription Recurring Order",2026-07-22T05:34:47+00:00
