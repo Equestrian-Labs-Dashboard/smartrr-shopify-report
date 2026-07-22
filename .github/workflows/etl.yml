@@ -2,16 +2,25 @@ name: Subscriptions ETL
 
 on:
   schedule:
-    - cron: "0 9 * * 1"   # every Monday at 09:00 UTC — change the "1" for a different weekday
-  workflow_dispatch: {}     # "Run workflow" button in GitHub UI for on-demand runs
+    - cron: "0 9 * * *" # daily at 09:00 UTC
+  workflow_dispatch:
+    inputs:
+      report_year:
+        description: "Year to query (for example 2025). Leave empty for rolling update."
+        required: false
+        type: string
 
 permissions:
   contents: write
 
+concurrency:
+  group: subscriptions-etl
+  cancel-in-progress: false
+
 jobs:
   run-etl:
     runs-on: ubuntu-latest
-    timeout-minutes: 15   # fail fast instead of hanging silently if something's wrong
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repo
@@ -21,21 +30,28 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Run ETL
         env:
-          PYTHONUNBUFFERED: "1"   # makes print() show up live in the Actions log
+          PYTHONUNBUFFERED: "1"
           SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
-          ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}   # optional, defaults to 90
+          ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}
+          REPORT_YEAR: ${{ inputs.report_year }}
           SPREADSHEET_ID: ${{ vars.SPREADSHEET_ID }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: python src/main.py
+        run: |
+          if [ -f src/main.py ]; then
+            python src/main.py
+          else
+            python main.py
+          fi
 
       - name: Commit updated report
         run: |
@@ -43,4 +59,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           git diff --staged --quiet || git commit -m "Update subscriptions report [automated]"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
