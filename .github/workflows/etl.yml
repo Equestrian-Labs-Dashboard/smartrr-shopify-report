@@ -1,0 +1,40 @@
+name: Subscriptions ETL
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # daily at 09:00 UTC — adjust as needed
+  workflow_dispatch: {}     # allows manual "Run workflow" button in GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  run-etl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ETL
+        env:
+          SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
+          SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
+          SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
+          SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
+        run: python src/main.py
+
+      - name: Commit updated report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update subscriptions report [automated]"
+          git push
