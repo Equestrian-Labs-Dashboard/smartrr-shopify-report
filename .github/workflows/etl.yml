@@ -2,8 +2,8 @@ name: Subscriptions ETL
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # daily at 09:00 UTC — adjust as needed
-  workflow_dispatch: {}     # allows manual "Run workflow" button in GitHub UI
+    - cron: "0 9 * * 1"   # every Monday at 09:00 UTC — change the "1" for a different weekday
+  workflow_dispatch: {}     # "Run workflow" button in GitHub UI for on-demand runs
 
 permissions:
   contents: write
@@ -11,6 +11,8 @@ permissions:
 jobs:
   run-etl:
     runs-on: ubuntu-latest
+    timeout-minutes: 15   # fail fast instead of hanging silently if something's wrong
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -25,10 +27,14 @@ jobs:
 
       - name: Run ETL
         env:
+          PYTHONUNBUFFERED: "1"   # makes print() show up live in the Actions log
           SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
+          ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}   # optional, defaults to 90
+          SPREADSHEET_ID: ${{ vars.SPREADSHEET_ID }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: python src/main.py
 
       - name: Commit updated report
