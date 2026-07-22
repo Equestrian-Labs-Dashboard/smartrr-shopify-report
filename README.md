@@ -1,109 +1,50 @@
-# Subscriptions Report — Shopify + Smartrr
+# Shopify + Smartrr Report
 
-Pipeline automatizado que corre diario por GitHub Actions: saca las órdenes con suscripción
-de Shopify, las cruza con el estado real de la suscripción en Smartrr, y deja el reporte en
-`data/subscriptions_report.csv` y `.json` dentro del mismo repo.
+This project runs a scheduled GitHub Actions ETL that retrieves subscription-tagged Shopify orders, looks up the related customers in Smartrr, writes two independent datasets, exports them to Google Sheets, and publishes a static dashboard through GitHub Pages.
 
-## 1. Subir esto a GitHub
+## Data model
 
-```bash
-cd smartrr-shopify-report
-git init
-git add .
-git commit -m "Initial commit: Shopify + Smartrr subscriptions ETL"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/smartrr-shopify-report.git
-git push -u origin main
-```
+The project deliberately keeps orders and subscriptions separate:
 
-## 2. Configurar Secrets y Variables en GitHub
+- `data/orders_report.csv` and `data/orders_report.json`: one row per Shopify order, deduplicated by `order_id`.
+- `data/subscriptions_report.csv` and `data/subscriptions_report.json`: one row per Smartrr subscription, deduplicated by `subscription_id`.
 
-En el repo: **Settings > Secrets and variables > Actions**
+Orders are never joined to every subscription belonging to the same customer. This prevents one Shopify order from appearing multiple times and prevents inflated order and revenue totals.
 
-### Secrets (pestaña "Secrets" — nunca visibles, para credenciales)
+## GitHub configuration
 
-| Nombre | De dónde lo sacás |
-|---|---|
-| `SHOPIFY_ACCESS_TOKEN` | El access token de tu app privada/custom de Shopify (el que ya tenés) |
-| `SMARTRR_ACCESS_TOKEN` | Smartrr Admin > **Integrations** > generás el token ahí |
+Add these repository secrets:
 
-### Variables (pestaña "Variables" — no sensibles, solo config)
+- `SHOPIFY_ACCESS_TOKEN`
+- `SMARTRR_ACCESS_TOKEN`
+- `GOOGLE_SERVICE_ACCOUNT_JSON` (optional)
 
-| Nombre | Valor de ejemplo |
-|---|---|
-| `SHOPIFY_STORE_DOMAIN` | `corro.myshopify.com` |
-| `SHOPIFY_API_VERSION` | `2025-01` |
+Add these repository variables:
 
-El dominio de la tienda y la versión del API no son secretas (no dan acceso a nada por sí
-solas), por eso van en Variables. El token sí, porque con eso solo alguien puede leer/escribir
-en tu tienda o en Smartrr.
+- `SHOPIFY_STORE_DOMAIN`
+- `SHOPIFY_API_VERSION` (optional; defaults to `2025-01`)
+- `ORDERS_LOOKBACK_DAYS` (optional; defaults to `90`)
+- `SPREADSHEET_ID` (optional)
 
-## 3. Correrlo
+## Running the ETL
 
-- Automático: corre todos los días a las 09:00 UTC (cron en `.github/workflows/etl.yml`,
-  ajustá el horario si querés).
-- Manual: en GitHub, pestaña **Actions** > "Subscriptions ETL" > **Run workflow**.
+The workflow runs daily at 09:00 UTC. It can also be run manually from **Actions → Subscriptions ETL → Run workflow**.
 
-## 4. Antes de confiar en los datos de Smartrr
+For a complete calendar-year query, enter a four-digit value in `report_year`, such as `2025`. Leave it empty for the normal rolling update.
 
-Los campos `status`, `next_order_date` y `plan_id` en `src/smartrr_client.py` están inferidos
-de nombres típicos de campo (no hay doc pública completa de Smartrr). Corré el pipeline una
-vez, abrí `data/subscriptions_report.csv` y fijate si esas tres columnas tienen datos con
-sentido. Si salen vacías o con nombres raros, agregá un `print(raw)` temporal en
-`get_customer_subscriptions` para ver el JSON crudo y ajustamos el mapeo en
-`parse_subscriptions`.
+## Google Sheets output
 
-## 5. Prender el dashboard web (GitHub Pages)
+When Google Sheets credentials are configured, the ETL writes:
 
-`index.html` ya está en la raíz del repo y lee `data/subscriptions_report.json` — solo
-falta prender Pages:
+- `Orders`: one row per Shopify order.
+- `Subscriptions`: one row per Smartrr subscription.
+- `Orders 2025`, `Orders 2026`, and similar tabs: order-only yearly views.
 
-1. En el repo: **Settings > Pages**
-2. En "Build and deployment" > Source: **Deploy from a branch**
-3. Branch: **main**, carpeta: **/ (root)** → **Save**
-4. Esperá 1-2 minutos, GitHub te da la URL (algo como
-   `https://equestrian-labs-dashboard.github.io/smartrr-shopify-report/`)
+## GitHub Pages
 
-Importante: para que el dashboard tenga algo que mostrar, primero tiene que haber corrido
-el workflow "Subscriptions ETL" al menos una vez (Actions → Run workflow) para que exista
-`data/subscriptions_report.json` en el repo. Si entrás a la página y no ves datos, ese es
-el motivo — correlo y refrescá.
+The dashboard reads both JSON files from the `data` directory. Configure Pages to deploy from the `main` branch and the repository root.
 
-## 6. Google Sheets (opcional pero recomendado)
+After an Action completes, GitHub Pages CDN propagation can take several minutes. You can verify the files directly at:
 
-Esto te arma un Google Sheet con:
-- Tab **"Live"**: se pisa entero cada corrida, siempre el estado actual.
-- Tabs **"2025"**, **"2026"**, etc.: van acumulando histórico sin duplicar (dedupe por
-  order_id + subscription_id), así podés descargar/filtrar por año.
-
-**Setup (una sola vez):**
-
-1. Andá a [console.cloud.google.com](https://console.cloud.google.com) → creá un proyecto
-   (o usá uno existente).
-2. **APIs & Services > Library** → buscá "Google Sheets API" → **Enable**.
-3. **APIs & Services > Credentials** → **Create Credentials > Service Account** → ponele
-   un nombre (ej. `smartrr-etl`) → Create.
-4. Entrá al service account creado → tab **Keys** → **Add Key > Create new key > JSON** →
-   se descarga un archivo `.json`. Ese archivo completo es tu `GOOGLE_SERVICE_ACCOUNT_JSON`.
-5. Copiá el email del service account (algo como
-   `smartrr-etl@tu-proyecto.iam.gserviceaccount.com`, lo ves en la misma pantalla).
-6. Creá un Google Sheet nuevo (o usá uno existente) → botón **Share** → pegá ese email
-   → dale permiso de **Editor**.
-7. De la URL del Sheet, copiá el ID: `https://docs.google.com/spreadsheets/d/`**`ESTE_ID`**`/edit`
-
-**Cargar en GitHub:**
-
-| Va en | Nombre | Valor |
-|---|---|---|
-| Secret | `GOOGLE_SERVICE_ACCOUNT_JSON` | Pegá el contenido COMPLETO del archivo `.json` descargado |
-| Variable | `SPREADSHEET_ID` | El ID que copiaste de la URL |
-
-Si estos dos no están cargados, el pipeline simplemente se salta el export a Sheets (no
-rompe nada) — vas a ver en el log "Skipping Google Sheets export".
-
-## 7. Escalar esto
-
-- `shopify_client.py` y `smartrr_client.py` son independientes — si mañana Smartrr te da
-  un endpoint bulk o webhooks, solo tocás `smartrr_client.py`, el resto del pipeline no cambia.
-- Para dashboard visual: igual que en Corro/Cavali, se puede publicar `data/subscriptions_report.json`
-  a través de GitHub Pages y consumirlo con Chart.js.
+- `/data/orders_report.json`
+- `/data/subscriptions_report.json`
