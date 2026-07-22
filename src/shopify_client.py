@@ -31,7 +31,7 @@ class ShopifyClient:
         resp.raise_for_status()
         return resp
 
-    def get_orders(self, status="any", since_id=None, created_at_min=None, limit=250):
+    def get_orders(self, status="any", since_id=None, created_at_min=None, created_at_max=None, limit=250):
         """
         Paginated fetch of all orders (handles Shopify's Link-header cursor pagination).
         Returns a list of raw order dicts.
@@ -46,6 +46,8 @@ class ShopifyClient:
             params["since_id"] = since_id
         if created_at_min:
             params["created_at_min"] = created_at_min
+        if created_at_max:
+            params["created_at_max"] = created_at_max
 
         while url:
             resp = self._get(url, params=params)
@@ -79,8 +81,8 @@ class ShopifyClient:
                 return True
         return False
 
-    def get_subscription_orders(self, created_at_min=None):
-        all_orders = self.get_orders(created_at_min=created_at_min)
+    def get_subscription_orders(self, created_at_min=None, created_at_max=None):
+        all_orders = self.get_orders(created_at_min=created_at_min, created_at_max=created_at_max)
         return [o for o in all_orders if self.is_subscription_order(o)]
 
 

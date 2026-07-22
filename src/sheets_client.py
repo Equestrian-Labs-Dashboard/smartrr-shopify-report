@@ -1,20 +1,7 @@
-"""
-Google Sheets writer.
-
-Requires:
-  GOOGLE_SERVICE_ACCOUNT_JSON   full JSON key of a Google service account (Secret)
-  SPREADSHEET_ID                the target Google Sheet's ID, from its URL      (Variable)
-
-Writes two kinds of tabs into the same spreadsheet:
-  - "Live"        -> fully overwritten every run. Always reflects the current pull.
-  - "<year>"       -> e.g. "2026". Upserted every run: existing rows for that year are
-                      kept, new rows are appended, and rows are de-duplicated by
-                      (order_id, subscription_id) so re-running never creates duplicates.
-                      This is what you download when you want "todo el año X".
-"""
+"""Google Sheets writer for separate order and subscription datasets."""
 
 import json
-import os
+
 import gspread
 import pandas as pd
 from google.oauth2.service_account import Credentials
@@ -22,77 +9,60 @@ from google.oauth2.service_account import Credentials
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 
-def _clean_cell(value):
-    """
-    Converts any pandas/numpy value into a JSON-safe string for the Sheets API.
-    Handles NaN, None, inf, and any other non-JSON-compliant value by turning
-    it into an empty string instead of letting it reach the request as a raw float.
-    """
+def clean_cell(value):
     if pd.isna(value):
         return ""
     return str(value)
 
 
-def _df_to_values(df: pd.DataFrame):
-    """Header row + all data rows, with every cell sanitized."""
-    header = df.columns.tolist()
-    rows = [[_clean_cell(v) for v in row] for row in df.itertuples(index=False, name=None)]
-    return [header] + rows
+def dataframe_values(df: pd.DataFrame):
+    return [df.columns.tolist()] + [
+        [clean_cell(value) for value in row]
+        for row in df.itertuples(index=False, name=None)
+    ]
 
 
 class SheetsClient:
     def __init__(self, service_account_json: str, spreadsheet_id: str):
-        creds_dict = json.loads(service_account_json)
-        creds = Credentials.from_service_account_info(creds_dict, scopes=SCOPES)
-        self.gc = gspread.authorize(creds)
-        self.sh = self.gc.open_by_key(spreadsheet_id)
+        credentials = Credentials.from_service_account_info(
+            json.loads(service_account_json), scopes=SCOPES
+        )
+        self.spreadsheet = gspread.authorize(credentials).open_by_key(spreadsheet_id)
 
-    def _get_or_create_worksheet(self, title: str, rows=1000, cols=20):
+    def worksheet(self, title: str, rows: int = 1000, cols: int = 24):
         try:
-            return self.sh.worksheet(title)
+            return self.spreadsheet.worksheet(title)
         except gspread.WorksheetNotFound:
-            return self.sh.add_worksheet(title=title, rows=rows, cols=cols)
+            return self.spreadsheet.add_worksheet(title=title, rows=rows, cols=cols)
 
-    def write_live(self, df: pd.DataFrame):
-        """Full overwrite of the 'Live' tab with the current pull."""
-        ws = self._get_or_create_worksheet("Live")
+    def overwrite(self, title: str, df: pd.DataFrame):
+        ws = self.worksheet(title, rows=max(len(df) + 10, 1000), cols=max(len(df.columns) + 2, 20))
         ws.clear()
         if df.empty:
             ws.update([["No data"]])
+        else:
+            ws.update(dataframe_values(df))
+        print(f"  Sheet tab '{title}': {len(df)} rows", flush=True)
+
+    def write_orders(self, orders_df: pd.DataFrame):
+        """One row per Shopify order. This tab never contains subscription-expanded rows."""
+        self.overwrite("Orders", orders_df)
+
+    def write_subscriptions(self, subscriptions_df: pd.DataFrame):
+        """One row per Smartrr subscription, independent from Shopify orders."""
+        self.overwrite("Subscriptions", subscriptions_df)
+
+    def write_order_year_tabs(self, orders_df: pd.DataFrame):
+        """Create one order-only tab per calendar year, such as 'Orders 2025'."""
+        if orders_df.empty or "created_at" not in orders_df.columns:
             return
-        ws.update(_df_to_values(df))
 
-    def upsert_by_year(self, df: pd.DataFrame, key_cols=("order_id", "subscription_id")):
-        """
-        Splits df by year (from created_at), and for each year:
-          - reads whatever is already in that year's tab
-          - merges with the new rows, de-duplicated by key_cols (new data wins)
-          - writes the merged result back
-        """
-        if df.empty or "created_at" not in df.columns:
-            return
+        data = orders_df.copy()
+        data["_year"] = pd.to_datetime(data["created_at"], errors="coerce", utc=True).dt.year
+        data = data.dropna(subset=["_year"])
+        data["_year"] = data["_year"].astype(int)
 
-        df = df.copy()
-        df["_year"] = pd.to_datetime(df["created_at"], errors="coerce").dt.year
-        df = df.dropna(subset=["_year"])
-        df["_year"] = df["_year"].astype(int)
-
-        for year, year_df in df.groupby("_year"):
+        for year, year_df in data.groupby("_year"):
             year_df = year_df.drop(columns=["_year"])
-            tab_name = str(year)
-            ws = self._get_or_create_worksheet(tab_name)
-
-            existing_values = ws.get_all_values()
-            if existing_values and len(existing_values) > 1:
-                existing_df = pd.DataFrame(existing_values[1:], columns=existing_values[0])
-            else:
-                existing_df = pd.DataFrame(columns=year_df.columns)
-
-            combined = pd.concat([existing_df, year_df.astype(str)], ignore_index=True)
-            key_cols_present = [c for c in key_cols if c in combined.columns]
-            if key_cols_present:
-                combined = combined.drop_duplicates(subset=key_cols_present, keep="last")
-
-            ws.clear()
-            ws.update(_df_to_values(combined))
-            print(f"  Sheet tab '{tab_name}': {len(combined)} total rows", flush=True)
+            year_df = year_df.drop_duplicates(subset=["order_id"], keep="last")
+            self.overwrite(f"Orders {year}", year_df)
