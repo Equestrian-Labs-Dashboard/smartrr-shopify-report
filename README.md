@@ -1,50 +1,59 @@
-# Shopify + Smartrr Report
+# Shopify + Smartrr Subscription Performance
 
-This project runs a scheduled GitHub Actions ETL that retrieves subscription-tagged Shopify orders, looks up the related customers in Smartrr, writes two independent datasets, exports them to Google Sheets, and publishes a static dashboard through GitHub Pages.
+This project automatically retrieves subscription-tagged orders from Shopify, enriches them with Shopify variant unit costs, retrieves subscription records from Smartrr, and publishes an English-language dashboard through GitHub Pages.
 
-## Data model
+## Source-of-truth rules
 
-The project deliberately keeps orders and subscriptions separate:
+- **Shopify:** orders, customers, products, quantities, gross sales, discounts, returns, net sales, order totals, COGS, gross profit and gross margin.
+- **Smartrr:** subscription IDs, plan IDs, subscription status when available, and next billing/order dates.
+- Historical Excel or Google Sheet values are not imported into the live calculations.
+- Orders and subscriptions remain separate datasets so a customer with multiple subscriptions cannot duplicate an order or inflate revenue.
 
-- `data/orders_report.csv` and `data/orders_report.json`: one row per Shopify order, deduplicated by `order_id`.
-- `data/subscriptions_report.csv` and `data/subscriptions_report.json`: one row per Smartrr subscription, deduplicated by `subscription_id`.
+## Dashboard fields
 
-Orders are never joined to every subscription belonging to the same customer. This prevents one Shopify order from appearing multiple times and prevents inflated order and revenue totals.
+### Executive KPIs
+- Orders
+- Unique customers
+- Gross sales
+- Net sales
+- Average Order Value (AOV)
+- Gross profit
+- Gross margin
+- Shopify unit-cost coverage
+
+### Analysis
+- Monthly net sales and order trends
+- Top products and variants by net sales
+- Units sold and customer count by product
+- Top customers by net sales
+- Repeat customers and repeat rate
+- Order-level gross sales, discounts, returns, net sales, COGS, gross profit and margin
+- Smartrr subscription records and upcoming billings
+
+## Metric definitions
+
+- **Gross Sales:** Shopify `total_line_items_price`.
+- **Discounts:** Shopify `total_discounts`.
+- **Returns:** original Shopify subtotal minus current Shopify subtotal.
+- **Net Sales:** Shopify `current_subtotal_price`.
+- **AOV:** Net Sales divided by order count.
+- **COGS:** net product quantity multiplied by Shopify Inventory Item unit cost.
+- **Gross Profit:** Net Sales minus COGS.
+- **Gross Margin:** Gross Profit divided by Net Sales.
+
+Gross Profit and Gross Margin remain unavailable when Shopify unit costs are missing. The project does not substitute old spreadsheet costs.
 
 ## GitHub configuration
 
-Add these repository secrets:
-
+Repository secrets:
 - `SHOPIFY_ACCESS_TOKEN`
 - `SMARTRR_ACCESS_TOKEN`
-- `GOOGLE_SERVICE_ACCOUNT_JSON` (optional)
 
-Add these repository variables:
-
+Repository variables:
 - `SHOPIFY_STORE_DOMAIN`
-- `SHOPIFY_API_VERSION` (optional; defaults to `2025-01`)
-- `ORDERS_LOOKBACK_DAYS` (optional; defaults to `90`)
-- `SPREADSHEET_ID` (optional)
+- `SHOPIFY_API_VERSION` (optional, defaults to `2025-01`)
+- `ORDERS_LOOKBACK_DAYS` (optional, defaults to `120`)
 
-## Running the ETL
+## Run and deploy
 
-The workflow runs daily at 09:00 UTC. It can also be run manually from **Actions → Subscriptions ETL → Run workflow**.
-
-For a complete calendar-year query, enter a four-digit value in `report_year`, such as `2025`. Leave it empty for the normal rolling update.
-
-## Google Sheets output
-
-When Google Sheets credentials are configured, the ETL writes:
-
-- `Orders`: one row per Shopify order.
-- `Subscriptions`: one row per Smartrr subscription.
-- `Orders 2025`, `Orders 2026`, and similar tabs: order-only yearly views.
-
-## GitHub Pages
-
-The dashboard reads both JSON files from the `data` directory. Configure Pages to deploy from the `main` branch and the repository root.
-
-After an Action completes, GitHub Pages CDN propagation can take several minutes. You can verify the files directly at:
-
-- `/data/orders_report.json`
-- `/data/subscriptions_report.json`
+Run **Actions → Subscriptions ETL → Run workflow**. For a complete 2026 rebuild, enter `2026` in `report_year`. After the action commits the data files, run the existing GitHub Pages deployment workflow if Pages is not configured to deploy automatically from the main branch.
