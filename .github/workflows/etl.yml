@@ -24,13 +24,16 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
       - name: Run Shopify and Smartrr ETL
         env:
           PYTHONUNBUFFERED: "1"
@@ -40,8 +43,8 @@ jobs:
           REPORT_YEAR: ${{ inputs.report_year }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
-        run: |
-          if [ -f src/main.py ]; then python src/main.py; else python main.py; fi
+        run: python src/main.py
+
       - name: Commit updated report
         run: |
           git config user.name "github-actions[bot]"
