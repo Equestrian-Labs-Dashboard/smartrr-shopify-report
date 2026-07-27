@@ -1,14 +1,9 @@
-"""
-Shopify Admin API client.
-
-Requires:
-  SHOPIFY_STORE_DOMAIN   e.g. "corro.myshopify.com"   (Variable)
-  SHOPIFY_ACCESS_TOKEN   Admin API access token         (Secret)
-  SHOPIFY_API_VERSION    e.g. "2025-01"                 (Variable, optional)
-"""
+"""Shopify Admin API client for subscription order analytics."""
 
 import os
 import time
+from typing import Iterable
+
 import requests
 
 
@@ -22,68 +17,104 @@ class ShopifyClient:
             "Content-Type": "application/json",
         }
 
-    def _get(self, url, params=None):
-        resp = requests.get(url, headers=self.headers, params=params, timeout=30)
-        if resp.status_code == 429:
-            # Rate limited, back off and retry once
+    def _request(self, method: str, url: str, **kwargs):
+        response = requests.request(method, url, headers=self.headers, timeout=45, **kwargs)
+        if response.status_code == 429:
             time.sleep(2)
-            resp = requests.get(url, headers=self.headers, params=params, timeout=30)
-        resp.raise_for_status()
-        return resp
+            response = requests.request(method, url, headers=self.headers, timeout=45, **kwargs)
+        response.raise_for_status()
+        return response
 
-    def get_orders(self, status="any", since_id=None, created_at_min=None, created_at_max=None, limit=250):
-        """
-        Paginated fetch of all orders (handles Shopify's Link-header cursor pagination).
-        Returns a list of raw order dicts.
-        """
+    def _get(self, url: str, params=None):
+        return self._request("GET", url, params=params)
+
+    def get_orders(self, status="any", created_at_min=None, created_at_max=None, limit=250):
+        """Fetch all orders using Shopify cursor pagination."""
         orders = []
         url = f"{self.base_url}/orders.json"
         params = {
             "status": status,
             "limit": limit,
+            "fields": ",".join([
+                "id", "name", "email", "customer", "currency", "created_at", "cancelled_at",
+                "financial_status", "fulfillment_status", "tags", "total_price", "current_total_price",
+                "subtotal_price", "current_subtotal_price", "total_line_items_price", "total_discounts",
+                "total_tax", "total_shipping_price_set", "refunds", "line_items"
+            ]),
         }
-        if since_id:
-            params["since_id"] = since_id
         if created_at_min:
             params["created_at_min"] = created_at_min
         if created_at_max:
             params["created_at_max"] = created_at_max
 
         while url:
-            resp = self._get(url, params=params)
-            payload = resp.json()
-            orders.extend(payload.get("orders", []))
-
-            # Shopify cursor-based pagination via Link header
-            link_header = resp.headers.get("Link", "")
+            response = self._get(url, params=params)
+            orders.extend(response.json().get("orders", []))
             next_url = None
-            if link_header:
-                for part in link_header.split(","):
-                    if 'rel="next"' in part:
-                        next_url = part.split(";")[0].strip().strip("<>")
+            for part in response.headers.get("Link", "").split(","):
+                if 'rel="next"' in part:
+                    next_url = part.split(";")[0].strip().strip("<>")
+                    break
             url = next_url
-            params = None  # next_url already contains query params
-
+            params = None
         return orders
 
     @staticmethod
     def is_subscription_order(order: dict) -> bool:
-        """
-        Heuristic: Smartrr-created orders carry a selling_plan on the line item,
-        and/or a tag mentioning the subscription app. Adjust once you confirm
-        the exact tag your store uses (check a known subscription order in Shopify admin).
-        """
         tags = (order.get("tags") or "").lower()
         if "subscription" in tags or "smartrr" in tags:
             return True
-        for item in order.get("line_items", []):
-            if item.get("selling_plan_allocation"):
-                return True
-        return False
+        return any(item.get("selling_plan_allocation") for item in order.get("line_items", []))
 
     def get_subscription_orders(self, created_at_min=None, created_at_max=None):
-        all_orders = self.get_orders(created_at_min=created_at_min, created_at_max=created_at_max)
-        return [o for o in all_orders if self.is_subscription_order(o)]
+        return [
+            order for order in self.get_orders(created_at_min=created_at_min, created_at_max=created_at_max)
+            if self.is_subscription_order(order)
+        ]
+
+    def graphql(self, query: str, variables: dict | None = None) -> dict:
+        response = self._request(
+            "POST",
+            f"{self.base_url}/graphql.json",
+            json={"query": query, "variables": variables or {}},
+        )
+        payload = response.json()
+        if payload.get("errors"):
+            raise RuntimeError(f"Shopify GraphQL errors: {payload['errors']}")
+        return payload.get("data") or {}
+
+    @staticmethod
+    def _chunks(values: list, size: int) -> Iterable[list]:
+        for start in range(0, len(values), size):
+            yield values[start:start + size]
+
+    def get_variant_unit_costs(self, variant_ids: list[str]) -> dict[str, float | None]:
+        """Return {numeric_variant_id: unit_cost}; missing Shopify costs remain None."""
+        clean_ids = sorted({str(value) for value in variant_ids if value})
+        result: dict[str, float | None] = {}
+        query = """
+        query VariantCosts($ids: [ID!]!) {
+          nodes(ids: $ids) {
+            ... on ProductVariant {
+              id
+              inventoryItem { unitCost { amount currencyCode } }
+            }
+          }
+        }
+        """
+        for batch in self._chunks(clean_ids, 100):
+            gids = [f"gid://shopify/ProductVariant/{variant_id}" for variant_id in batch]
+            data = self.graphql(query, {"ids": gids})
+            for node in data.get("nodes") or []:
+                if not node:
+                    continue
+                numeric_id = str(node.get("id", "")).rsplit("/", 1)[-1]
+                amount = (((node.get("inventoryItem") or {}).get("unitCost") or {}).get("amount"))
+                try:
+                    result[numeric_id] = float(amount) if amount is not None else None
+                except (TypeError, ValueError):
+                    result[numeric_id] = None
+        return result
 
 
 if __name__ == "__main__":
@@ -92,5 +123,4 @@ if __name__ == "__main__":
         access_token=os.environ["SHOPIFY_ACCESS_TOKEN"],
         api_version=os.environ.get("SHOPIFY_API_VERSION") or "2025-01",
     )
-    subs = client.get_subscription_orders()
-    print(f"Found {len(subs)} subscription-tagged orders")
+    print(f"Found {len(client.get_subscription_orders())} subscription-tagged orders")
