@@ -2,11 +2,11 @@ name: Subscriptions ETL
 
 on:
   schedule:
-    - cron: "0 9 * * *" # daily at 09:00 UTC
+    - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
       report_year:
-        description: "Year to query (for example 2025). Leave empty for rolling update."
+        description: "Calendar year to rebuild, for example 2026. Leave empty for the rolling update."
         required: false
         type: string
 
@@ -20,44 +20,33 @@ concurrency:
 jobs:
   run-etl:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-
+    timeout-minutes: 40
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Run ETL
+      - name: Run Shopify and Smartrr ETL
         env:
           PYTHONUNBUFFERED: "1"
           SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
           ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}
           REPORT_YEAR: ${{ inputs.report_year }}
-          SPREADSHEET_ID: ${{ vars.SPREADSHEET_ID }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
-          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: |
-          if [ -f src/main.py ]; then
-            python src/main.py
-          else
-            python main.py
-          fi
-
+          if [ -f src/main.py ]; then python src/main.py; else python main.py; fi
       - name: Commit updated report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "Update subscriptions report [automated]"
+          git diff --staged --quiet || git commit -m "Update subscription analytics [automated]"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push
