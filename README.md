@@ -1,59 +1,55 @@
-# Shopify + Smartrr Subscription Performance
+# SmartPay — Shopify + Smartrr Subscription Performance
 
-This project automatically retrieves subscription-tagged orders from Shopify, enriches them with Shopify variant unit costs, retrieves subscription records from Smartrr, and publishes an English-language dashboard through GitHub Pages.
+This repository builds an English-language dashboard directly from Shopify and Smartrr. It does not use Google Sheets, Apps Script, `gspread`, or spreadsheet values as financial inputs.
 
-## Source-of-truth rules
+## Dashboard sections
 
-- **Shopify:** orders, customers, products, quantities, gross sales, discounts, returns, net sales, order totals, COGS, gross profit and gross margin.
-- **Smartrr:** subscription IDs, plan IDs, subscription status when available, and next billing/order dates.
-- Historical Excel or Google Sheet values are not imported into the live calculations.
-- Orders and subscriptions remain separate datasets so a customer with multiple subscriptions cannot duplicate an order or inflate revenue.
+- **Overview:** period KPIs plus Year-to-Date subscription KPIs.
+- **Orders:** order-level audit table and a three-order validation sample.
+- **Products:** all products and variants sold in the selected period.
+- **Customers:** all customers in the selected period.
 
-## Dashboard fields
+The previous standalone Subscriptions tab was removed. Useful subscription KPIs now appear in Overview.
 
-### Executive KPIs
-- Orders
-- Unique customers
-- Gross sales
-- Net sales
-- Average Order Value (AOV)
-- Gross profit
-- Gross margin
-- Shopify unit-cost coverage
+## Sales formulas
 
-### Analysis
-- Monthly net sales and order trends
-- Top products and variants by net sales
-- Units sold and customer count by product
-- Top customers by net sales
-- Repeat customers and repeat rate
-- Order-level gross sales, discounts, returns, net sales, COGS, gross profit and margin
-- Smartrr subscription records and upcoming billings
+- `Gross Sales = Shopify total_line_items_price`
+- `Discounts = Gross Sales - Shopify subtotal_price`
+- `Returns = Shopify subtotal_price - Shopify current_subtotal_price`
+- `Net Sales = Shopify current_subtotal_price`
+- `Formula Check = Gross Sales - Discounts - Returns - Net Sales` (must be `0.00`)
+- `COGS = net quantity × Shopify variant unit cost`
+- `Gross Profit = Net Sales - COGS`
+- `Gross Margin = Gross Profit / Net Sales`
 
-## Metric definitions
+Gross Profit and Gross Margin are shown only when every net unit in an order has a Shopify unit cost. Missing costs are never replaced with spreadsheet values.
 
-- **Gross Sales:** Shopify `total_line_items_price`.
-- **Discounts:** Shopify `total_discounts`.
-- **Returns:** original Shopify subtotal minus current Shopify subtotal.
-- **Net Sales:** Shopify `current_subtotal_price`.
-- **AOV:** Net Sales divided by order count.
-- **COGS:** net product quantity multiplied by Shopify Inventory Item unit cost.
-- **Gross Profit:** Net Sales minus COGS.
-- **Gross Margin:** Gross Profit divided by Net Sales.
-
-Gross Profit and Gross Margin remain unavailable when Shopify unit costs are missing. The project does not substitute old spreadsheet costs.
-
-## GitHub configuration
+## Required GitHub configuration
 
 Repository secrets:
+
 - `SHOPIFY_ACCESS_TOKEN`
 - `SMARTRR_ACCESS_TOKEN`
 
 Repository variables:
+
 - `SHOPIFY_STORE_DOMAIN`
 - `SHOPIFY_API_VERSION` (optional, defaults to `2025-01`)
 - `ORDERS_LOOKBACK_DAYS` (optional, defaults to `120`)
 
-## Run and deploy
+## Full 2026 rebuild
 
-Run **Actions → Subscriptions ETL → Run workflow**. For a complete 2026 rebuild, enter `2026` in `report_year`. After the action commits the data files, run the existing GitHub Pages deployment workflow if Pages is not configured to deploy automatically from the main branch.
+Run:
+
+**Actions → Subscriptions ETL → Run workflow**
+
+Set `report_year` to `2026`. This is required after installing the new fields so historical orders receive discounts, returns, products, costs and audit columns.
+
+## Manual audit required
+
+In the Orders tab, validate the three rows under **Audit sample (3 orders)** against Shopify Admin:
+
+1. The Horse Health approximately 30 lb or zero-margin order when available.
+2. Two deterministic sample orders.
+
+Compare order number, Gross Sales, Discounts, Net Sales, COGS, Gross Profit, Gross Margin and Order Total.

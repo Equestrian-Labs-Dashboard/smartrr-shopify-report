@@ -1,22 +1,9 @@
-"""
-Smartrr API client.
+"""Smartrr API client for SmartPay subscription KPIs."""
 
-Requires:
-  SMARTRR_ACCESS_TOKEN   generated in Smartrr Admin > Integrations   (Secret)
+from __future__ import annotations
 
-Confirmed endpoints (per Smartrr's public Gorgias / headless-store integration docs):
-  GET /vendor/selling-plan-group                               -> all subscription programs
-  GET /vendor/order/formatted?filterLike[emailOrName]={query}  -> subscriptions for ONE customer
-
-There is no publicly confirmed bulk "list all subscriptions" endpoint. This client
-looks subscriptions up per customer email (fed in from Shopify order data), which is
-reliable and documented. If Smartrr support grants a bulk endpoint or webhook access
-later, add a `get_all_subscriptions()` method here and nothing else in the pipeline
-needs to change.
-"""
-
-import os
 import time
+
 import requests
 
 
@@ -29,49 +16,79 @@ class SmartrrClient:
             "Content-Type": "application/json",
         }
 
-    def _get(self, path, params=None):
-        resp = requests.get(f"{self.BASE_URL}{path}", headers=self.headers, params=params, timeout=30)
-        if resp.status_code == 429:
-            time.sleep(2)
-            resp = requests.get(f"{self.BASE_URL}{path}", headers=self.headers, params=params, timeout=30)
-        resp.raise_for_status()
-        return resp.json()
+    def _get(self, path: str, params: dict | None = None) -> dict:
+        for attempt in range(5):
+            response = requests.get(
+                f"{self.BASE_URL}{path}", headers=self.headers, params=params, timeout=45
+            )
+            if response.status_code == 429 or response.status_code >= 500:
+                time.sleep(min(2 ** attempt, 16))
+                continue
+            response.raise_for_status()
+            return response.json()
+        response.raise_for_status()
+        return {}
 
-    def get_selling_plans(self):
-        return self._get("/selling-plan-group")
+    def get_customer_subscriptions(self, email_or_name: str) -> dict:
+        return self._get("/order/formatted", {"filterLike[emailOrName]": email_or_name})
 
-    def get_customer_subscriptions(self, email_or_name: str):
-        """Raw response for one customer. Shape confirmed fields: custRel.id, sts[] (list of subs, sts[].id)."""
-        params = {"filterLike[emailOrName]": email_or_name}
-        return self._get("/order/formatted", params=params)
+    @staticmethod
+    def _first(source: dict, *keys):
+        for key in keys:
+            value = source.get(key)
+            if value not in (None, ""):
+                return value
+        return None
 
-    def parse_subscriptions(self, email: str, raw: dict):
-        """
-        Best-effort parse. custRel.id and sts[].id are confirmed field names.
-        status / next_order_date / plan_id are inferred — verify against a raw
-        dump for your account and adjust here if the field names differ.
-        """
-        if not raw or "data" not in raw:
-            return []
+    @staticmethod
+    def _normalize_status(value) -> str | None:
+        if value in (None, ""):
+            return None
+        text = str(value).strip().lower()
+        if any(token in text for token in ("cancel", "terminated", "ended", "inactive")):
+            return "cancelled"
+        if any(token in text for token in ("pause", "hold", "skipped")):
+            return "paused"
+        if any(token in text for token in ("active", "enabled", "live", "subscribed")):
+            return "active"
+        return text
 
-        records = []
-        for entry in raw["data"]:
-            cust_rel_id = (entry.get("custRel") or {}).get("id")
-            subs = entry.get("sts", [])
-            for idx, sub in enumerate(subs):
+    def parse_subscriptions(self, email: str, raw: dict) -> list[dict]:
+        """Normalize common Smartrr response aliases without inventing missing statuses."""
+        records: list[dict] = []
+        data = raw.get("data") if isinstance(raw, dict) else None
+        if not isinstance(data, list):
+            return records
+
+        for entry in data:
+            cust_rel = entry.get("custRel") or entry.get("customerRelation") or {}
+            subscriptions = entry.get("sts") or entry.get("subscriptions") or []
+            if isinstance(subscriptions, dict):
+                subscriptions = list(subscriptions.values())
+            for index, sub in enumerate(subscriptions):
+                if not isinstance(sub, dict):
+                    continue
+                raw_status = self._first(
+                    sub, "status", "purchaseState", "state", "subscriptionStatus", "subscription_status"
+                )
+                cancelled_at = self._first(
+                    sub, "cancelledAt", "canceledAt", "cancelled_at", "canceled_at", "endedAt", "ended_at"
+                )
+                status = self._normalize_status(raw_status)
+                if cancelled_at and status is None:
+                    status = "cancelled"
                 records.append({
                     "customer_email": email,
-                    "customer_relation_id": cust_rel_id,
-                    "subscription_id": sub.get("id"),
-                    "status": sub.get("status") or sub.get("purchaseState"),
-                    "next_order_date": sub.get("nextOrderDate") or sub.get("nextBillingDate"),
-                    "plan_id": sub.get("sellingPlanId"),
-                    "is_most_recent": idx == 0,
+                    "customer_relation_id": cust_rel.get("id") or entry.get("customerRelationId"),
+                    "subscription_id": sub.get("id") or sub.get("subscriptionId"),
+                    "status": status,
+                    "raw_status": raw_status,
+                    "created_at": self._first(sub, "createdAt", "created_at", "startedAt", "started_at"),
+                    "cancelled_at": cancelled_at,
+                    "next_order_date": self._first(
+                        sub, "nextOrderDate", "nextBillingDate", "next_order_date", "next_billing_date"
+                    ),
+                    "plan_id": self._first(sub, "sellingPlanId", "selling_plan_id", "planId", "plan_id"),
+                    "is_most_recent": index == 0,
                 })
         return records
-
-
-if __name__ == "__main__":
-    client = SmartrrClient(access_token=os.environ["SMARTRR_ACCESS_TOKEN"])
-    plans = client.get_selling_plans()
-    print(plans)
