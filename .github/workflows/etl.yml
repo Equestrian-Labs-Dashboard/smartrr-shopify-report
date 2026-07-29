@@ -20,10 +20,12 @@ concurrency:
 jobs:
   run-etl:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 45
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,11 +47,20 @@ jobs:
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
         run: python src/main.py
 
+      - name: Validate generated JSON
+        run: |
+          python -m json.tool data/orders_report.json > /dev/null
+          python -m json.tool data/subscriptions_report.json > /dev/null
+
       - name: Commit updated report
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "Update subscription analytics [automated]"
+          if git diff --staged --quiet; then
+            echo "No report changes to commit."
+            exit 0
+          fi
+          git commit -m "Update SmartPay subscription analytics [automated]"
           git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push
+          git push origin "HEAD:${GITHUB_REF_NAME}"
