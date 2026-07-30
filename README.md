@@ -1,38 +1,35 @@
-# SmartPay — Shopify + Smartrr Subscription Performance
+# SmartPay — Shopify + Smartrr Analytics
 
-SmartPay is a GitHub Actions ETL and static GitHub Pages dashboard. Shopify is the source of truth for orders, discounts, returns, products, unit costs, COGS and margins. Smartrr is the source of truth for subscription contracts and billing dates.
+This version separates metrics by source and confidence.
 
-## Important subscription correction
+## Sources
 
-Subscription discovery no longer depends on the selected order report year. Every run builds the Smartrr customer universe from subscription-tagged Shopify orders beginning at `2025-01-01`, then includes emails preserved in prior order and subscription datasets. This allows subscriptions created in 2025 to remain visible during 2026 even when no new subscription was created in 2026.
+- **Shopify:** orders, discounts, returns, product lines, unit costs, net sales, COGS, gross profit and gross margin.
+- **Smartrr vendor customer lookup:** subscription records, readable contract status and future billing dates.
+- **Smartrr Advanced Analytics:** active subscriptions, churn, CLTV and subscription revenue are a separate analytics dataset. The vendor lookup endpoint does not guarantee the same results.
 
-Status handling:
+## Important correction
 
-- `active`, `paused`, and `cancelled`: confirmed from a Smartrr status or cancellation date.
-- `active_inferred`: status was missing, but Smartrr provided a future billing date.
-- `unknown`: neither a usable status nor a future billing date was available.
+Subscription status is now read only from the subscription contract object. Parent formatted-order status is never used to overwrite a subscription status. This prevents active subscriptions from being incorrectly classified as cancelled.
 
-The dashboard displays confirmed and inferred active subscriptions separately. Unknown records are never treated as cancelled. Churn is shown only as an estimated current-snapshot ratio using dated YTD cancellations.
+Unknown subscription statuses are excluded from active and cancelled counts. A future billing date is shown as `active_inferred`, not as a confirmed active status.
 
-## Repository configuration
+## Optional official Smartrr metrics
 
-Secrets:
+To display the same headline values shown in Smartrr Advanced Analytics, add repository variables populated from its export:
 
-- `SHOPIFY_ACCESS_TOKEN`
-- `SMARTRR_ACCESS_TOKEN`
+- `SMARTRR_OFFICIAL_ACTIVE_SUBSCRIPTIONS`
+- `SMARTRR_OFFICIAL_CHURN_RATE` as a decimal, e.g. `0.3421`
+- `SMARTRR_OFFICIAL_CLTV`
+- `SMARTRR_OFFICIAL_SUBSCRIPTION_REVENUE`
 
-Variables:
+When these are absent, the dashboard clearly labels operational or derived metrics and leaves churn unavailable rather than displaying a false `100%`.
 
-- `SHOPIFY_STORE_DOMAIN`
-- `SHOPIFY_API_VERSION` (optional)
-- `ORDERS_LOOKBACK_DAYS` (optional)
-- `SUBSCRIPTION_HISTORY_START` (optional, defaults to `2025-01-01T00:00:00Z`)
+## Rebuild
 
-## Full historical refresh
+Run the workflow for:
 
-Run **Subscriptions ETL** twice:
+1. `2025`
+2. `2026`
 
-1. `report_year = 2025`
-2. `report_year = 2026`
-
-The subscription customer universe is rebuilt from 2025 onward on both runs, while the order datasets are merged and deduplicated by order ID.
+Set `SUBSCRIPTION_HISTORY_START=2025-01-01T00:00:00Z`.

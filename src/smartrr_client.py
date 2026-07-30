@@ -1,15 +1,18 @@
-"""Smartrr API client for SmartPay subscription analytics.
+"""Smartrr API client for SmartPay analytics.
 
-The public customer lookup response has changed shape across Smartrr integrations.
-This parser therefore reads confirmed status/date fields from the subscription record,
-common nested contract objects, and the parent formatted-order record. It never turns a
-missing status into a confirmed cancellation. A future billing date is retained as an
-explicit operational inference so the dashboard can separate confirmed and inferred data.
+Important:
+- /vendor/order/formatted is a customer lookup endpoint, not the same dataset used
+  by Smartrr Advanced Analytics (Looker).
+- Status is read only from the subscription/contract object. Parent order records
+  are not allowed to overwrite subscription status because that caused active
+  subscriptions to be misclassified as cancelled.
+- Future billing dates create an explicit operational inference, never a confirmed status.
 """
 
 from __future__ import annotations
 
 import datetime as dt
+import json
 import time
 from typing import Any
 
@@ -29,7 +32,10 @@ class SmartrrClient:
         response = None
         for attempt in range(5):
             response = requests.get(
-                f"{self.BASE_URL}{path}", headers=self.headers, params=params, timeout=45
+                f"{self.BASE_URL}{path}",
+                headers=self.headers,
+                params=params,
+                timeout=45,
             )
             if response.status_code == 429 or response.status_code >= 500:
                 time.sleep(min(2**attempt, 16))
@@ -41,7 +47,10 @@ class SmartrrClient:
         return {}
 
     def get_customer_subscriptions(self, email_or_name: str) -> dict:
-        return self._get("/order/formatted", {"filterLike[emailOrName]": email_or_name})
+        return self._get(
+            "/order/formatted",
+            {"filterLike[emailOrName]": email_or_name},
+        )
 
     @staticmethod
     def _first(source: dict, *keys):
@@ -87,16 +96,14 @@ class SmartrrClient:
             return None
 
     @staticmethod
-    def _nested_sources(record: dict) -> list[dict]:
-        """Return likely containers without recursively walking arbitrary payload data."""
+    def _contract_sources(record: dict) -> list[dict]:
+        """Return subscription-level containers only."""
         sources = [record]
         for key in (
             "contract",
             "subscriptionContract",
             "subscription_contract",
             "shopifySubscriptionContract",
-            "sellingPlan",
-            "selling_plan",
             "details",
             "metadata",
         ):
@@ -105,8 +112,56 @@ class SmartrrClient:
                 sources.append(value)
         return sources
 
+    @classmethod
+    def _extract_items(cls, sources: list[dict]) -> list[dict]:
+        """Best-effort extraction of queued subscription items and prices."""
+        arrays = []
+        for source in sources:
+            for key in (
+                "lineItems", "line_items", "items", "products",
+                "subscriptionLineItems", "subscription_line_items",
+            ):
+                value = source.get(key) if isinstance(source, dict) else None
+                if isinstance(value, list):
+                    arrays.extend(value)
+
+        items = []
+        for item in arrays:
+            if not isinstance(item, dict):
+                continue
+            variant = item.get("variant") if isinstance(item.get("variant"), dict) else {}
+            product = item.get("product") if isinstance(item.get("product"), dict) else {}
+            price_value = cls._first_across(
+                [item, variant],
+                "price", "unitPrice", "unit_price", "amount",
+            )
+            if isinstance(price_value, dict):
+                price_value = price_value.get("amount")
+            try:
+                price = float(price_value) if price_value not in (None, "") else None
+            except (TypeError, ValueError):
+                price = None
+            try:
+                quantity = float(cls._first(item, "quantity", "qty") or 1)
+            except (TypeError, ValueError):
+                quantity = 1.0
+            items.append({
+                "product": cls._first_across(
+                    [item, product], "productTitle", "product_title", "title", "name"
+                ) or "Unknown product",
+                "variant": cls._first_across(
+                    [item, variant], "variantTitle", "variant_title", "title", "name"
+                ) or "",
+                "variant_id": str(cls._first_across(
+                    [item, variant], "variantId", "variant_id", "id"
+                ) or ""),
+                "quantity": quantity,
+                "unit_price": price,
+                "estimated_revenue": price * quantity if price is not None else None,
+            })
+        return items
+
     def parse_subscriptions(self, email: str, raw: dict) -> list[dict]:
-        """Normalize one customer's subscriptions and preserve status confidence."""
         records: list[dict] = []
         data = raw.get("data") if isinstance(raw, dict) else None
         if not isinstance(data, list):
@@ -116,18 +171,27 @@ class SmartrrClient:
         for entry in data:
             if not isinstance(entry, dict):
                 continue
+
             cust_rel = entry.get("custRel") or entry.get("customerRelation") or {}
-            subscriptions = entry.get("sts") or entry.get("subscriptions") or entry.get("subscriptionContracts") or []
+            subscriptions = (
+                entry.get("sts")
+                or entry.get("subscriptions")
+                or entry.get("subscriptionContracts")
+                or []
+            )
             if isinstance(subscriptions, dict):
                 subscriptions = list(subscriptions.values())
             if not isinstance(subscriptions, list):
                 continue
 
-            parent_sources = self._nested_sources(entry)
             for index, sub in enumerate(subscriptions):
                 if not isinstance(sub, dict):
                     continue
-                sources = self._nested_sources(sub) + parent_sources
+
+                # Critical correction: status and cancellation fields are read from the
+                # subscription contract only, never from the parent formatted order.
+                sources = self._contract_sources(sub)
+
                 raw_status = self._first_across(
                     sources,
                     "status",
@@ -171,12 +235,12 @@ class SmartrrClient:
 
                 status = self._normalize_status(raw_status)
                 confidence = "confirmed" if status in {"active", "paused", "cancelled"} else "unknown"
-                status_source = "api_status" if confidence == "confirmed" else "missing"
+                status_source = "contract_status" if confidence == "confirmed" else "missing"
 
                 if cancelled_at:
                     status = "cancelled"
                     confidence = "confirmed"
-                    status_source = "cancellation_date"
+                    status_source = "contract_cancellation_date"
                 elif status not in {"active", "paused", "cancelled"}:
                     next_date = self._parse_date(next_order_date)
                     if next_date and next_date >= now:
@@ -186,22 +250,43 @@ class SmartrrClient:
                     else:
                         status = "unknown"
 
-                records.append(
-                    {
-                        "customer_email": email,
-                        "customer_relation_id": cust_rel.get("id") or entry.get("customerRelationId"),
-                        "subscription_id": sub.get("id") or sub.get("subscriptionId") or sub.get("contractId"),
-                        "status": status,
-                        "status_confidence": confidence,
-                        "status_source": status_source,
-                        "raw_status": raw_status,
-                        "created_at": created_at,
-                        "cancelled_at": cancelled_at,
-                        "next_order_date": next_order_date,
-                        "plan_id": self._first_across(
-                            sources, "sellingPlanId", "selling_plan_id", "planId", "plan_id"
-                        ),
-                        "is_most_recent": index == 0,
-                    }
+                items = self._extract_items(sources)
+                estimated_revenue = sum(
+                    float(item["estimated_revenue"])
+                    for item in items
+                    if item.get("estimated_revenue") is not None
                 )
+                if not any(item.get("estimated_revenue") is not None for item in items):
+                    estimated_revenue = None
+
+                records.append({
+                    "customer_email": email,
+                    "customer_relation_id": (
+                        cust_rel.get("id") or entry.get("customerRelationId")
+                    ),
+                    "subscription_id": (
+                        sub.get("id")
+                        or sub.get("subscriptionId")
+                        or sub.get("contractId")
+                    ),
+                    "status": status,
+                    "status_confidence": confidence,
+                    "status_source": status_source,
+                    "raw_status": raw_status,
+                    "created_at": created_at,
+                    "cancelled_at": cancelled_at,
+                    "next_order_date": next_order_date,
+                    "plan_id": self._first_across(
+                        sources,
+                        "sellingPlanId",
+                        "selling_plan_id",
+                        "planId",
+                        "plan_id",
+                    ),
+                    "estimated_next_revenue": estimated_revenue,
+                    "subscription_items": json.dumps(
+                        items, ensure_ascii=False, separators=(",", ":")
+                    ),
+                    "is_most_recent": index == 0,
+                })
         return records

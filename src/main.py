@@ -246,9 +246,218 @@ def write_dataset(frame: pd.DataFrame, stem: str) -> None:
     frame.to_json(OUTPUT_DIR / f"{stem}.json", orient="records", indent=2, force_ascii=False)
 
 
+
+def minimal_order_metrics(order: dict) -> dict:
+    gross = number(order.get("total_line_items_price"))
+    original_subtotal = number(
+        order.get("subtotal_price"),
+        gross - number(order.get("total_discounts")),
+    )
+    current_subtotal = number(order.get("current_subtotal_price"), original_subtotal)
+    return {
+        "order_id": str(order.get("id") or ""),
+        "created_at": order.get("created_at"),
+        "gross_sales": gross,
+        "net_sales": max(current_subtotal, 0.0),
+        "is_subscription": ShopifyClient.is_subscription_order(order),
+    }
+
+
+def optional_number(name: str) -> float | None:
+    value = (os.environ.get(name) or "").strip()
+    if not value:
+        return None
+    try:
+        return float(value)
+    except ValueError:
+        log(f"WARNING: {name} is not numeric and will be ignored.")
+        return None
+
+
+def create_analytics_summary(
+    all_shopify_orders: list[dict],
+    orders_frame: pd.DataFrame,
+    subscriptions_frame: pd.DataFrame,
+    updated_at: str,
+) -> dict:
+    now = dt.datetime.now(dt.timezone.utc)
+    order_metrics = [minimal_order_metrics(order) for order in all_shopify_orders]
+
+    total_orders = len(order_metrics)
+    subscription_orders = sum(1 for row in order_metrics if row["is_subscription"])
+    total_net_sales = sum(row["net_sales"] for row in order_metrics)
+    subscription_net_sales = sum(
+        row["net_sales"] for row in order_metrics if row["is_subscription"]
+    )
+
+    subscriptions = subscriptions_frame.copy()
+    if subscriptions.empty:
+        subscriptions = pd.DataFrame(columns=[
+            "status", "status_confidence", "customer_email", "next_order_date",
+            "cancelled_at", "estimated_next_revenue", "subscription_items",
+        ])
+
+    status = subscriptions.get("status", pd.Series(dtype=str)).fillna("").str.lower()
+    confidence = subscriptions.get(
+        "status_confidence", pd.Series(dtype=str)
+    ).fillna("").str.lower()
+
+    confirmed_active = int(((status == "active") & (confidence == "confirmed")).sum())
+    inferred_active = int((status == "active_inferred").sum())
+    paused = int((status == "paused").sum())
+    confirmed_cancelled = int(
+        ((status == "cancelled") & (confidence == "confirmed")).sum()
+    )
+    unknown = int((status == "unknown").sum())
+
+    operational_active = confirmed_active + inferred_active
+    known_status = confirmed_active + paused + confirmed_cancelled + inferred_active
+    status_coverage = known_status / len(subscriptions) if len(subscriptions) else None
+
+    next_dates = pd.to_datetime(
+        subscriptions.get("next_order_date", pd.Series(dtype=str)),
+        errors="coerce",
+        utc=True,
+    )
+    future_mask = next_dates.notna() & (next_dates >= pd.Timestamp(now))
+    upcoming_90_mask = future_mask & (
+        next_dates <= pd.Timestamp(now + dt.timedelta(days=90))
+    )
+
+    upcoming_rows = []
+    for index in subscriptions.index[future_mask]:
+        row = subscriptions.loc[index]
+        upcoming_rows.append({
+            "subscription_id": row.get("subscription_id"),
+            "customer_email": row.get("customer_email"),
+            "next_order_date": row.get("next_order_date"),
+            "status": row.get("status"),
+            "estimated_revenue": number(
+                row.get("estimated_next_revenue"), default=0.0
+            ) if row.get("estimated_next_revenue") not in (None, "", "nan") else None,
+            "subscription_items": row.get("subscription_items") or "[]",
+        })
+
+    # Official Smartrr metrics may be supplied from an Advanced Analytics export
+    # or repository variables. They always take priority over operational estimates.
+    official_active = optional_number("SMARTRR_OFFICIAL_ACTIVE_SUBSCRIPTIONS")
+    official_churn = optional_number("SMARTRR_OFFICIAL_CHURN_RATE")
+    official_cltv = optional_number("SMARTRR_OFFICIAL_CLTV")
+    official_subscription_revenue = optional_number(
+        "SMARTRR_OFFICIAL_SUBSCRIPTION_REVENUE"
+    )
+
+    subscription_customers = int(
+        subscriptions.get("customer_email", pd.Series(dtype=str))
+        .fillna("")
+        .replace("", pd.NA)
+        .dropna()
+        .nunique()
+    )
+    derived_cltv = (
+        subscription_net_sales / subscription_customers
+        if subscription_customers
+        else None
+    )
+
+    renewals_by_month: dict[str, dict] = {}
+    for row in upcoming_rows:
+        parsed = pd.to_datetime(row["next_order_date"], errors="coerce", utc=True)
+        if pd.isna(parsed):
+            continue
+        key = parsed.strftime("%Y-%m")
+        bucket = renewals_by_month.setdefault(
+            key,
+            {"month": key, "subscriptions": 0, "estimated_revenue": 0.0, "revenue_coverage": 0},
+        )
+        bucket["subscriptions"] += 1
+        if row["estimated_revenue"] is not None:
+            bucket["estimated_revenue"] += float(row["estimated_revenue"])
+            bucket["revenue_coverage"] += 1
+
+    return {
+        "report_updated_at": updated_at,
+        "data_scope_start": os.environ.get(
+            "SUBSCRIPTION_HISTORY_START", "2025-01-01T00:00:00Z"
+        ),
+        "shopify": {
+            "total_orders": total_orders,
+            "subscription_orders": subscription_orders,
+            "subscription_order_share": (
+                subscription_orders / total_orders if total_orders else None
+            ),
+            "total_net_sales": round(total_net_sales, 2),
+            "subscription_net_sales": round(subscription_net_sales, 2),
+        },
+        "subscriptions": {
+            "records": int(len(subscriptions)),
+            "customers": subscription_customers,
+            "confirmed_active": confirmed_active,
+            "inferred_active": inferred_active,
+            "operational_active": operational_active,
+            "paused": paused,
+            "confirmed_cancelled": confirmed_cancelled,
+            "unknown": unknown,
+            "status_coverage": status_coverage,
+            "upcoming_all": int(future_mask.sum()),
+            "upcoming_90_days": int(upcoming_90_mask.sum()),
+            "upcoming_revenue_estimate": round(
+                sum(
+                    row["estimated_revenue"]
+                    for row in upcoming_rows
+                    if row["estimated_revenue"] is not None
+                ),
+                2,
+            ),
+            "upcoming_revenue_coverage": sum(
+                1 for row in upcoming_rows if row["estimated_revenue"] is not None
+            ),
+            "derived_cltv": round(derived_cltv, 2) if derived_cltv is not None else None,
+        },
+        "official_metrics": {
+            "active_subscriptions": official_active,
+            "churn_rate": official_churn,
+            "cltv": official_cltv,
+            "subscription_revenue": official_subscription_revenue,
+            "source": (
+                "Smartrr Advanced Analytics override"
+                if any(
+                    value is not None
+                    for value in (
+                        official_active,
+                        official_churn,
+                        official_cltv,
+                        official_subscription_revenue,
+                    )
+                )
+                else None
+            ),
+        },
+        "renewals_by_month": sorted(renewals_by_month.values(), key=lambda row: row["month"]),
+        "upcoming_renewals": sorted(
+            upcoming_rows, key=lambda row: row.get("next_order_date") or ""
+        ),
+        "metric_notes": {
+            "active": (
+                "Official Smartrr value when configured; otherwise confirmed active "
+                "plus subscriptions inferred active from a future billing date."
+            ),
+            "churn": (
+                "Not calculated from customer lookup records. Churn requires the "
+                "official Advanced Analytics value or historical beginning/ending snapshots."
+            ),
+            "cltv": (
+                "Official Smartrr CLTV when configured; otherwise subscription net sales "
+                "divided by distinct subscription customers in the loaded Shopify history."
+            ),
+        },
+    }
+
+
 def main() -> None:
     created_at_min, created_at_max, label = query_window()
     updated_at = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+
     shopify = ShopifyClient(
         os.environ["SHOPIFY_STORE_DOMAIN"],
         os.environ["SHOPIFY_ACCESS_TOKEN"],
@@ -256,8 +465,17 @@ def main() -> None:
     )
     smartrr = SmartrrClient(os.environ["SMARTRR_ACCESS_TOKEN"])
 
-    log(f"Fetching Shopify subscription orders for {label}...")
-    raw_orders = shopify.get_subscription_orders(created_at_min, created_at_max)
+    log(f"Fetching all Shopify orders for {label}...")
+    all_raw_orders = shopify.get_orders(created_at_min, created_at_max)
+    raw_orders = [
+        order for order in all_raw_orders
+        if ShopifyClient.is_subscription_order(order)
+    ]
+    log(
+        f"  {len(raw_orders)} subscription orders found "
+        f"out of {len(all_raw_orders)} total Shopify orders"
+    )
+
     variant_ids = [
         str(item.get("variant_id"))
         for order in raw_orders
@@ -273,57 +491,98 @@ def main() -> None:
 
     current_orders = normalize_orders(raw_orders, unit_costs, updated_at)
 
-    # Subscription discovery must not depend on the selected report year. A customer who
-    # subscribed in 2025 can still be active in 2026 without placing a new first order.
-    # Build the customer universe from subscription-tagged Shopify orders beginning in 2025,
-    # then merge prior report history so legacy subscribers remain discoverable.
-    subscription_history_start = (os.environ.get("SUBSCRIPTION_HISTORY_START") or "2025-01-01T00:00:00Z").strip()
-    log(f"Building Smartrr customer universe from Shopify since {subscription_history_start}...")
-    history_orders = raw_orders
+    subscription_history_start = (
+        os.environ.get("SUBSCRIPTION_HISTORY_START")
+        or "2025-01-01T00:00:00Z"
+    ).strip()
+    log(
+        "Building the Smartrr customer universe from Shopify subscription "
+        f"orders since {subscription_history_start}..."
+    )
+
     if created_at_min > subscription_history_start:
-        history_orders = shopify.get_subscription_orders(subscription_history_start, None)
+        history_orders = shopify.get_subscription_orders(
+            subscription_history_start, None
+        )
+    else:
+        history_orders = raw_orders
 
     emails = {
-        ((order.get("customer") or {}).get("email") or order.get("email") or "").strip().lower()
+        (
+            (order.get("customer") or {}).get("email")
+            or order.get("email")
+            or ""
+        ).strip().lower()
         for order in history_orders
     }
     emails.discard("")
 
-    for history_path, email_column in (
-        (OUTPUT_DIR / "orders_report.csv", "customer_email"),
-        (OUTPUT_DIR / "subscriptions_report.csv", "customer_email"),
+    for history_path in (
+        OUTPUT_DIR / "orders_report.csv",
+        OUTPUT_DIR / "subscriptions_report.csv",
     ):
         if history_path.exists():
             try:
                 historic = pd.read_csv(history_path, dtype=str)
-                if email_column in historic.columns:
-                    emails.update(historic[email_column].fillna("").str.strip().str.lower())
+                if "customer_email" in historic.columns:
+                    emails.update(
+                        historic["customer_email"]
+                        .fillna("")
+                        .str.strip()
+                        .str.lower()
+                    )
             except (pd.errors.EmptyDataError, OSError):
                 pass
+
     emails.discard("")
     emails = sorted(emails)
 
     subscription_rows: list[dict] = []
-    log(f"Fetching all Smartrr subscriptions for {len(emails)} customers discovered from 2025 onward...")
+    log(f"Fetching Smartrr subscriptions for {len(emails)} customers...")
     for index, email in enumerate(emails, 1):
         try:
-            subscription_rows.extend(smartrr.parse_subscriptions(email, smartrr.get_customer_subscriptions(email)))
+            raw = smartrr.get_customer_subscriptions(email)
+            subscription_rows.extend(
+                smartrr.parse_subscriptions(email, raw)
+            )
         except Exception as exc:
             log(f"WARNING: Smartrr lookup failed for {email}: {exc}")
         if index % 10 == 0 or index == len(emails):
             log(f"  {index}/{len(emails)} customers processed")
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    all_orders = merge_history(current_orders, OUTPUT_DIR / "orders_report.csv", "order_id")
+
+    all_orders = merge_history(
+        current_orders,
+        OUTPUT_DIR / "orders_report.csv",
+        "order_id",
+    )
     all_subscriptions = merge_history(
         normalize_subscriptions(subscription_rows, updated_at),
         OUTPUT_DIR / "subscriptions_report.csv",
         "subscription_id",
     )
+
     write_dataset(all_orders, "orders_report")
     write_dataset(all_subscriptions, "subscriptions_report")
-    log(f"Orders report written: {len(all_orders)} unique orders")
-    log(f"Subscriptions report written: {len(all_subscriptions)} unique subscriptions")
+
+    summary = create_analytics_summary(
+        all_raw_orders,
+        all_orders,
+        all_subscriptions,
+        updated_at,
+    )
+    (OUTPUT_DIR / "analytics_summary.json").write_text(
+        json.dumps(summary, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    log(f"Orders report written: {len(all_orders)} unique subscription orders")
+    log(
+        f"Subscriptions report written: "
+        f"{len(all_subscriptions)} unique subscription records"
+    )
+    log("Analytics summary written: data/analytics_summary.json")
 
 
 if __name__ == "__main__":
