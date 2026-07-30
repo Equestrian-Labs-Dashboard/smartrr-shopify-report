@@ -1,67 +1,51 @@
 name: Subscriptions ETL
 
 on:
-  schedule:
-    - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
       report_year:
-        description: "Calendar year to rebuild, for example 2026. Leave empty for the rolling update."
+        description: "Calendar year to rebuild, e.g. 2025 or 2026"
         required: false
         type: string
+  schedule:
+    - cron: "0 9 * * *"
 
 permissions:
   contents: write
 
-concurrency:
-  group: subscriptions-etl
-  cancel-in-progress: false
-
 jobs:
   run-etl:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
           cache: pip
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run Shopify and Smartrr ETL
+      - run: pip install -r requirements.txt
+      - name: Run SmartPay ETL
         env:
-          PYTHONUNBUFFERED: "1"
           SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
-          ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}
-          SUBSCRIPTION_HISTORY_START: ${{ vars.SUBSCRIPTION_HISTORY_START }}
-          REPORT_YEAR: ${{ inputs.report_year }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
+          REPORT_YEAR: ${{ inputs.report_year }}
+          ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}
+          SUBSCRIPTION_HISTORY_START: ${{ vars.SUBSCRIPTION_HISTORY_START }}
+          SMARTRR_OFFICIAL_ACTIVE_SUBSCRIPTIONS: ${{ vars.SMARTRR_OFFICIAL_ACTIVE_SUBSCRIPTIONS }}
+          SMARTRR_OFFICIAL_CHURN_RATE: ${{ vars.SMARTRR_OFFICIAL_CHURN_RATE }}
+          SMARTRR_OFFICIAL_CLTV: ${{ vars.SMARTRR_OFFICIAL_CLTV }}
+          SMARTRR_OFFICIAL_SUBSCRIPTION_REVENUE: ${{ vars.SMARTRR_OFFICIAL_SUBSCRIPTION_REVENUE }}
         run: python src/main.py
-
-      - name: Validate generated JSON
+      - name: Validate JSON output
         run: |
-          python -m json.tool data/orders_report.json > /dev/null
-          python -m json.tool data/subscriptions_report.json > /dev/null
-
-      - name: Commit updated report
+          python -m json.tool data/orders_report.json >/dev/null
+          python -m json.tool data/subscriptions_report.json >/dev/null
+          python -m json.tool data/analytics_summary.json >/dev/null
+      - name: Commit report data
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          if git diff --staged --quiet; then
-            echo "No report changes to commit."
-            exit 0
-          fi
-          git commit -m "Update SmartPay subscription analytics [automated]"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git diff --cached --quiet || git commit -m "Update SmartPay analytics data"
+          git push
