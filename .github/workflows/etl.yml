@@ -42,6 +42,7 @@ jobs:
           SHOPIFY_STORE_DOMAIN: ${{ vars.SHOPIFY_STORE_DOMAIN }}
           SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION }}
           ORDERS_LOOKBACK_DAYS: ${{ vars.ORDERS_LOOKBACK_DAYS }}
+          SUBSCRIPTION_HISTORY_START: ${{ vars.SUBSCRIPTION_HISTORY_START }}
           REPORT_YEAR: ${{ inputs.report_year }}
           SHOPIFY_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
           SMARTRR_ACCESS_TOKEN: ${{ secrets.SMARTRR_ACCESS_TOKEN }}
