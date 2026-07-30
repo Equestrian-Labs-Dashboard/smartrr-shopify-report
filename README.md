@@ -1,55 +1,38 @@
 # SmartPay — Shopify + Smartrr Subscription Performance
 
-This repository builds an English-language dashboard directly from Shopify and Smartrr. It does not use Google Sheets, Apps Script, `gspread`, or spreadsheet values as financial inputs.
+SmartPay is a GitHub Actions ETL and static GitHub Pages dashboard. Shopify is the source of truth for orders, discounts, returns, products, unit costs, COGS and margins. Smartrr is the source of truth for subscription contracts and billing dates.
 
-## Dashboard sections
+## Important subscription correction
 
-- **Overview:** period KPIs plus Year-to-Date subscription KPIs.
-- **Orders:** order-level audit table and a three-order validation sample.
-- **Products:** all products and variants sold in the selected period.
-- **Customers:** all customers in the selected period.
+Subscription discovery no longer depends on the selected order report year. Every run builds the Smartrr customer universe from subscription-tagged Shopify orders beginning at `2025-01-01`, then includes emails preserved in prior order and subscription datasets. This allows subscriptions created in 2025 to remain visible during 2026 even when no new subscription was created in 2026.
 
-The previous standalone Subscriptions tab was removed. Useful subscription KPIs now appear in Overview.
+Status handling:
 
-## Sales formulas
+- `active`, `paused`, and `cancelled`: confirmed from a Smartrr status or cancellation date.
+- `active_inferred`: status was missing, but Smartrr provided a future billing date.
+- `unknown`: neither a usable status nor a future billing date was available.
 
-- `Gross Sales = Shopify total_line_items_price`
-- `Discounts = Gross Sales - Shopify subtotal_price`
-- `Returns = Shopify subtotal_price - Shopify current_subtotal_price`
-- `Net Sales = Shopify current_subtotal_price`
-- `Formula Check = Gross Sales - Discounts - Returns - Net Sales` (must be `0.00`)
-- `COGS = net quantity × Shopify variant unit cost`
-- `Gross Profit = Net Sales - COGS`
-- `Gross Margin = Gross Profit / Net Sales`
+The dashboard displays confirmed and inferred active subscriptions separately. Unknown records are never treated as cancelled. Churn is shown only as an estimated current-snapshot ratio using dated YTD cancellations.
 
-Gross Profit and Gross Margin are shown only when every net unit in an order has a Shopify unit cost. Missing costs are never replaced with spreadsheet values.
+## Repository configuration
 
-## Required GitHub configuration
-
-Repository secrets:
+Secrets:
 
 - `SHOPIFY_ACCESS_TOKEN`
 - `SMARTRR_ACCESS_TOKEN`
 
-Repository variables:
+Variables:
 
 - `SHOPIFY_STORE_DOMAIN`
-- `SHOPIFY_API_VERSION` (optional, defaults to `2025-01`)
-- `ORDERS_LOOKBACK_DAYS` (optional, defaults to `120`)
+- `SHOPIFY_API_VERSION` (optional)
+- `ORDERS_LOOKBACK_DAYS` (optional)
+- `SUBSCRIPTION_HISTORY_START` (optional, defaults to `2025-01-01T00:00:00Z`)
 
-## Full 2026 rebuild
+## Full historical refresh
 
-Run:
+Run **Subscriptions ETL** twice:
 
-**Actions → Subscriptions ETL → Run workflow**
+1. `report_year = 2025`
+2. `report_year = 2026`
 
-Set `report_year` to `2026`. This is required after installing the new fields so historical orders receive discounts, returns, products, costs and audit columns.
-
-## Manual audit required
-
-In the Orders tab, validate the three rows under **Audit sample (3 orders)** against Shopify Admin:
-
-1. The Horse Health approximately 30 lb or zero-margin order when available.
-2. Two deterministic sample orders.
-
-Compare order number, Gross Sales, Discounts, Net Sales, COGS, Gross Profit, Gross Margin and Order Total.
+The subscription customer universe is rebuilt from 2025 onward on both runs, while the order datasets are merged and deduplicated by order ID.

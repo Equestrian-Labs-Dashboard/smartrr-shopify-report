@@ -272,9 +272,39 @@ def main() -> None:
         unit_costs = {}
 
     current_orders = normalize_orders(raw_orders, unit_costs, updated_at)
-    emails = sorted(set(current_orders.get("customer_email", pd.Series(dtype=str)).dropna()) - {""})
+
+    # Subscription discovery must not depend on the selected report year. A customer who
+    # subscribed in 2025 can still be active in 2026 without placing a new first order.
+    # Build the customer universe from subscription-tagged Shopify orders beginning in 2025,
+    # then merge prior report history so legacy subscribers remain discoverable.
+    subscription_history_start = (os.environ.get("SUBSCRIPTION_HISTORY_START") or "2025-01-01T00:00:00Z").strip()
+    log(f"Building Smartrr customer universe from Shopify since {subscription_history_start}...")
+    history_orders = raw_orders
+    if created_at_min > subscription_history_start:
+        history_orders = shopify.get_subscription_orders(subscription_history_start, None)
+
+    emails = {
+        ((order.get("customer") or {}).get("email") or order.get("email") or "").strip().lower()
+        for order in history_orders
+    }
+    emails.discard("")
+
+    for history_path, email_column in (
+        (OUTPUT_DIR / "orders_report.csv", "customer_email"),
+        (OUTPUT_DIR / "subscriptions_report.csv", "customer_email"),
+    ):
+        if history_path.exists():
+            try:
+                historic = pd.read_csv(history_path, dtype=str)
+                if email_column in historic.columns:
+                    emails.update(historic[email_column].fillna("").str.strip().str.lower())
+            except (pd.errors.EmptyDataError, OSError):
+                pass
+    emails.discard("")
+    emails = sorted(emails)
+
     subscription_rows: list[dict] = []
-    log(f"Fetching Smartrr subscriptions for {len(emails)} unique customers...")
+    log(f"Fetching all Smartrr subscriptions for {len(emails)} customers discovered from 2025 onward...")
     for index, email in enumerate(emails, 1):
         try:
             subscription_rows.extend(smartrr.parse_subscriptions(email, smartrr.get_customer_subscriptions(email)))
