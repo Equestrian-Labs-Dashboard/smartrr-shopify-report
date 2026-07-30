@@ -14,11 +14,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-09-24",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -35,11 +37,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -56,11 +60,13 @@
     "next_order_date":"2026-09-03T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -77,11 +83,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-08",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -98,11 +106,13 @@
     "next_order_date":"2026-07-30T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -119,11 +129,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -140,11 +152,13 @@
     "next_order_date":"2027-01-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -161,11 +175,13 @@
     "next_order_date":"2027-01-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -182,11 +198,13 @@
     "next_order_date":"2027-01-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -203,11 +221,13 @@
     "next_order_date":"2027-01-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -224,11 +244,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-14",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -245,11 +267,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -266,11 +290,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-03-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -287,11 +313,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-18",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -308,11 +336,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-15",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -329,11 +359,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-22",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -350,11 +382,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-06",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -371,11 +405,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -392,11 +428,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -413,11 +451,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -434,11 +474,13 @@
     "next_order_date":"2026-08-19T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -455,11 +497,13 @@
     "next_order_date":"2026-08-17T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -476,11 +520,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-06-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -497,11 +543,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -518,11 +566,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -539,11 +589,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-08",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -560,11 +612,13 @@
     "next_order_date":"2026-08-01T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -581,11 +635,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-30",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -602,11 +658,13 @@
     "next_order_date":"2026-08-04T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -623,11 +681,13 @@
     "next_order_date":"2026-08-18T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -644,11 +704,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -665,11 +727,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -686,11 +750,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -707,11 +773,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-12",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -728,11 +796,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -749,11 +819,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-09-16",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -770,11 +842,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -791,11 +865,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-31",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -812,11 +888,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-03-08",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -833,11 +911,13 @@
     "next_order_date":"2026-08-15T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -854,11 +934,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -875,11 +957,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -896,11 +980,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -917,11 +1003,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-03-25",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -938,11 +1026,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-01",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -959,11 +1049,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -980,11 +1072,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-22",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1001,11 +1095,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-15",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1022,11 +1118,13 @@
     "next_order_date":"2026-09-20T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1043,11 +1141,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-02",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1064,11 +1164,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-07-07",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1085,11 +1187,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1106,11 +1210,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-28",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1127,11 +1233,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1148,11 +1256,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-25",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1169,11 +1279,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-09-08",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1190,11 +1302,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-24",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1211,11 +1325,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1232,11 +1348,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1253,11 +1371,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460418106",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-10",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1274,11 +1394,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1295,11 +1417,13 @@
     "next_order_date":"2026-08-17T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1316,11 +1440,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-26",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1337,11 +1463,13 @@
     "next_order_date":"2026-08-31T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1358,11 +1486,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1379,11 +1509,13 @@
     "next_order_date":"2026-08-05T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1400,11 +1532,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1421,11 +1555,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1442,11 +1578,13 @@
     "next_order_date":"2026-08-01T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1463,11 +1601,13 @@
     "next_order_date":"2026-08-01T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1484,11 +1624,13 @@
     "next_order_date":"2026-09-05T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1505,11 +1647,13 @@
     "next_order_date":"2026-09-15T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1526,11 +1670,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-14",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1547,11 +1693,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1568,11 +1716,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-28",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1589,11 +1739,13 @@
     "next_order_date":"2027-01-13T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1610,11 +1762,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1631,11 +1785,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-03",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1652,11 +1808,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-15",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1673,11 +1831,13 @@
     "next_order_date":"2026-08-17T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1694,11 +1854,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-15",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1715,11 +1877,13 @@
     "next_order_date":"2026-12-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1736,11 +1900,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1757,11 +1923,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1778,11 +1946,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1799,11 +1969,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-18",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1820,11 +1992,13 @@
     "next_order_date":"2026-08-09T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1841,11 +2015,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1862,11 +2038,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-07-13",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1883,11 +2061,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1904,11 +2084,13 @@
     "next_order_date":"2026-08-13T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1925,11 +2107,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1946,11 +2130,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1967,11 +2153,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -1988,11 +2176,13 @@
     "next_order_date":"2027-06-06T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2009,11 +2199,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2030,11 +2222,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2051,11 +2245,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-25",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2072,11 +2268,13 @@
     "next_order_date":"2026-08-03T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2093,11 +2291,13 @@
     "next_order_date":"2026-09-04T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2114,11 +2314,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-09",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2135,11 +2337,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2156,11 +2360,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-02",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2177,11 +2383,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-23",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2198,11 +2406,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-13",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2219,11 +2429,13 @@
     "next_order_date":"2026-11-18T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2240,11 +2452,13 @@
     "next_order_date":"2026-11-19T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2261,11 +2475,13 @@
     "next_order_date":"2026-11-18T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2282,11 +2498,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2303,11 +2521,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2324,11 +2544,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2345,11 +2567,13 @@
     "next_order_date":"2027-01-19T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2366,11 +2590,13 @@
     "next_order_date":"2026-08-04T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2387,11 +2613,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2408,11 +2636,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2429,11 +2659,13 @@
     "next_order_date":"2026-08-20T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2450,11 +2682,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2471,11 +2705,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2492,11 +2728,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2513,11 +2751,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2534,11 +2774,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-30",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2555,11 +2797,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2576,11 +2820,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2597,11 +2843,13 @@
     "next_order_date":"2026-10-22T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2618,11 +2866,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-06",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2639,11 +2889,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2660,11 +2912,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2681,11 +2935,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-22",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2702,11 +2958,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-22",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2723,11 +2981,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-06",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2744,11 +3004,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-03",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2765,11 +3027,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2786,11 +3050,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-11",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2807,11 +3073,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-19",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2828,11 +3096,13 @@
     "next_order_date":"2026-08-06T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2849,11 +3119,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-14",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2870,11 +3142,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2891,11 +3165,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2912,11 +3188,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2933,11 +3211,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2954,11 +3234,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2975,11 +3257,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -2996,11 +3280,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-29",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3017,11 +3303,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3038,11 +3326,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-16",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3059,11 +3349,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3080,11 +3372,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-17",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3101,11 +3395,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-27",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3122,11 +3418,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-23",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3143,11 +3441,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-28",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3164,11 +3464,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-03",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3185,11 +3487,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3206,11 +3510,13 @@
     "next_order_date":"2026-10-04T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3227,11 +3533,13 @@
     "next_order_date":"2026-09-13T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3248,11 +3556,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3269,11 +3579,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-28",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3290,11 +3602,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3311,11 +3625,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-29",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3332,11 +3648,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-29",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3353,11 +3671,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-20",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3374,11 +3694,13 @@
     "next_order_date":"2027-01-05T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3395,11 +3717,13 @@
     "next_order_date":"2027-01-05T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3416,11 +3740,13 @@
     "next_order_date":"2026-08-26T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3437,11 +3763,13 @@
     "next_order_date":"2026-08-21T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3458,11 +3786,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3479,11 +3809,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-21",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3500,11 +3832,13 @@
     "next_order_date":"2026-10-01T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3521,11 +3855,13 @@
     "next_order_date":"2026-11-20T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3542,11 +3878,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3563,11 +3901,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-29",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3584,11 +3924,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3605,11 +3947,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3626,11 +3970,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460450874",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3647,11 +3993,13 @@
     "next_order_date":"2026-08-04T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3668,11 +4016,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3689,11 +4039,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-02-02",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3710,11 +4062,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-02",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3731,11 +4085,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-12-02",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3752,11 +4108,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3773,11 +4131,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2460352570",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3794,11 +4154,13 @@
     "next_order_date":"2026-08-24T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3815,11 +4177,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446983226",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"unknown",
-    "status_source":"missing"
+    "status_source":"missing",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3836,11 +4200,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-04-08",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3857,11 +4223,13 @@
     "next_order_date":"2026-10-14T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447048762",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3878,11 +4246,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-01-26",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3899,11 +4269,13 @@
     "next_order_date":"2026-09-01T14:00:00.000Z",
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446721082",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":null,
     "status_confidence":"inferred",
-    "status_source":"future_billing_date"
+    "status_source":"future_billing_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3920,11 +4292,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447015994",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-11-13",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3941,11 +4315,13 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2446950458",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2025-10-23",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   },
   {
     "order_id":null,
@@ -3962,10 +4338,12 @@
     "next_order_date":null,
     "plan_id":"gid:\/\/shopify\/SellingPlan\/2447081530",
     "is_most_recent":true,
-    "report_updated_at":"2026-07-30T05:34:02+00:00",
+    "report_updated_at":"2026-07-30T06:01:13+00:00",
     "raw_status":null,
     "cancelled_at":"2026-05-14",
     "status_confidence":"confirmed",
-    "status_source":"cancellation_date"
+    "status_source":"contract_cancellation_date",
+    "estimated_next_revenue":null,
+    "subscription_items":"[]"
   }
 ]
