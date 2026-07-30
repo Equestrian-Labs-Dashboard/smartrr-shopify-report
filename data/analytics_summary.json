@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-07-30T06:01:13+00:00",
+  "report_updated_at": "2026-07-30T11:03:25+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 3158,
-    "subscription_orders": 162,
-    "subscription_order_share": 0.0512982900569981,
-    "total_net_sales": 539623.08,
-    "subscription_net_sales": 13679.8
+    "total_orders": 1850,
+    "subscription_orders": 73,
+    "subscription_order_share": 0.03945945945945946,
+    "total_net_sales": 294091.96,
+    "subscription_net_sales": 6853.12
   },
   "subscriptions": {
     "records": 189,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 34,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 87.13
+    "derived_cltv": 43.65
   },
   "official_metrics": {
     "active_subscriptions": null,
