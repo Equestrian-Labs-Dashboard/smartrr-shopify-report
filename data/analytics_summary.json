@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-07-30T11:03:25+00:00",
+  "report_updated_at": "2026-07-31T11:27:03+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1850,
+    "total_orders": 1854,
     "subscription_orders": 73,
-    "subscription_order_share": 0.03945945945945946,
-    "total_net_sales": 294091.96,
-    "subscription_net_sales": 6853.12
+    "subscription_order_share": 0.039374325782092774,
+    "total_net_sales": 294371.04,
+    "subscription_net_sales": 6812.62
   },
   "subscriptions": {
     "records": 189,
@@ -19,10 +19,10 @@
     "unknown": 54,
     "status_coverage": 0.7142857142857143,
     "upcoming_all": 48,
-    "upcoming_90_days": 34,
+    "upcoming_90_days": 33,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 43.65
+    "derived_cltv": 43.39
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -33,20 +33,14 @@
   },
   "renewals_by_month": [
     {
-      "month": "2026-07",
-      "subscriptions": 1,
-      "estimated_revenue": 0.0,
-      "revenue_coverage": 0
-    },
-    {
       "month": "2026-08",
-      "subscriptions": 22,
+      "subscriptions": 21,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 7,
+      "subscriptions": 8,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -58,7 +52,7 @@
     },
     {
       "month": "2026-11",
-      "subscriptions": 4,
+      "subscriptions": 5,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -82,22 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "4de6eafb-c554-4c9f-9289-995b4a2a8489",
-      "customer_email": "allison.postier@me.com",
-      "next_order_date": "2026-07-30T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "d455e746-2cd6-45fe-b721-ad576fa88dc0",
-      "customer_email": "briar_glen_riding@yahoo.com",
-      "next_order_date": "2026-08-01T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "d9a3df7f-ba4b-4b94-bb34-9a4f0eccf39c",
       "customer_email": "hltreiner@icloud.com",
@@ -323,6 +301,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "4de6eafb-c554-4c9f-9289-995b4a2a8489",
+      "customer_email": "allison.postier@me.com",
+      "next_order_date": "2026-09-30T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "49278d66-f02d-49d8-a778-8732f20ae003",
       "customer_email": "sonart.mhr@gmail.com",
       "next_order_date": "2026-10-01T14:00:00.000Z",
@@ -350,6 +336,14 @@
       "subscription_id": "fdded550-31fa-4a9f-afc0-f4b6263cfa23",
       "customer_email": "mlsaettler@gmail.com",
       "next_order_date": "2026-10-22T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "d455e746-2cd6-45fe-b721-ad576fa88dc0",
+      "customer_email": "briar_glen_riding@yahoo.com",
+      "next_order_date": "2026-11-01T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
