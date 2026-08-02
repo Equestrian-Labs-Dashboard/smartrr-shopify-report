@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-08-01T10:37:12+00:00",
+  "report_updated_at": "2026-08-02T10:36:25+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1860,
+    "total_orders": 1869,
     "subscription_orders": 72,
-    "subscription_order_share": 0.03870967741935484,
-    "total_net_sales": 294652.32,
-    "subscription_net_sales": 6786.52
+    "subscription_order_share": 0.038523274478330656,
+    "total_net_sales": 294950.59,
+    "subscription_net_sales": 6935.87
   },
   "subscriptions": {
-    "records": 189,
-    "customers": 157,
+    "records": 190,
+    "customers": 158,
     "confirmed_active": 0,
-    "inferred_active": 48,
-    "operational_active": 48,
+    "inferred_active": 49,
+    "operational_active": 49,
     "paused": 0,
     "confirmed_cancelled": 87,
     "unknown": 54,
-    "status_coverage": 0.7142857142857143,
-    "upcoming_all": 48,
-    "upcoming_90_days": 33,
+    "status_coverage": 0.7157894736842105,
+    "upcoming_all": 49,
+    "upcoming_90_days": 34,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 43.23
+    "derived_cltv": 43.9
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,19 +34,19 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 21,
+      "subscriptions": 19,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 8,
+      "subscriptions": 9,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 4,
+      "subscriptions": 6,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,22 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "d9a3df7f-ba4b-4b94-bb34-9a4f0eccf39c",
-      "customer_email": "hltreiner@icloud.com",
-      "next_order_date": "2026-08-01T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "71884844-aba2-4825-bc60-fe036fe65c1c",
-      "customer_email": "hltreiner@icloud.com",
-      "next_order_date": "2026-08-01T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "7b87ba2e-18fc-4a6f-a5b3-8264e33cf6f9",
       "customer_email": "laurenbritton33@gmail.com",
@@ -301,9 +285,33 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "5d75d03a-b7ae-4a37-b010-eadb8818e565",
+      "customer_email": "lakamer@aol.com",
+      "next_order_date": "2026-09-26T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "4de6eafb-c554-4c9f-9289-995b4a2a8489",
       "customer_email": "allison.postier@me.com",
       "next_order_date": "2026-09-30T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "d9a3df7f-ba4b-4b94-bb34-9a4f0eccf39c",
+      "customer_email": "hltreiner@icloud.com",
+      "next_order_date": "2026-10-01T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "71884844-aba2-4825-bc60-fe036fe65c1c",
+      "customer_email": "hltreiner@icloud.com",
+      "next_order_date": "2026-10-01T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
