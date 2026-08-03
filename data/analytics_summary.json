@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-08-02T10:36:25+00:00",
+  "report_updated_at": "2026-08-03T12:18:04+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1869,
+    "total_orders": 1881,
     "subscription_orders": 72,
-    "subscription_order_share": 0.038523274478330656,
-    "total_net_sales": 294950.59,
-    "subscription_net_sales": 6935.87
+    "subscription_order_share": 0.03827751196172249,
+    "total_net_sales": 295676.36,
+    "subscription_net_sales": 6971.78
   },
   "subscriptions": {
-    "records": 190,
-    "customers": 158,
+    "records": 191,
+    "customers": 159,
     "confirmed_active": 0,
-    "inferred_active": 49,
-    "operational_active": 49,
+    "inferred_active": 50,
+    "operational_active": 50,
     "paused": 0,
     "confirmed_cancelled": 87,
     "unknown": 54,
-    "status_coverage": 0.7157894736842105,
-    "upcoming_all": 49,
-    "upcoming_90_days": 34,
-    "upcoming_revenue_estimate": 0,
-    "upcoming_revenue_coverage": 0,
-    "derived_cltv": 43.9
+    "status_coverage": 0.7172774869109948,
+    "upcoming_all": 50,
+    "upcoming_90_days": 35,
+    "upcoming_revenue_estimate": NaN,
+    "upcoming_revenue_coverage": 1,
+    "derived_cltv": 43.85
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,15 +34,15 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 19,
+      "subscriptions": 20,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
       "subscriptions": 9,
-      "estimated_revenue": 0.0,
-      "revenue_coverage": 0
+      "estimated_revenue": NaN,
+      "revenue_coverage": 1
     },
     {
       "month": "2026-10",
@@ -221,6 +221,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "6a5611b9-8fe5-4929-a43c-4416a5b04d05",
+      "customer_email": "mistyloumorris8781@gmail.com",
+      "next_order_date": "2026-08-30T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "95cb935b-ffd2-4a5e-8c8f-90215d614ef2",
       "customer_email": "gwen.itskowitz@gmail.com",
       "next_order_date": "2026-08-31T14:00:00.000Z",
@@ -289,7 +297,7 @@
       "customer_email": "lakamer@aol.com",
       "next_order_date": "2026-09-26T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": null,
+      "estimated_revenue": NaN,
       "subscription_items": "[]"
     },
     {
