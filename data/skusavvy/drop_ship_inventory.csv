@@ -1,0 +1,79 @@
+quantity,bin,binBarcode,shelf,level,productName,productType,sku,option1,option2,option3,lotName,expiration,warehouse,minCost,avgCost,maxCost,price,committed,incoming,velocity
+-1,,,,,DAC Oil Fat & Fatty Acid Supplement,Horse Care > Supplements > Weight Gain & Muscle,OIL38,Size: 38 Pounds,,,,,Drop Ship,114250,114250,114250,147600,0,0,
+-1,,,,,Back on Track Classic Turnout Sheet,Horse Wear > Blankets & Sheets > Turnout Blankets & Sheets > Sheets,21420040,Size: 75,,,,,Drop Ship,144500,144500,144500,289000,0,0,
+-2,,,,,Fortiflex 8-Quart Utility Pail,Stable > Stable Supplies > Feed & Water Buckets,N400-8-TEAL,Size: 8 Quarts,Color: Teal,,,,Drop Ship,3990,3990,3990,6990,0,0,
+-3,,,,,Tough-1 1200D Waterproof Poly Snuggit Turnout Blanket,Horse Wear > Blankets & Sheets > Turnout Blankets & Sheets > Medium Weight,32-21202S-4-69,Size: 69,Color: Royal Blue,,,,Drop Ship,68880,68880,68880,99990,0,0,
+-1,,,,,EquiFit D-Teq Front Boot with ImpacTeq Liner,Tack & Equipment > Boots & Wraps > Protective Boots > Front Boots,01601FXXLB,Size: XX Large,Color: Black with Black Binding,,,,Drop Ship,162750,162750,162750,314000,0,0,
+-1,,,,,TRM Good as Gold + MAG,Horse Care > Supplements > Calming & Focus,323465-1.5,Size: 1.5 Kilograms,,,,,Drop Ship,83200,83200,83200,129990,0,0,
+-1,,,,,EquiFit Essential Dressage Girth with SmartFabric Liner,Tack & Equipment > Girths & Cinches > Dressage Girths,32964BL28,Size: 28-Inch,Color: Black,,,,Drop Ship,67000,67000,67000,134000,0,0,
+-2,,,,,5/A Baker Trailer Tie,Stable > Stable Supplies > Cross Ties & Trailer Ties,7038,Title: Default Title,,,,,Drop Ship,11000,11000,11000,19990,0,0,
+-1,,,,,EquiFit Essential Bell Boot with Fleece Rolled Top,Tack & Equipment > Boots & Wraps > Bell Boots,11269XLBLK,Size: Extra Large,Color: Black,,,,Drop Ship,26320,26320,26320,49000,0,0,
+-1,,,,,5/A Baker Original Stable Sheet,Horse Wear > Blankets & Sheets > Stable Blankets & Sheets > Lightweight,7002-BAP-BAP-76-STD,Size: 76-Inch,,,,,Drop Ship,81000,81000,81000,145950,0,0,
+-1,,,,,5/A Baker Irish Knit Anti-Sweat Sheet,"Horse Wear > Blankets & Sheets > Coolers, Fleece & Covers",7011-NAT-BAP-80-1,Size: 80-Inch,,,,,Drop Ship,71400,71400,71400,128950,0,0,0.014763977
+-1,,,,,5/A Baker Irish Knit Anti-Sweat Sheet,"Horse Wear > Blankets & Sheets > Coolers, Fleece & Covers",7011-NAT-BAP-76-1,Size: 76-Inch,,,,,Drop Ship,71400,71400,71400,128950,0,0,0.012407362
+-2,,,,,5/A Baker Irish Knit Anti-Sweat Sheet,"Horse Wear > Blankets & Sheets > Coolers, Fleece & Covers",7011-NAT-BAP-86-1,Size: 86-Inch,,,,,Drop Ship,71400,71400,71400,128950,0,0,0.02835607
+-7,,,,,5/A Baker Irish Knit Anti-Sweat Sheet,"Horse Wear > Blankets & Sheets > Coolers, Fleece & Covers",7011-NAT-BAP-82-1,Size: 82-Inch,,,,,Drop Ship,71400,71400,71400,128950,0,0,
+-1,,,,,EnviroEquine EveryDayBalance,Horse Care > Supplements > Vitamins & Minerals,EEEDBE25LBB,Size: 25 Pounds,,,,,Drop Ship,203000,203000,203000,310000,0,0,
+-1,,,,,DAC Digestive Feed Additive,Horse Care > Supplements > Vitamins & Minerals,DDA40,Size: 40 Pounds,,,,,Drop Ship,150380,150380,150380,181450,0,0,
+-1,,,,,EquiFit Essential Schooling Girth Replacement Liners,Tack & Equipment > Girths & Cinches > English Girths > Hunter/Jumper Girths,32959-52,Size: 52-Inch,Style: SheepsWool,,,,Drop Ship,37420,37420,37420,48000,0,0,
+-2,,,,,Elemental Equine Sole Salvation,Horse Care > Grooming & Bathing > Hoof Oils & Conditioner,ELEMEQ-SOL SAL-8,Size: 8 Ounces,,,,,Drop Ship,34000,34000,34000,45950,0,0,0.029250687
+-1,,,,,Elemental Equine Skin Salvation,Horse Care > First Aid & Wellness > Wound Care & Topicals,ELEMEQ-SKIN SAL-4,Size: 4 Ounces,,,,,Drop Ship,18000,18000,18000,25950,0,0,0.018105758
+-1,,,,,Elemental Equine Skin Salvation Spray,Horse Care > First Aid & Wellness > Wound Care & Topicals,ELEMEQ-SKIN SAL SPRY-64 RF,Size: 64 Ounce Refill,,,,,Drop Ship,48000,48000,48000,69950,0,0,0.01459576
+-1,,,,,Elemental Equine Glycerin Saddle Soap,Tack & Equipment > Leather Care,ELEMEQ-GLY SOAP-8,Size: 8 Ounces,,,,,Drop Ship,10000,10000,10000,16950,0,0,
+-2,,,,,Elemental Equine Skin Salvation Spray,Horse Care > First Aid & Wellness > Wound Care & Topicals,ELEMEQ-SKIN SAL SPRY-16,Size: 16 Ounces,,,,,Drop Ship,15000,15000,15000,21950,0,0,0.033609685
+-1,,,,,TRM Good As Gold Paste,Horse Care > Supplements > Calming & Focus,323468-3 QTY X35,Size: 1.23 Ounces (3 Syringes),,,,,Drop Ship,18800,18800,18800,26990,0,0,
+-4,,,,,Elemental Equine Hoof Armour,Horse Care > Grooming & Bathing > Hoof Oils & Conditioner,ELEMEQ-HOOF OIL-16,Size: 16 Ounces,,,,,Drop Ship,24000,24000,24000,32950,0,0,0.045727383
+-2,,,,,EnviroEquine Ulcer+,Horse Care > Supplements > Digestive & Gut Health,ULPA,Size: 1 Gallon,,,,,Drop Ship,81250,81250,81250,155000,0,0,
+-2,,,,,EnviroEquine Omega Balance,Horse Care > Supplements > Skin & Coat,EEOMBA01GAL,Size: 1 Gallon,,,,,Drop Ship,58470,58470,58470,89950,0,0,
+-1,,,,,Royal Wire 3-Tier Grooming Cart,Stable > Stable Organizers > Racks & Hooks,WHL-3GC-001,Title: Default Title,,,,,Drop Ship,230000,230000,230000,360000,0,0,
+-2,,,,,Royal Wire 3-Tier Bridle Rack,Stable > Stable Organizers > Racks & Hooks,BRD-3BR-001,Title: Default Title,,,,,Drop Ship,181000,181000,181000,300000,0,0,
+-1,,,,,Royal Wire Main Frame with 3 Saddle Racks & Saddle Pad Bar,Stable > Stable Organizers > Racks & Hooks,MFR-SPH-001,"Style: 3 Racks, 1 Saddle Pad Holder, 2 Hooks",,,,,Drop Ship,233000,233000,233000,380000,0,0,
+-1,,,,,Royal Wire Collapsible Hanging Shelf,Stable > Stable Organizers > Racks & Hooks,WFM-CHS-001,Title: Default Title,,,,,Drop Ship,103000,103000,103000,165000,0,0,0.01128169
+-3,,,,,Dandy Products Liverpool,Stable > Stable Supplies > Misc,DANDY-LIVERPOOL-2X9X2,Size: 2 Feet x 9 Feet x 2 Inches,,,,,Drop Ship,125000,125000,125000,250000,0,0,0.034808166
+-6,,,,,Dandy Products Foam Rail,Stable > Stable Supplies > Misc,DANDY-FOAM-RAIL-4X4.5-SQUARE,Size: 4 Inches (D) x 4.5 Feet,Color: White,Style: Square Rail,,,Drop Ship,45000,45000,45000,75000,0,0,0.06925268
+-2,,,,,Dandy Products Coco Mat,Stable > Stable Supplies > Misc,DANDY-COCO-MAT-4X6,Size: 4 Feet x 6 Feet,,,,,Drop Ship,198000,198000,198000,287000,0,0,0.017431995
+-3,,,,,Dandy Products Liverpool,Stable > Stable Supplies > Misc,DANDY-LIVERPOOL-10X4X2,Size: 10 Feet x 4 Feet x 2 Inches,,,,,Drop Ship,200000,200000,200000,400000,0,0,0.023063157
+-11,,,,,Dandy Products Foam Rail,Stable > Stable Supplies > Misc,DANDY-FOAM-RAIL-4X9-SQUARE,Size: 4 Inches (D) x 9 Feet,Color: White,Style: Square Rail,,,Drop Ship,65000,65000,65000,90000,0,0,0.10646228
+-1,,,,,Basics by Tough-1 1200D Turnout Sheet,Horse Wear > Blankets & Sheets > Turnout Blankets & Sheets > Lightweight,34-912-2-81,Color: Black,Size: 81,,,,Drop Ship,45980,45980,45980,78950,0,0,
+-2,,,,,Jack's Shoobugs Fly Mask,Horse Wear > Fly & Insect Control > Fly Masks,4305-MI,Size: Mini,,,,,Drop Ship,10030,10030,10030,16990,0,0,0.025080666
+-2,,,,,Jack's Shoobugs Fly Mask,Horse Wear > Fly & Insect Control > Fly Masks,4305-C,Size: Cob,,,,,Drop Ship,10030,10030,10030,16990,0,0,0.0299439
+-3,,,,,Jack's Shoobugs Fly Mask,Horse Wear > Fly & Insect Control > Fly Masks,4305-F,Size: Full,,,,,Drop Ship,10030,10030,10030,16990,0,0,0.04491585
+-2,,,,,Jack's Shoobugs Fly Mask,Horse Wear > Fly & Insect Control > Fly Masks,4305-D,Size: Draft,,,,,Drop Ship,10030,10030,10030,16990,0,0,
+-1,,,,,Back On Track Sienna Mesh Cooler,"Horse Wear > Blankets & Sheets > Coolers, Fleece & Covers",21880065,Color: Black,Size: 87,,,,Drop Ship,86000,86000,86000,172000,0,0,
+-1,,,,,Back On Track Airflow Exercise Boots,Tack & Equipment > Boots & Wraps > Protective Boots > Front Boots,20987004,Color: White,Size: Extra Large,,,,Drop Ship,52500,52500,52500,105000,0,0,
+-5,,,,,Jack's Cordura Stall Guard,Stable > Stable Supplies > Stall Supplies,4486NV/WH,Body Color: Navy,Trim Color: White,,,,Drop Ship,29350,29350,29350,49990,0,0,
+-1,,,,,Cross Ties with Bolt Snap,Stable > Stable Supplies > Cross Ties & Trailer Ties,20177-RE,Color: Red,,,,,Drop Ship,20150,20150,20150,29990,0,0,
+-1,,,,,Cross Ties with Bolt Snap,Stable > Stable Supplies > Cross Ties & Trailer Ties,20177-NV,Color: Navy,,,,,Drop Ship,20150,20150,20150,29990,0,0,
+-2,,,,,EnviroEquine Structure+,Horse Care > Supplements > Joint Health,EESTRU1UNIT,Size: 1 Gallon,,,,,Drop Ship,192370,192370,192370,295950,0,0,0.02721089
+-1,,,,,De Prix Soft Gel Pad,Tack & Equipment > English Saddle Pads > Half Pads,1274,Title: Default Title,,,,,Drop Ship,29170,29170,29170,40990,0,0,0.01497195
+-1,,,,,GEL-EZE Wither Pads,Tack & Equipment > English Saddle Pads > Half Pads,1388,Title: Default Title,,,,,Drop Ship,49000,49000,49000,74950,0,0,
+-11,,,,,IChON Sterile S-GAG Vials 100mg/mL,Pharmacy > Joint & Ligament,80332-658,Size: 1 vial,,,,,Drop Ship,21920,21920,21920,27400,0,0,
+-60,,,,,Equioxx Tablets,Pharmacy > Anti-Inflammatory & Pain,80216-795-685,Size: 57 mg (sold per tablet),,,,,Drop Ship,1590,1590,1590,1730,0,0,
+-1,,,,,Back on Track Airflow Collection Brush Boot,Tack & Equipment > Boots & Wraps > Protective Boots > Front Boots,20199004,Color: Black,"Size: XLarge (18"")",,,,Drop Ship,42000,42000,42000,84000,0,0,
+-4,,,,,"1"" Horse Havana Track Halter with Snap",Tack & Equipment > Halters & Leads > Halters > Leather Halters,110SCH,Size: Cob,,,,,Drop Ship,57950,57950,57950,127490,0,0,
+-1,,,,,EquiLume Stable Light,Horse Care > Equine Therapy > Light Therapy,EQUILUMESTABLE,Title: Default Title,,,,,Drop Ship,637500,637500,637500,750000,0,0,
+-1,,,,,EquiLume Curragh Replacement Light Cup,Horse Care > Equine Therapy > Light Therapy,CURRAGHREPLACEMENT,Title: Default Title,,,,,Drop Ship,220000,220000,220000,275000,0,0,
+-2,,,,,RevitaVet Poll Cap,Horse Care > Equine Therapy > Light Therapy,RVPOLLCAP,Title: Default Title,,,,,Drop Ship,300000,300000,300000,429000,0,0,0.02206828
+-1,,,,,ProSeries Derby Pelham Bit,Tack & Equipment > Bits > English Bits,4787-5-3/4,Size: 5 3/4 Inches,,,,,Drop Ship,75000,75000,75000,109990,0,0,0.017652461
+-2,,,,,Nunn Finer Betris Bridle,"Tack & Equipment > Bridles, Headstalls & Reins > English Bridles & Reins > Bridles",BETRISH,Size: Horse,,,,,Drop Ship,199000,199000,199000,445000,0,0,
+-2,,,,,Nunn Finer Arianna Bridle,"Tack & Equipment > Bridles, Headstalls & Reins > English Bridles & Reins > Bridles",ARIANNAH,Size: Horse,,,,,Drop Ship,199000,199000,199000,450000,0,0,
+-4,,,,,Nunn Finer Betris Bridle,"Tack & Equipment > Bridles, Headstalls & Reins > English Bridles & Reins > Bridles",BETRISOS,Size: Oversize,,,,,Drop Ship,199000,199000,199000,445000,0,0,
+-1,,,,,Nunn Finer Florence Bridle,"Tack & Equipment > Bridles, Headstalls & Reins > English Bridles & Reins > Bridles",FLORENCEH,Size: Horse,,,,,Drop Ship,199000,199000,199000,445000,0,0,
+-1,,,,,Bluebonnet Lifeline+ Equine,Horse Care > Supplements > Vitamins & Minerals,177578-ED,Size: 44 lb Refill (100-200 days),,,,,Drop Ship,284000,284000,284000,392000,0,0,
+-1,,,,,Bluebonnet Rewind Joint,Horse Care > Supplements > Joint Health,177595-ED,Size: 44 lbs Refill (110 Days),,,,,Drop Ship,184500,184500,184500,270000,0,0,
+-1,,,,,Bluebonnet Amino Edge,Horse Care > Supplements > Weight Gain & Muscle,177333-AD,Size: 40 lb (40-80 days),,,,,Drop Ship,78750,78750,78750,114000,0,0,0.020132255
+-1,,,,,Bluebonnet Pro Balance,Horse Care > Supplements > Vitamins & Minerals,177560-ED,Size: 44lb Refill (100-200 days),,,,,Drop Ship,183750,183750,183750,268000,0,0,
+-1,,,,,Nunn Finer Valeria Short Girth,Tack & Equipment > Girths & Cinches > English Girths > Hunter/Jumper Girths,Valeria-BR24,Color: Havana,"Size: 24""",,,,Drop Ship,84000,84000,84000,172000,0,0,0.037595417
+-1,,,,,Nunn Finer Argento Standing Martingale,Tack & Equipment > Martingales & Breastplates,294H,Color: Havana,Size: Horse,,,,Drop Ship,48000,48000,48000,116000,0,0,
+-1,,,,,Nunn Finer Argento Running Martingale,Tack & Equipment > Martingales & Breastplates,293H,Color: Havana,Size: Horse,,,,Drop Ship,48000,48000,48000,120000,0,0,
+-1,,,,,Nunn Finer Andrea Girth,Tack & Equipment > Girths & Cinches > English Girths > Hunter/Jumper Girths,ANDREA-BK22,Color: Black,"Size: 22""",,,,Drop Ship,84000,84000,84000,172000,0,0,0.079189956
+-1,,,,,Nunn Finer Flat Leather Draw Reins with Snaps,Tack & Equipment > Training & Lunging > Training Reins,7BK,Color: Black,,,,,Drop Ship,58000,58000,58000,120000,0,0,
+-1,,,,,"Nunn Finer Nylon Center Stirrup Leathers 1"" Wide",Tack & Equipment > Stirrups & Leathers > Stirrup Leathers & Accessories,430HA,Color: Havana,"Size: 54""",,,,Drop Ship,67000,67000,67000,130000,0,0,0.0135903945
+-1,,,,,Dy'on Patent Large Crank Noseband Double Bridle,"Tack & Equipment > Bridles, Headstalls & Reins > Dressage Bridles",WOECASBLF,Size: Full,,,,,Drop Ship,77240,77240,77240,424990,0,0,
+-1,,,,,RevitaVet Knee Saver,Horse Care > Equine Therapy > Light Therapy,RevitaVetKneeSaver-Single,Quantity: Single,,,,,Drop Ship,300000,300000,300000,429000,0,0,
+-1,,,,,RevitaVet Knee Saver,Horse Care > Equine Therapy > Light Therapy,RevitaVetKneeSaver-Pair,Quantity: Pair,,,,,Drop Ship,300000,300000,300000,799000,0,0,0.023445982
+-2,,,,,5/A Baker Elizabeth Bag,Rider > Bags > Totes & Pouches,7050-BK,Color: Black,,,,,Drop Ship,179000,179000,179000,357950,0,0,0.0114153195
+-2,,,,,5/A Baker Duffle Bag,Rider > Bags > Totes & Pouches,7052-BR,Color: Brown,,,,,Drop Ship,154000,154000,154000,307950,0,0,
+0,bin 1,1767031197411,First Shelf,1,Corro Equestrian Boot Bag,Rider > Bags > Boot Bags,SME001,"Size: 28.3"" x 15.4"" x 10.2""",Color: Navy,,,,Drop Ship,134490,134490,134490,174990,0,0,1.2383889
+-5,,,,,RevitaVet Infrared Blanket,Horse Care > Equine Therapy > Light Therapy,RVBLANKET,Color: Black,,,,,Drop Ship,2800000,2800000,2800000,3999990,0,0,0.017882226
+2,,,,,Horseware Ireland Fly Boots,Horse Wear > Fly & Insect Control > Fly Boots,DBHF22-IJI0-PY,Size: Pony,Color: Silver/Titanium Gray,,,,Drop Ship,17740,17740,17740,39950,0,0,0.08380212

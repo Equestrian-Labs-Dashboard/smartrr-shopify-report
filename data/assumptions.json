@@ -1,0 +1,1172 @@
+{
+  "meta": {
+    "modelStatus": "Draft",
+    "fundingScenario": "$3M",
+    "fundingDate": "Oct-26",
+    "version": "v1.7",
+    "lastUpdate": "2026-08-04",
+    "organicGrowth": "10%",
+    "doverCapture": "20%",
+    "roas": "4.0x",
+    "baseEcommerceMonthly": "$70k",
+    "actualsThroughMonth": 0,
+    "displayYear": "2026",
+    "actualForecastSeedVersion": 0
+  },
+  "lists": {
+    "modelStatus": [
+      "Draft",
+      "Budget",
+      "Forecast",
+      "Board"
+    ],
+    "fundingScenario": [
+      "Base $0",
+      "$500k",
+      "$1M",
+      "$3M",
+      "$5M",
+      "$10M"
+    ],
+    "fundingDate": [
+      "Aug-26",
+      "Oct-26",
+      "Jan-27"
+    ],
+    "doverCapture": [
+      "5%",
+      "10%",
+      "15%",
+      "20%",
+      "30%"
+    ],
+    "roas": [
+      "3.0x",
+      "3.5x",
+      "4.0x"
+    ],
+    "displayYear": [
+      "2026",
+      "2027",
+      "2028",
+      "2029"
+    ]
+  },
+  "funding": [
+    {
+      "scenario": "Base",
+      "total": 0,
+      "date": "-",
+      "marketing": 0,
+      "inventory": 0,
+      "payables": 0,
+      "embroidery": 0,
+      "privateLabel": 0,
+      "organicGrowthDefault": "5%"
+    },
+    {
+      "scenario": "$500k",
+      "total": 500000,
+      "date": "Jul-26",
+      "marketing": 100000,
+      "inventory": 150000,
+      "payables": 250000,
+      "embroidery": 0,
+      "privateLabel": 0,
+      "organicGrowthDefault": "5%"
+    },
+    {
+      "scenario": "$1M",
+      "total": 1000000,
+      "date": "Jul-26",
+      "marketing": 350000,
+      "inventory": 300000,
+      "payables": 300000,
+      "embroidery": 50000,
+      "privateLabel": 0,
+      "organicGrowthDefault": "10%"
+    },
+    {
+      "scenario": "$3M",
+      "total": 3000000,
+      "date": "Oct-26",
+      "marketing": 900000,
+      "inventory": 900000,
+      "payables": 750000,
+      "embroidery": 50000,
+      "privateLabel": 400000,
+      "organicGrowthDefault": "10%"
+    },
+    {
+      "scenario": "$5M",
+      "total": 5000000,
+      "date": "Jul-26",
+      "marketing": 1750000,
+      "inventory": 1900000,
+      "payables": 600000,
+      "embroidery": 50000,
+      "privateLabel": 700000,
+      "organicGrowthDefault": "15%"
+    },
+    {
+      "scenario": "$10M",
+      "total": 10000000,
+      "date": "Jan-27",
+      "payables": 1000000,
+      "inventory": 4000000,
+      "marketing": 3500000,
+      "embroidery": 500000,
+      "privateLabel": 1000000,
+      "organicGrowthDefault": "15%"
+    }
+  ],
+  "commercial": [
+    {
+      "title": "Acquisition Strategy \u2014 Emma",
+      "rows": [
+        {
+          "driver": "Base Ad Spend",
+          "current": "$20k / month",
+          "y2026": "$240,000",
+          "y2027": "$240,000",
+          "y2028": "$240,000",
+          "y2029": "$240,000",
+          "note": "Base spend is calculated through 2028 at $20k/month. 2029 remains a management reinvestment input.",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028"
+          ]
+        },
+        {
+          "driver": "Incremental Ad Spend",
+          "current": "$0",
+          "y2026": "Calculated",
+          "y2027": "Calculated",
+          "y2028": "Calculated",
+          "y2029": "\u2014",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028",
+            "y2029"
+          ],
+          "note": "Funding-driven allocation reference. Paid Growth Revenue uses total calculated Ad Spend, not only incremental spend."
+        },
+        {
+          "driver": "Total Ad Spend",
+          "current": "Calculated / editable 2029",
+          "y2026": "Calculated",
+          "y2027": "Calculated",
+          "y2028": "Calculated",
+          "y2029": "Calculated",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028",
+            "y2029"
+          ],
+          "note": "2026\u20132028 calculated from Target Ad Spend % of Ecommerce Gross Sales. 2029 default uses prior-year Ecommerce Gross Sales \u00d7 Reinvestment %. "
+        },
+        {
+          "driver": "2029 Reinvestment %",
+          "current": "Management input",
+          "y2026": "\u2014",
+          "y2027": "\u2014",
+          "y2028": "\u2014",
+          "y2029": "20%",
+          "note": "Default Logic (2029 onwards): Prior Year Ecommerce Gross Sales \u00d7 Reinvestment %."
+        },
+        {
+          "driver": "ROAS",
+          "current": "YTD avg pending",
+          "y2026": "4.0x",
+          "y2027": "",
+          "y2028": "",
+          "y2029": ""
+        },
+        {
+          "driver": "Target Ad Spend % of Ecommerce Gross Sales",
+          "current": "20%",
+          "y2026": "20%",
+          "y2027": "20%",
+          "y2028": "20%",
+          "y2029": "\u2014",
+          "calculated": [
+            "y2029"
+          ],
+          "note": "Input for 2026\u20132028. Formula solves the circular relationship: Ecommerce Gross Sales = pre-paid revenue / (1 - Ad Spend % \u00d7 ROAS). 2029 is calculated from editable Total Ad Spend."
+        },
+        {
+          "driver": "Ad Spend % of Ecommerce Gross Sales",
+          "current": "Calculated",
+          "y2026": "Calculated",
+          "y2027": "Calculated",
+          "y2028": "Calculated",
+          "y2029": "Calculated",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028",
+            "y2029"
+          ],
+          "note": "Display KPI: Total Ad Spend divided by Ecommerce Gross Sales."
+        },
+        {
+          "driver": "CAC",
+          "current": "Calculated pending",
+          "y2026": "Calculated",
+          "y2027": "Calculated",
+          "y2028": "Calculated",
+          "y2029": "Calculated",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028",
+            "y2029"
+          ]
+        },
+        {
+          "driver": "New Customer Mix %",
+          "current": "YTD avg pending",
+          "y2026": "",
+          "y2027": "",
+          "y2028": "",
+          "y2029": ""
+        }
+      ]
+    },
+    {
+      "title": "Retention Strategy \u2014 Berna",
+      "rows": [
+        {
+          "driver": "Returning Customers %",
+          "current": "46.6%",
+          "y2026": "47%",
+          "y2027": "48%",
+          "y2028": "52%",
+          "y2029": "55%"
+        },
+        {
+          "driver": "Incremental Revenue Carryover %",
+          "current": "\u2014",
+          "y2026": "0%",
+          "y2027": "50%",
+          "y2028": "50%",
+          "y2029": "\u2014",
+          "note": "Carryover applies only once when calculating the following year\u2019s Base Ecommerce Revenue. Applies to Organic Growth + Paid Growth Revenue + Net Dover Capture."
+        },
+        {
+          "driver": "Purchase Frequency",
+          "current": "1.01",
+          "y2026": "1.2",
+          "y2027": "1.5",
+          "y2028": "1.8",
+          "y2029": "2.0",
+          "note": "Must use same ecommerce population as AOV and GM1."
+        },
+        {
+          "driver": "Email Revenue %",
+          "current": "10.5%",
+          "y2026": "11%",
+          "y2027": "13%",
+          "y2028": "15%",
+          "y2029": "18%"
+        },
+        {
+          "driver": "Annual GP per Customer",
+          "current": "$66",
+          "y2026": "Calculated",
+          "y2027": "Calculated",
+          "y2028": "Calculated",
+          "y2029": "Calculated",
+          "calculated": [
+            "y2026",
+            "y2027",
+            "y2028",
+            "y2029"
+          ],
+          "note": "AOV \u00d7 Purchase Frequency \u00d7 GM1%, all from the same business population."
+        }
+      ]
+    },
+    {
+      "title": "Market Growth Strategy",
+      "rows": [
+        {
+          "driver": "Organic Growth %",
+          "current": "Actual YoY Growth H1 from Sheets",
+          "y2026": "10%",
+          "y2027": "10%",
+          "y2028": "10%",
+          "y2029": "10%",
+          "note": "Baseline/current is Actual YoY Growth; forecast years are editable Organic Growth Assumptions by funding scenario."
+        },
+        {
+          "driver": "Dover Market Opportunity (Gross)",
+          "current": "$130M",
+          "y2026": "$130M",
+          "y2027": "$130M",
+          "y2028": "$130M",
+          "y2029": "$130M",
+          "note": "Gross market opportunity before paid ads overlap."
+        },
+        {
+          "driver": "Dover Target Capture % (Gross)",
+          "current": "N/A",
+          "y2026": "20%",
+          "y2027": "20%",
+          "y2028": "20%",
+          "y2029": "20%",
+          "note": "Scenario target capture applied across forecast years; dollar output is gross before overlap."
+        },
+        {
+          "driver": "Paid Ads Overlap %",
+          "current": "N/A",
+          "y2026": "30%",
+          "y2027": "30%",
+          "y2028": "30%",
+          "y2029": "30%",
+          "note": "Prevents double counting Dover revenue that is already influenced by paid ads."
+        }
+      ],
+      "doverRamp": {
+        "y2026": "5%",
+        "y2027": "55%",
+        "y2028": "25%",
+        "y2029": "15%"
+      }
+    }
+  ],
+  "growthEngines": [
+    {
+      "title": "Ecommerce \u2014 Emma",
+      "note": "Revenue = Base + Organic + Paid + Dover",
+      "rows": [
+        {
+          "driver": "Orders",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "\u2014",
+          "y2028": "\u2014",
+          "y2029": "\u2014",
+          "note": "Baseline/current should feed from Shopify/Stacks ecommerce-only orders, excluding HITS, Wellington and Concierge."
+        },
+        {
+          "driver": "AOV",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "\u2014",
+          "y2028": "\u2014",
+          "y2029": "\u2014",
+          "note": "Use ecommerce-only AOV."
+        },
+        {
+          "driver": "GM1 %",
+          "current": "Actuals pending",
+          "y2026": "30.5%",
+          "y2027": "30.5%",
+          "y2028": "30.5%",
+          "y2029": "30.5%",
+          "note": "Current GM1 is channel-specific: Gross Profit / Net Sales using Shopify orders classified to this channel and Shopify variant unit costs. Forecast years remain editable."
+        }
+      ]
+    },
+    {
+      "title": "Concierge \u2014 Nicole",
+      "rows": [
+        {
+          "driver": "Active Clients",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "12",
+          "y2028": "15",
+          "y2029": "18"
+        },
+        {
+          "driver": "Orders per Client",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "1.5",
+          "y2028": "1.8",
+          "y2029": "2.0"
+        },
+        {
+          "driver": "AOV",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "$110",
+          "y2028": "$120",
+          "y2029": "$130"
+        },
+        {
+          "driver": "GM1 %",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "30.5%",
+          "y2028": "30.5%",
+          "y2029": "30.5%",
+          "note": "Current GM1 is channel-specific: Gross Profit / Net Sales using Shopify orders classified to this channel and Shopify variant unit costs. Forecast years remain editable."
+        }
+      ]
+    },
+    {
+      "title": "Cavali \u2014 Angela",
+      "note": "",
+      "rows": [
+        {
+          "driver": "Orders",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "\u2014",
+          "y2028": "\u2014",
+          "y2029": "\u2014",
+          "note": "Current and 2026 forecast are seeded from Shopify Cavali actuals after refresh; later years remain user-editable."
+        },
+        {
+          "driver": "Signature Active Members",
+          "current": "84",
+          "y2026": "100",
+          "y2027": "200",
+          "y2028": "300",
+          "y2029": "400",
+          "note": "Current to be validated from Smartrr API."
+        },
+        {
+          "driver": "Signature Boxes per Year",
+          "current": "1.9",
+          "y2026": "2",
+          "y2027": "2",
+          "y2028": "2",
+          "y2029": "2"
+        },
+        {
+          "driver": "Signature Price",
+          "current": "$99",
+          "y2026": "$99",
+          "y2027": "$99",
+          "y2028": "$99",
+          "y2029": "$99"
+        },
+        {
+          "driver": "Premium Active Members",
+          "current": "\u2014",
+          "y2026": "10",
+          "y2027": "20",
+          "y2028": "30",
+          "y2029": "40"
+        },
+        {
+          "driver": "Premium Boxes per Year",
+          "current": "\u2014",
+          "y2026": "2",
+          "y2027": "2",
+          "y2028": "2",
+          "y2029": "2"
+        },
+        {
+          "driver": "Premium Price",
+          "current": "$199",
+          "y2026": "$199",
+          "y2027": "$199",
+          "y2028": "$199",
+          "y2029": "$199"
+        },
+        {
+          "driver": "GM1 %",
+          "current": "32.1%",
+          "y2026": "\u2014",
+          "y2027": "\u2014",
+          "y2028": "\u2014",
+          "y2029": "\u2014",
+          "note": "Current GM1 comes from Cavali Shopify net sales and Shopify unit costs. Forecast years remain editable and saved by scenario."
+        },
+        {
+          "driver": "Organic Member Growth",
+          "current": "-33.9%",
+          "y2026": "10%",
+          "y2027": "10%",
+          "y2028": "10%",
+          "y2029": "10%"
+        },
+        {
+          "driver": "Cavali Ad Spend",
+          "current": "No ad_spend rows",
+          "y2026": "$0",
+          "y2027": "$0",
+          "y2028": "$0",
+          "y2029": "$0"
+        },
+        {
+          "driver": "Cavali CAC",
+          "current": "Needs members/ad source",
+          "y2026": "$100",
+          "y2027": "$100",
+          "y2028": "$100",
+          "y2029": "$100"
+        }
+      ]
+    },
+    {
+      "title": "Wellington \u2014 Nicole",
+      "rows": [
+        {
+          "driver": "Orders",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "12",
+          "y2028": "14",
+          "y2029": "16"
+        },
+        {
+          "driver": "AOV",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "$110",
+          "y2028": "$120",
+          "y2029": "$130"
+        },
+        {
+          "driver": "GM1 %",
+          "current": "Actuals pending",
+          "y2026": "\u2014",
+          "y2027": "30.5%",
+          "y2028": "30.5%",
+          "y2029": "30.5%",
+          "note": "Current GM1 is channel-specific: Gross Profit / Net Sales using Shopify orders classified to this channel and Shopify variant unit costs. Forecast years remain editable."
+        }
+      ]
+    },
+    {
+      "title": "Embroidery \u2014 Tatum",
+      "status": "\ud83d\udd12 Locked below $1M funding",
+      "rows": [
+        {
+          "driver": "Orders",
+          "current": "\u2014",
+          "y2026": "10",
+          "y2027": "10",
+          "y2028": "10",
+          "y2029": "10"
+        },
+        {
+          "driver": "AOV",
+          "current": "\u2014",
+          "y2026": "$0",
+          "y2027": "$15",
+          "y2028": "$20",
+          "y2029": "$25"
+        },
+        {
+          "driver": "GM1 %",
+          "current": "\u2014",
+          "y2026": "60%",
+          "y2027": "60%",
+          "y2028": "60%",
+          "y2029": "60%"
+        }
+      ]
+    },
+    {
+      "title": "Private Label \u2014 Tatum",
+      "status": "\ud83d\udd12 Locked below $3M funding",
+      "rows": [
+        {
+          "driver": "Units Sold",
+          "current": "\u2014",
+          "y2026": "0",
+          "y2027": "100",
+          "y2028": "1,000",
+          "y2029": "1,000",
+          "note": "Launch timing gate; 2026 zero, 2027 limited initial quarter."
+        },
+        {
+          "driver": "Average Selling Price",
+          "current": "\u2014",
+          "y2026": "$0",
+          "y2027": "$10",
+          "y2028": "$10",
+          "y2029": "$10"
+        },
+        {
+          "driver": "GM1 %",
+          "current": "\u2014",
+          "y2026": "70%",
+          "y2027": "70%",
+          "y2028": "70%",
+          "y2029": "70%"
+        }
+      ]
+    }
+  ],
+  "purchasing": {
+    "commercialTerms": [
+      {
+        "driver": "Markup %",
+        "current": "Actuals pending",
+        "y2026": "10%",
+        "y2027": "10%",
+        "y2028": "10%",
+        "y2029": "10%"
+      },
+      {
+        "driver": "Booking Amount",
+        "current": "Actuals pending",
+        "y2026": "$10k",
+        "y2027": "$10k",
+        "y2028": "$20k",
+        "y2029": "$20k"
+      },
+      {
+        "driver": "Booking Discount %",
+        "current": "Actuals pending",
+        "y2026": "10%",
+        "y2027": "10%",
+        "y2028": "10%",
+        "y2029": "10%"
+      },
+      {
+        "driver": "Discounts & Returns %",
+        "current": "17%",
+        "y2026": "16%",
+        "y2027": "16%",
+        "y2028": "16%",
+        "y2029": "16%",
+        "note": "Commercial Economics \u2014 authorized by Tatum"
+      }
+    ],
+    "vendorMix": {
+      "prepaid": "80%",
+      "under15": "15%",
+      "d30to45": "5%"
+    },
+    "capitalEfficiency": [
+      {
+        "driver": "Inventory Turns",
+        "current": "0.17x",
+        "y2026": "0.20x",
+        "y2027": "0.30x",
+        "y2028": "0.50x",
+        "y2029": "0.80x",
+        "note": "Current source conflict resolved to SKU/Savy 0.17x until Shopify/SKU source is confirmed."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "driver": "Outbound Shipping Cost %",
+      "current": "Manual / ShipStation or QuickBooks pending",
+      "y2026": "0%",
+      "y2027": "0%",
+      "y2028": "0%",
+      "y2029": "0%",
+      "note": "Check whether split exists in QuickBooks or use manual source."
+    },
+    {
+      "driver": "Shipping Revenue %",
+      "current": "Manual / Shopify pending",
+      "y2026": "0%",
+      "y2027": "0%",
+      "y2028": "0%",
+      "y2029": "0%"
+    },
+    {
+      "driver": "Packaging Cost %",
+      "current": "Manual pending",
+      "y2026": "0%",
+      "y2027": "0%",
+      "y2028": "0%",
+      "y2029": "0%"
+    }
+  ],
+  "growthInitiatives": [
+    {
+      "initiative": "Affiliate",
+      "owner": "Berna / Emma",
+      "trigger": "Base",
+      "status": "Active",
+      "launch": "2026",
+      "investment": "TBD"
+    },
+    {
+      "initiative": "Concierge Expansion",
+      "owner": "Nicole",
+      "trigger": "Base",
+      "status": "Active",
+      "launch": "2026",
+      "investment": "TBD"
+    },
+    {
+      "initiative": "HITS Marketing Subscription",
+      "owner": "Emma / Marketing",
+      "trigger": "Base",
+      "status": "Active",
+      "launch": "2026",
+      "investment": "$305.64",
+      "type": "OPEX / Sales & Marketing"
+    },
+    {
+      "initiative": "Cavali Paid Growth",
+      "owner": "Angela / Marketing",
+      "trigger": "\u2265$1M",
+      "status": "Active",
+      "launch": "Oct-26",
+      "investment": "Scenario"
+    },
+    {
+      "initiative": "Embroidery",
+      "owner": "Tatum",
+      "trigger": "\u2265$1M",
+      "status": "Active",
+      "launch": "Oct-26",
+      "investment": "$50k"
+    },
+    {
+      "initiative": "Private Label",
+      "owner": "Tatum",
+      "trigger": "\u2265$3M",
+      "status": "Active",
+      "launch": "Oct-27",
+      "investment": "Phased / TBD"
+    },
+    {
+      "initiative": "Market Expansion",
+      "owner": "Leadership",
+      "trigger": "\u2265$5M",
+      "status": "Locked",
+      "launch": "Jan-27",
+      "investment": "TBD"
+    }
+  ],
+  "thesis": [
+    {
+      "label": "Gross Sales",
+      "value": "$20M",
+      "sub": "2027 Target"
+    },
+    {
+      "label": "GM3",
+      "value": "40%",
+      "sub": "2029 Target >35%"
+    },
+    {
+      "label": "EBITDA",
+      "value": "22%",
+      "sub": "2029 Target >20%"
+    },
+    {
+      "label": "Base Ecommerce",
+      "value": "$70k/mo",
+      "sub": "Monthly Run Rate"
+    },
+    {
+      "label": "Dover Capture",
+      "value": "20%",
+      "sub": "Scenario target"
+    }
+  ],
+  "engineSheet": {
+    "formulaRows": [
+      {
+        "line": "Gross Sales",
+        "source": "Sheet 2 formula",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "Discounts & Returns",
+        "source": "Financial dashboard / assumption",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "Net Sales",
+        "source": "Gross Sales \u2212 Discounts & Returns",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "COGS",
+        "source": "Purchasing Strategy / COGS Total",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "GM1",
+        "source": "Net Sales \u2212 COGS",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "Total Shipping Expenses",
+        "source": "Operations Strategy",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "GM2",
+        "source": "GM1 \u2212 Total Shipping Expenses",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "Ad Spend",
+        "source": "Acquisition Strategy",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "GM3",
+        "source": "GM2 \u2212 Ad Spend",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      },
+      {
+        "line": "EBITDA",
+        "source": "GM3 \u2212 Operating Costs",
+        "current": "",
+        "y2026": "",
+        "y2027": "",
+        "y2028": "",
+        "y2029": ""
+      }
+    ],
+    "wellingtonAds2026": {
+      "jan": 1242,
+      "feb": 810,
+      "mar": 0,
+      "apr": 81,
+      "may": 0,
+      "jun": 0,
+      "jul": 0,
+      "source": "Ceci input 2026-07-10; not yet connected to formula until Growth Engine uses Wellington paid media."
+    },
+    "formulaNotes": [
+      {
+        "item": "Tab 02 linked active scenario",
+        "status": "connected",
+        "needed": "None"
+      },
+      {
+        "item": "Growth engine gross sales formulas",
+        "status": "connected to Tab 01 inputs",
+        "needed": "Fill Orders / AOV / GM1 / member inputs in Tab 01"
+      },
+      {
+        "item": "GP1 by engine",
+        "status": "connected using Engine Net Sales \u00d7 GM1%",
+        "needed": "Discounts & Returns % applied before GM1; later can vary by engine if needed"
+      },
+      {
+        "item": "Margin Bridge through GP3",
+        "status": "connected where inputs exist",
+        "needed": "Discounts & Returns %, operations %, and Ad Spend assumptions"
+      },
+      {
+        "item": "Current / Baseline YTD automation",
+        "status": "connected to Corro/Cavali Google Sheets",
+        "needed": "Sheets must be shareable and tabs must exist: kpis_daily, revenue_share, new_vs_returning, ad_spend; Cavali also smartrr_product_volume"
+      },
+      {
+        "item": "Markup weighted average",
+        "status": "pending external data",
+        "needed": "Product/SKU-level price and cost/COGS or purchase data with units or sales weights"
+      },
+      {
+        "item": "Klaviyo / Email Revenue % automation",
+        "status": "pending external data",
+        "needed": "Klaviyo monthly revenue export/API by month"
+      },
+      {
+        "item": "Cavali CAC / new members",
+        "status": "partially connected",
+        "needed": "Cavali ad_spend tab plus Smartrr product volume / membership rows; if ad_spend is empty, keep manual input"
+      },
+      {
+        "item": "V16 Paid Growth Revenue",
+        "status": "connected",
+        "needed": "Paid growth now uses Base Ad Spend + Incremental Ad Spend \u00d7 ROAS, so revenue is not zero in years without funding-driven incremental spend."
+      }
+    ]
+  },
+  "implementationChecklist": [
+    {
+      "item": "Organic Growth editable, no dropdown",
+      "status": "done"
+    },
+    {
+      "item": "Funding & Allocation: remove Funding column",
+      "status": "done"
+    },
+    {
+      "item": "Save button and Download button",
+      "status": "done"
+    },
+    {
+      "item": "Current/Baseline YTD averages from dashboard",
+      "status": "pending-data-connection"
+    },
+    {
+      "item": "Dover Capture header feeds 2026",
+      "status": "done"
+    },
+    {
+      "item": "Section 3 Gross Profit calculation",
+      "status": "superseded-by-final-magic-page-scope"
+    },
+    {
+      "item": "Purchasing Markup weighted average",
+      "status": "pending-data-connection"
+    },
+    {
+      "item": "Vendor Payment Mix 80/15/5",
+      "status": "done"
+    },
+    {
+      "item": "Purchasing COGS Total",
+      "status": "removed-from-magic-page-output-moved-to-tab-02"
+    },
+    {
+      "item": "Section 2 ROAS and Ad Spend",
+      "status": "done"
+    },
+    {
+      "item": "Remove waterfall / financial outputs from Magic Page",
+      "status": "done"
+    },
+    {
+      "item": "Tab 02 active scenario cards linked to Tab 01",
+      "status": "done"
+    },
+    {
+      "item": "Tab 02 financial snapshot formulas",
+      "status": "done-local-formulas"
+    },
+    {
+      "item": "Tab 02 engine detail and executive summary",
+      "status": "done-local-formulas"
+    },
+    {
+      "item": "Tab 02 margin bridge through GP3",
+      "status": "done-local-formulas"
+    },
+    {
+      "item": "Wellington ad spend inputs stored",
+      "status": "done-reference-only"
+    },
+    {
+      "item": "Header uses Funding, Funding Date, Base Ecommerce, Dover Capture, ROAS",
+      "status": "done-v14"
+    },
+    {
+      "item": "Dover Capture Ramp by year with Paid Ads Overlap",
+      "status": "done-v14"
+    },
+    {
+      "item": "Ecommerce Revenue Build feeds Ecommerce engine row",
+      "status": "done-v14"
+    },
+    {
+      "item": "Organic Growth removed from header and tied to funding scenario default",
+      "status": "done-v14"
+    },
+    {
+      "item": "Organic Growth applies only to Base Ecommerce Revenue in V1",
+      "status": "done-v14"
+    }
+  ],
+  "dataSources": {
+    "corroDashboard": {
+      "label": "Corro Dashboard Google Sheet",
+      "spreadsheetId": "1nq8xkDzowAvhD3wpMBlVK2M3FZSNS2DrAiPxz-Y2tdU",
+      "tabs": {
+        "kpis": "kpis_daily",
+        "revenueShare": "revenue_share",
+        "newVsReturning": "new_vs_returning",
+        "adSpend": "ad_spend",
+        "products": "products_q1_2026"
+      }
+    },
+    "cavaliDashboard": {
+      "label": "Cavali Dashboard Google Sheet",
+      "spreadsheetId": "1QUdJc2EIdElIX5nlLQxWxS98aAz-TgQnSg9glJpNtig",
+      "tabs": {
+        "kpis": "kpis_daily",
+        "revenueShare": "revenue_share",
+        "newVsReturning": "new_vs_returning",
+        "adSpend": "ad_spend",
+        "smartrrProductVolume": "smartrr_product_volume",
+        "products": "products_q1_2026"
+      }
+    },
+    "marketingStats": {
+      "label": "Marketing Stats Google Sheet",
+      "spreadsheetId": "1ROTaII-_S_0VntYvOZj8GFCoUnkQVcr1rPES0p-14mI",
+      "tabs": {
+        "googleAds": "Google Ads",
+        "meta": "META",
+        "total": "Total Google+META"
+      }
+    }
+  },
+  "adminDataMap": [
+    {
+      "item": "Tab 02 linked active scenario",
+      "status": "connected",
+      "needed": "None"
+    },
+    {
+      "item": "Growth engine gross sales formulas",
+      "status": "connected to Tab 01 inputs",
+      "needed": "Fill Orders / AOV / GM1 / member inputs in Tab 01"
+    },
+    {
+      "item": "GP1 by engine",
+      "status": "connected using Gross Sales \u00d7 GM1%",
+      "needed": "Approved GM1% per engine"
+    },
+    {
+      "item": "Margin Bridge through GP3",
+      "status": "connected where inputs exist",
+      "needed": "Discounts & Returns %, operations %, and Ad Spend assumptions"
+    },
+    {
+      "item": "Current / Baseline YTD automation",
+      "status": "connected to Corro/Cavali Google Sheets",
+      "needed": "Sheets must be shareable and tabs must exist: kpis_daily, revenue_share, new_vs_returning, ad_spend; Cavali also smartrr_product_volume"
+    },
+    {
+      "item": "Markup weighted average",
+      "status": "pending external data",
+      "needed": "Product/SKU-level price and cost/COGS or purchase data with units or sales weights"
+    },
+    {
+      "item": "Klaviyo / Email Revenue % automation",
+      "status": "pending external data",
+      "needed": "Klaviyo monthly revenue export/API by month"
+    },
+    {
+      "item": "Cavali CAC / new members",
+      "status": "partially connected",
+      "needed": "Cavali ad_spend tab plus Smartrr product volume / membership rows; if ad_spend is empty, keep manual input"
+    },
+    {
+      "item": "HITS Marketing Subscription",
+      "status": "Manual input",
+      "source": "Invoice / subscription receipt",
+      "needed": "Keep as Sales & Marketing OPEX reference; not CapEx; visible in Strategic Growth Initiatives, financial impact belongs in Tab 03 / Financial P&L.",
+      "lastRefresh": "manual",
+      "owner": "Emma / Marketing"
+    }
+  ],
+  "ecommerceBuild": {
+    "normalizedMonthlyRunRate": "$70k",
+    "note": "Base Ecommerce Revenue = Monthly Ecommerce Run Rate \u00d7 12 months. Organic Growth applies only to Base Ecommerce Revenue in V1."
+  },
+  "cashFlow": {
+    "openingCash": "$0",
+    "minimumCashBuffer": "$250k"
+  },
+  "smartrr": {
+    "status": "API structure planned",
+    "summaryKpis": [
+      "Total Orders",
+      "Active Ordering Customers",
+      "Gross Sales",
+      "Net Sales",
+      "Gross Margin %",
+      "Gross Profit",
+      "AOV",
+      "Top 10 Products",
+      "Top 10 Customers"
+    ],
+    "currentExample": {
+      "orders": "159",
+      "customers": "84",
+      "grossSales": "$15k"
+    },
+    "note": "Use Smartrr API where available; add net sales, GM, GP and AOV beside gross sales."
+  },
+  "formulaNotes": [
+    "Carryover applies only once when calculating the following year Base Ecommerce Revenue; do not re-add prior carryover downstream.",
+    "GM1 must always be defined on Net Sales, not Gross Sales.",
+    "Annual GP per Customer uses AOV, Purchase Frequency and GM1 from the same business population.",
+    "2029 Default Logic onwards: Prior Year Ecommerce Gross Sales \u00d7 Reinvestment %.",
+    "Paid Growth Revenue: Revenue influenced by paid media. Assumes constant ROAS during selected fiscal year."
+  ],
+  "dataConnections": {
+    "shopifyDirect": "pending - do not expose Shopify tokens in GitHub Pages; use pipeline/API proxy/Google Sheets actuals",
+    "shopifyFieldsNeeded": [
+      "orders",
+      "gross_sales",
+      "net_sales",
+      "aov",
+      "discounts_returns",
+      "cogs",
+      "gm1",
+      "customers",
+      "new_customers",
+      "returning_customers"
+    ]
+  },
+  "dataStatus": {
+    "shopifyDirect": "connected through GitHub Actions sync when workflow runs; writes data/shopify_actuals.json",
+    "shopifySecrets": [
+      "SHOPIFY_CORRO_STORE",
+      "SHOPIFY_CORRO_TOKEN",
+      "SHOPIFY_CAVALI_STORE",
+      "SHOPIFY_CAVALI_TOKEN"
+    ],
+    "shopifySync": "connected via GitHub Actions to data/shopify_actuals.json when workflow runs"
+  },
+  "easyNumbersTest": {
+    "status": "READY FOR MONDAY REVIEW",
+    "scope": "2027-2029 only",
+    "preserve2026ShopifyActuals": true,
+    "editableInputs": true,
+    "backupAndRestoreEnabled": true,
+    "note": "The Load Easy Test button applies simple assumptions only to 2027-2029. It does not overwrite 2026 actuals or the current Shopify-based 2026 forecast."
+  },
+  "financialAssumptions": {
+    "salesMarketingOpexByYear": {
+      "y2026": "$210k",
+      "y2027": "$300k",
+      "y2028": "$300k",
+      "y2029": "$300k"
+    },
+    "otherOperatingExpensesByYear": {
+      "y2026": "$0",
+      "y2027": "$0",
+      "y2028": "$0",
+      "y2029": "$0"
+    }
+  },
+  "version": "v1.6"
+}

@@ -1,0 +1,10 @@
+import fs from 'node:fs'; import vm from 'node:vm'; import assert from 'node:assert/strict';
+const assumptions=JSON.parse(fs.readFileSync(new URL('./data/assumptions.json',import.meta.url),'utf8'));
+const source=fs.readFileSync(new URL('./assets/js/app.js',import.meta.url),'utf8');
+const test=`STATE=${JSON.stringify(assumptions)}; const R={};
+STATE.operations.find(r=>r.driver==='Outbound Shipping Cost %').y2026='10%'; STATE.operations.find(r=>r.driver==='Packaging Cost %').y2026='5%'; STATE.operations.find(r=>r.driver==='Shipping Revenue %').y2026='2%';
+let b=marginBridge('y2026'); assert.ok(Math.abs(b.gp2-(b.gp1-b.netSales*.10-b.netSales*.05+b.netSales*.02))<.01); assert.ok(Math.abs(b.gp3-(b.gp2-b.adSpend))<.01); R.gp={gp1:b.gp1,gp2:b.gp2,gp3:b.gp3};
+STATE.meta.fundingScenario='$3M'; STATE.meta.fundingDate='Jan-27'; assert.equal(cashFlowRows('y2026').cashIn.Funding,0); assert.equal(cashFlowRows('y2027').cashIn.Funding,3000000);
+assert.deepEqual(embroideryLaunchStart(),{year:2027,month:3}); assert.deepEqual(privateLabelLaunchStart(),{year:2028,month:3}); assert.equal(launchFactorForEngine('Embroidery','y2027'),.75); assert.equal(launchFactorForEngine('Private Label','y2028'),.75);
+let d1=doverRampPct('y2026'),p1=ecommerceBuild('y2026').paid; STATE.meta.fundingDate='Oct-26'; let d2=doverRampPct('y2026'),p2=ecommerceBuild('y2026').paid; assert.ok(d2>d1); assert.ok(p2>p1); assert.deepEqual(privateLabelLaunchStart(),{year:2028,month:0}); R.funding={jan27:{dover:d1,paid:p1},oct26:{dover:d2,paid:p2},cash2027:3000000}; globalThis.__R=R;`;
+const sandbox={console,assert,document:{addEventListener(){},createElement(){return{setAttribute(){},appendChild(){},addEventListener(){},style:{}}},createTextNode(v){return v},getElementById(){return null},body:{setAttribute(){},getAttribute(){return'light'}}},localStorage:{getItem(){return null},setItem(){}},DataService:{},window:{},location:{reload(){}},alert(){},confirm(){return false},setTimeout,clearTimeout,Date,Math,Number,String,Object,Array,JSON,Map,Set}; vm.createContext(sandbox); vm.runInContext(source+'\n'+test,sandbox); console.log(JSON.stringify(sandbox.__R,null,2));
