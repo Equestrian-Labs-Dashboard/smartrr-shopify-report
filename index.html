@@ -1,212 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Equestrian Labs · Strategic Operating Model</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=130" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmartPay — Subscription Analytics</title>
+<style>
+:root{
+  --plum:#421d39;--plum-2:#5b3151;--ink:#241c29;--muted:#706778;
+  --bg:#f5f6f8;--card:#fff;--line:#e2e4e9;--soft:#f0f1f4;
+  --lav:#6869ef;--blue:#278ee5;--good:#1d925b;--warn:#a96b13;--bad:#bc3e52;
+  --shadow:0 8px 24px rgba(37,28,41,.07)
+}
+[data-theme=dark]{
+  --ink:#f8f5fa;--muted:#b9afbd;--bg:#161117;--card:#241b25;--line:#453448;
+  --soft:#2d2230;--lav:#9697ff;--blue:#58aaf0;--shadow:0 12px 30px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{height:72px;padding:0 26px;background:var(--plum);color:#fff;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.14);position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:12px}.mark{width:40px;height:40px;border-radius:11px;background:#f4e7f1;color:var(--plum);display:grid;place-items:center;font-weight:850}.title{font-size:21px;font-weight:760}.updated{font-size:11px;color:#ddd0dc;margin-top:4px}
+button,input,select{font:inherit}.theme,.tab{cursor:pointer}
+.theme{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:9px;padding:9px 12px}
+main{max-width:1480px;margin:auto;padding:24px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.tab{padding:10px 16px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;font-weight:650}.tab.active{background:var(--plum);color:#fff;border-color:var(--plum)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:17px}.controls input,.controls select{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 12px;border-radius:8px}.controls input{min-width:280px;flex:1}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:21px 23px;margin-bottom:20px;box-shadow:var(--shadow);display:flex;justify-content:space-between;gap:20px}.hero h2{margin:4px 0 6px;font-size:23px}.hero p{margin:0;color:var(--muted);line-height:1.5;max-width:840px}.kicker{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--plum-2);font-weight:800}.source{align-self:center;padding:9px 12px;border-radius:8px;background:#f1ebf0;color:var(--plum);font-weight:750;white-space:nowrap}
+.section{margin:24px 0 11px}.section h2{margin:0;font-size:17px}.section p{margin:5px 0 0;color:var(--muted);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:13px;margin-bottom:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:17px;min-height:108px;box-shadow:var(--shadow)}.label{text-transform:uppercase;font-size:10px;letter-spacing:.07em;color:var(--muted)}.value{font-size:25px;font-weight:790;margin-top:8px}.detail{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.35}.official{border-top:4px solid var(--lav)}.operational{border-top:4px solid var(--blue)}.quality{border-top:4px solid var(--plum-2)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px;box-shadow:var(--shadow);margin-bottom:18px}.panel h3{margin:0 0 12px;font-size:15px}.chart{height:255px}.chart svg{width:100%;height:100%}.grid{stroke:var(--line)}.axis{fill:var(--muted);font-size:10px}.bar{fill:var(--blue)}.line{fill:none;stroke:var(--lav);stroke-width:3}.area{fill:color-mix(in srgb,var(--lav) 13%,transparent)}.dot{fill:var(--lav);stroke:var(--card);stroke-width:2}
+.note{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft);color:var(--muted);font-size:12px;line-height:1.45;margin-bottom:16px}
+.table-wrap{overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-bottom:18px}table{width:100%;border-collapse:collapse;font-size:12px}th,td{padding:11px 12px;border-bottom:1px solid var(--line);white-space:nowrap;text-align:left}th{font-size:10px;text-transform:uppercase;color:var(--muted);background:var(--soft);position:sticky;top:0}.badge{padding:3px 8px;border-radius:999px;font-size:10px;font-weight:750;background:var(--soft)}.good{color:var(--good)}.warn{color:var(--warn)}.bad{color:var(--bad)}.empty{padding:48px;text-align:center;color:var(--muted)}
+@media(max-width:850px){main{padding:16px}.grid2{grid-template-columns:1fr}.hero{flex-direction:column}.source{align-self:flex-start}}
+</style>
 </head>
 <body>
-
-<header class="header">
-  <div class="header-inner">
-    <div>
-      <p class="brand-eyebrow">Equestrian Labs</p>
-      <h1 class="brand-title">Strategic Operating Model <span id="versionBadge" class="version-badge">v1.6</span></h1>
-      <p class="brand-sub">2026 – 2029</p>
-      <div class="legend" style="margin-top:10px;">
-        <span class="legend-chip"><span class="legend-swatch" style="background:#FFF4CC"></span>Editable</span>
-        <span class="legend-chip"><span class="legend-swatch" style="background:#FFFFFF;border:1px solid #4a6d93"></span>Calculated</span>
-        <span class="legend-chip"><span class="legend-swatch" style="background:#F2F2F2"></span>Baseline / Historical</span>
-        <span class="save-indicator" id="saveIndicator">Saved ✓</span>
-      </div>
-    </div>
-    <div class="header-actions" aria-label="Model actions">
-      <button class="action-btn primary" id="saveData">Save</button>
-      <button class="action-btn" id="refreshActuals">Refresh Actuals</button>
-      <button class="action-btn" id="downloadData">Download</button>
-      <button class="action-btn" id="publishScenario">Publish To…</button>
-      <button class="theme-toggle" id="themeToggle" title="Toggle light/dark mode" aria-label="Toggle light/dark mode"><span class="theme-icon" id="themeIcon">☀</span></button>
-    </div>
-  </div>
-
-  <nav class="tabbar" id="tabbar">
-    <button class="tab-btn active" data-tab="tab-01">01 · Magic Page</button>
-    <button class="tab-btn" data-tab="tab-02">02 · Growth &amp; Margin Engine</button>
-    <button class="tab-btn" data-tab="tab-03">03 · Financial Summary</button>
-    <button class="tab-btn" data-tab="tab-04">04 · Commercial Cash Flow</button>
-  </nav>
-</header>
-
-<main class="wrap">
-  <section class="tab-panel active" id="tab-01">
-    <section class="magic-control-panel" aria-label="Magic Page controls">
-      <div class="display-control-row">
-        <div class="display-control-heading">
-          <span class="display-control-kicker">Dashboard Display</span>
-          <span class="display-control-note">All KPI Cards show the closing forecast for the selected year.</span>
-        </div>
-        <div class="dashboard-display-field compact-field"><label for="modelStatus">Scenario</label><select id="modelStatus"></select></div>
-        <div class="dashboard-display-field compact-field"><label for="displayYear">Display Year</label><select id="displayYear"></select></div>
-      </div>
-
-      <div class="assumption-control-row" aria-label="Magic Page model inputs">
-        <div class="dashboard-display-field"><label for="fundingScenario">Funding Scenario</label><select id="fundingScenario"></select></div>
-        <div class="dashboard-display-field"><label for="fundingDate">Funding Date</label><select id="fundingDate"></select></div>
-        <div class="dashboard-display-field"><label for="baseEcommerce">Base Ecommerce</label><input id="baseEcommerce" /></div>
-        <div class="dashboard-display-field"><label for="doverCapture">Dover Capture</label><select id="doverCapture"></select></div>
-        <div class="dashboard-display-field"><label for="roas">ROAS</label><select id="roas"></select></div>
-        <div class="dashboard-display-field"><label for="lastUpdate">Last Updated</label><input id="lastUpdate" /></div>
-      </div>
-
-      <details class="validation-tools">
-        <summary>Validation tools</summary>
-        <div class="validation-tools-body">
-          <p>Loads simple editable assumptions for 2027–2029 only. Shopify actuals and the 2026 forecast are preserved.</p>
-          <div class="qa-actions">
-            <button class="action-btn primary" id="loadEasyNumbers">Load Easy Test (2027–2029)</button>
-            <button class="action-btn" id="restoreScenarioValues">Restore Previous Values</button>
-          </div>
-        </div>
-      </details>
-    </section>
-    <div class="scenario-banner">CURRENT STRATEGIC SCENARIO</div>
-    <div class="kpi-grid" id="kpiGrid"></div>
-
-    <section class="section" data-accent="funding">
-      <div class="section-header">Section 1 — Funding &amp; Allocation</div>
-      <p class="section-sub">Funding scenarios &amp; allocation rules</p>
-      <table class="grid" id="fundingTable"></table>
-      <p class="section-note">Unallocated Capital = scenario funding total − allocated capital. It should equal $0.</p>
-    </section>
-
-    <section class="section" data-accent="commercial">
-      <div class="section-header">Section 2 — Commercial Strategy</div>
-      <p class="section-note">Growth Engines — strategic inputs only. Baseline/Current values are automatically refreshed from actuals where available.</p>
-      <div class="strategy-grid" id="commercialBlocks"></div>
-    </section>
-
-    <section class="section" data-accent="bu">
-      <div class="section-header">Section 3 — Growth Engines</div>
-      <p class="section-note">Each engine has its own input block according to how that business works. No revenue or gross profit output on the Magic Page.</p>
-      <div class="engine-grid" id="engineBlocks"></div>
-    </section>
-
-    <section class="section" data-accent="margin">
-      <div class="section-header">Section 4 — Purchasing Strategy</div>
-      <span class="owner-tag" style="margin-top:10px; display:inline-block;">Owner: Tatum</span>
-      <div class="two-col" style="margin-top:10px;">
-        <div>
-          <p class="section-sub">Commercial Terms</p>
-          <table class="grid" id="purchasingTable"></table>
-        </div>
-        <div>
-          <p class="section-sub">Vendor Payment Mix</p>
-          <table class="grid" id="vendorMixTable"></table>
-          <p class="section-sub">Capital Efficiency</p>
-          <table class="grid" id="capitalEfficiencyTable"></table>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" data-accent="margin">
-      <div class="section-header">Section 5 — Operations Strategy</div>
-      <span class="owner-tag" style="margin-top:10px; display:inline-block;">Owner: Jordyn</span>
-      <table class="grid" id="opsTable" style="max-width:760px;"></table>
-    </section>
-
-    <section class="section" data-accent="growth">
-      <div class="section-header">Section 6 — Growth Initiatives</div>
-      <table class="grid" id="growthTable" style="margin-top:10px;"></table>
-      <button class="add-row-btn" id="addGrowthRow">+ Add initiative</button>
-    </section>
-
-    <section class="section" data-accent="thesis">
-      <div class="section-header">Section 7 — Strategic Targets</div>
-      <p class="section-note">Company-level targets only. Detailed dollar outputs are kept out of the Magic Page.</p>
-      <div class="thesis-grid" id="thesisGrid"></div>
-    </section>
-
-    <div class="footer">
-      Magic Page = what we assume and choose. Growth &amp; Margin Engine = what those assumptions generate.
-      <br />
-      <button class="add-row-btn" id="resetData" style="margin-top:10px;">Reset to base values</button>
-    </div>
-  </section>
-
-  <section class="tab-panel" id="tab-02">
-    <div class="scenario-banner">GROWTH &amp; MARGIN ENGINE</div>
-    <p class="section-note" style="text-align:center; margin-top:8px;">Financial outputs generated from the Magic Page assumptions.</p>
-
-    <section class="section" data-accent="funding">
-      <div class="section-header">Active Scenario</div>
-      <div class="kpi-grid compact" id="sheet2ScenarioGrid"></div>
-    </section>
-
-    <section class="section" data-accent="commercial">
-      <div class="section-header">Financial Snapshot</div>
-      <div class="kpi-grid snapshot-grid" id="financialSnapshotGrid"></div>
-    </section>
-
-    <section class="section" data-accent="bu">
-      <div class="section-header">Growth Engines — Revenue &amp; Profit Contribution</div>
-      <p class="section-note">This is the portfolio view: which engine generates sales and which engine generates GP1. Ecommerce is built from base revenue, organic growth, incremental paid growth and net Dover capture.</p>
-      <p class="section-sub">Ecommerce Revenue Build</p>
-      <table class="grid" id="ecommerceBuildTable" style="margin-top:10px;"></table>
-      <p class="section-sub">Growth Engine Portfolio</p>
-      <table class="grid" id="sheet2ExecSummaryTable" style="margin-top:10px;"></table>
-      <div class="supporting-kpis" id="sheet2SupportingKpis"></div>
-    </section>
-
-    <section class="section" data-accent="margin">
-      <div class="section-header">Margin Bridge</div>
-      <p class="section-note">Gross Sales → Net Sales → COGS → GP1 → GP2 → GP3. EBITDA and fixed operating expenses remain in Tab 03.</p>
-      <table class="grid" id="sheet2MarginBridgeTable" style="margin-top:10px;"></table>
-    </section>
-  </section>
-
-  <section class="tab-panel" id="tab-03">
-    <div class="scenario-banner">FINANCIAL SUMMARY</div>
-    <p class="section-note" style="text-align:center; margin-top:8px;">Executive profitability view generated from the Strategic Model.</p>
-    <section class="section" data-accent="commercial">
-      <div class="section-header">KPI Cards</div>
-      <div class="kpi-grid snapshot-grid" id="tab3KpiGrid"></div>
-    </section>
-    <section class="section" data-accent="margin">
-      <div class="section-header">Commercial P&amp;L</div>
-      <table class="grid" id="tab3PnlTable" style="margin-top:10px;"></table>
-    </section>
-    <section class="section" data-accent="bu">
-      <div class="section-header">Operating KPIs</div>
-      <div class="kpi-grid snapshot-grid" id="tab3OperatingKpis"></div>
-    </section>
-  </section>
-
-  <section class="tab-panel" id="tab-04">
-    <div class="scenario-banner">COMMERCIAL CASH FLOW</div>
-    <p class="section-note" style="text-align:center; margin-top:8px;">Cash position and execution capacity generated from actual cash timing, model outputs and funding plan.</p>
-    <section class="section cash-summary-section" data-accent="cashflow">
-      <div id="tab4CashKpis" class="cash-summary-card"></div>
-    </section>
-    <section class="section" data-accent="commercial">
-      <div class="section-header">Cash In</div>
-      <table class="grid" id="tab4CashInTable" style="margin-top:10px;"></table>
-    </section>
-    <section class="section" data-accent="margin">
-      <div class="section-header">Cash Out</div>
-      <table class="grid" id="tab4CashOutTable" style="margin-top:10px;"></table>
-    </section>
-    <section class="section" data-accent="growth">
-      <div class="section-header">Net Cash Flow</div>
-      <table class="grid" id="tab4NetCashTable" style="margin-top:10px;"></table>
-    </section>
-  </section>
-
-</main>
-
-<script src="assets/js/dataService.js?v=140"></script>
-<script src="assets/js/app.js?v=140"></script>
+<header><div class="brand"><div class="mark">SP</div><div><div class="title">SmartPay Subscription Analytics</div><div class="updated" id="updated">Loading data…</div></div></div><button class="theme" id="theme">Dark mode</button></header>
+<main><div class="tabs" id="tabs"></div><div id="content"><div class="empty">Loading…</div></div></main>
+<script>
+const URLS={orders:'data/orders_report.json',subscriptions:'data/subscriptions_report.json',summary:'data/analytics_summary.json'};
+const state={view:'overview',orders:[],subscriptions:[],summary:{},year:'all',month:'all',text:''};
+const views=[['overview','Overview'],['orders','Orders'],['products','Products'],['customers','Customers'],['renewals','Renewals']];
+const n=v=>{const x=Number(v);return Number.isFinite(x)?x:0},has=v=>v!==null&&v!==undefined&&v!==''&&Number.isFinite(Number(v));
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=(v,c='USD')=>has(v)?new Intl.NumberFormat('en-US',{style:'currency',currency:c,maximumFractionDigits:2}).format(Number(v)):'—';
+const pct=v=>has(v)?new Intl.NumberFormat('en-US',{style:'percent',maximumFractionDigits:1}).format(Number(v)):'—';
+const dt=v=>v&&!Number.isNaN(new Date(v))?new Date(v).toLocaleDateString('en-US'):'—';
+const y=v=>v&&!Number.isNaN(new Date(v))?String(new Date(v).getFullYear()):'unknown',m=v=>v&&!Number.isNaN(new Date(v))?String(new Date(v).getMonth()+1).padStart(2,'0'):'unknown';
+function items(r){try{return Array.isArray(r.line_items)?r.line_items:JSON.parse(r.line_items||'[]')}catch{return[]}}
+function selected(){const q=state.text.toLowerCase();return state.orders.filter(r=>(state.year==='all'||y(r.created_at)===state.year)&&(state.month==='all'||m(r.created_at)===state.month)&&(!q||JSON.stringify(r).toLowerCase().includes(q)))}
+function controls(){const years=[...new Set(state.orders.map(r=>y(r.created_at)).filter(v=>v!=='unknown'))].sort((a,b)=>b-a);return `<div class="controls"><input id="search" placeholder="Search customer, order, product or status" value="${esc(state.text)}"><select id="year"><option value="all">All years</option>${years.map(v=>`<option ${state.year===v?'selected':''}>${v}</option>`).join('')}</select><select id="month"><option value="all">All months / YTD</option>${Array.from({length:12},(_,i)=>String(i+1).padStart(2,'0')).map((v,i)=>`<option value="${v}" ${state.month===v?'selected':''}>${new Date(2026,i,1).toLocaleString('en-US',{month:'long'})}</option>`).join('')}</select></div>`}
+function card(label,value,detail='',cls=''){return `<div class="card ${cls}"><div class="label">${label}</div><div class="value">${value}</div><div class="detail">${detail}</div></div>`}
+function agg(rows){const c=rows.find(r=>r.currency)?.currency||'USD',gross=rows.reduce((s,r)=>s+n(r.gross_sales||r.total_price),0),disc=rows.reduce((s,r)=>s+n(r.discounts),0),ret=rows.reduce((s,r)=>s+n(r.returns),0),net=rows.reduce((s,r)=>s+n(r.net_sales||r.total_price),0),complete=rows.filter(r=>r.margin_status==='complete'&&has(r.gross_profit)),coveredNet=complete.reduce((s,r)=>s+n(r.net_sales),0),gp=complete.length?complete.reduce((s,r)=>s+n(r.gross_profit),0):null;return{c,orders:rows.length,customers:new Set(rows.map(r=>r.customer_email).filter(Boolean)).size,gross,disc,ret,net,aov:rows.length?net/rows.length:0,gp,gm:gp!==null&&coveredNet?gp/coveredNet:null,coverage:rows.length?complete.length/rows.length:null}}
+function monthly(rows){const x={};rows.forEach(r=>{const d=new Date(r.created_at);if(Number.isNaN(d))return;const k=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;x[k]??={label:d.toLocaleString('en-US',{month:'short'}),net:0,orders:0};x[k].net+=n(r.net_sales||r.total_price);x[k].orders++});return Object.keys(x).sort().map(k=>x[k])}
+function overview(){const rows=selected(),a=agg(rows),s=state.summary.subscriptions||{},sh=state.summary.shopify||{},off=state.summary.official_metrics||{},active=has(off.active_subscriptions)?off.active_subscriptions:(s.operational_active||null),activeLabel=has(off.active_subscriptions)?'Official Active Subscriptions':'Operational Active Subscriptions',churn=has(off.churn_rate)?pct(off.churn_rate):'—',cltv=has(off.cltv)?off.cltv:s.derived_cltv,subRevenue=has(off.subscription_revenue)?off.subscription_revenue:sh.subscription_net_sales;return `${controls()}<div class="hero"><div><div class="kicker">Commerce + subscription intelligence</div><h2>Performance overview</h2><p>Shopify is the source for orders, discounts, returns and cost. Smartrr customer lookups provide operational subscription status and billing dates. Official Advanced Analytics metrics are shown only when explicitly supplied.</p></div><div class="source">Shopify + Smartrr</div></div>
+<div class="section"><h2>Selected period commerce</h2><p>Financial metrics change with the year and month filters.</p></div><div class="cards">${card('Orders',a.orders)}${card('Unique customers',a.customers)}${card('Gross sales',money(a.gross,a.c),'Before discounts and merchandise returns')}${card('Discounts',money(a.disc,a.c),'Shopify discount allocations')}${card('Returns',money(a.ret,a.c),'Merchandise returns')}${card('Net sales',money(a.net,a.c),'Gross − discounts − returns')}${card('AOV',money(a.aov,a.c),'Net sales ÷ orders')}${card('Gross profit',money(a.gp,a.c),`Complete cost coverage ${pct(a.coverage)}`)}${card('Gross margin',pct(a.gm),'Gross profit ÷ covered net sales')}</div>
+<div class="grid2"><div class="panel"><h3>Subscription net sales</h3><div id="sales" class="chart"></div></div><div class="panel"><h3>Subscription order volume</h3><div id="ordersChart" class="chart"></div></div></div>
+<div class="section"><h2>Subscription health</h2><p>Official and operational figures are separated to prevent false comparisons with Smartrr Advanced Analytics.</p></div><div class="cards">${card(activeLabel,active??'—',has(off.active_subscriptions)?'Smartrr Advanced Analytics override':`${s.confirmed_active||0} confirmed + ${s.inferred_active||0} future-billing inferred`,has(off.active_subscriptions)?'official':'operational')}${card('Subscription customers',s.customers??'—','Distinct customers in loaded Smartrr records','operational')}${card('Current CLTV',money(cltv),'Official when configured; otherwise derived from loaded Shopify history',has(off.cltv)?'official':'operational')}${card('Subscription revenue',money(subRevenue),'Official when configured; otherwise Shopify subscription net sales',has(off.subscription_revenue)?'official':'operational')}${card('% of subscription orders',pct(sh.subscription_order_share),'Subscription-tagged Shopify orders ÷ all Shopify orders','quality')}${card('Churn rate',churn,has(off.churn_rate)?'Official Smartrr Advanced Analytics':'Not calculated from customer lookup records','official')}${card('Upcoming renewals (90 days)',s.upcoming_90_days??'—','Subscriptions with a future billing date','operational')}${card('Status coverage',pct(s.status_coverage),`${s.unknown||0} records remain unknown`,'quality')}</div>
+<div class="grid2"><div class="panel"><h3>Queued renewals by month</h3><div id="renewals" class="chart"></div></div><div class="panel"><h3>Data quality</h3><div class="note"><strong>Why this differs from Smartrr:</strong> Smartrr Advanced Analytics is powered by a separate analytics dataset. The vendor customer lookup API does not expose the same churn, CLTV, MRR or full active-subscription logic. This dashboard no longer fabricates those values from incomplete status records.</div><div class="cards">${card('Confirmed active',s.confirmed_active??0,'Contract status returned as active')}${card('Active inferred',s.inferred_active??0,'Future billing date with no readable status')}${card('Confirmed cancelled',s.confirmed_cancelled??0,'Contract cancellation confirmed')}${card('Unknown status',s.unknown??0,'Excluded from active and churn')}</div></div></div>`}
+function ordersView(){const rows=selected();return `${controls()}<div class="note">Use the Shopify order number to audit Gross Sales, Discounts, Returns, Net Sales, COGS and Margin. Formula Check should be $0.00.</div><div class="table-wrap"><table><thead><tr><th>Order</th><th>Customer</th><th>Type</th><th>Gross</th><th>Discounts</th><th>Returns</th><th>Net</th><th>Total</th><th>COGS</th><th>GP</th><th>GM</th><th>Coverage</th><th>Check</th><th>Created</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r.order_name||r.order_id)}</td><td>${esc(r.customer_email)}</td><td>${esc(r.subscription_order_type)}</td><td>${money(r.gross_sales,r.currency)}</td><td>${money(r.discounts,r.currency)}</td><td>${money(r.returns,r.currency)}</td><td>${money(r.net_sales,r.currency)}</td><td>${money(r.order_total,r.currency)}</td><td>${money(r.cogs,r.currency)}</td><td>${money(r.gross_profit,r.currency)}</td><td>${pct(r.gross_margin)}</td><td>${pct(r.cost_coverage_pct)}</td><td class="${Math.abs(n(r.sales_formula_check))<.01?'good':'bad'}">${money(r.sales_formula_check,r.currency)}</td><td>${dt(r.created_at)}</td></tr>`).join('')}</tbody></table></div>`}
+function productsView(){const map={};selected().forEach(r=>items(r).forEach(i=>{const k=`${i.product}|${i.variant}|${i.sku}`;map[k]??={product:i.product,variant:i.variant,sku:i.sku,orders:new Set(),units:0,net:0,cogs:0,covered:true};const x=map[k];x.orders.add(r.order_id);x.units+=n(i.net_quantity);x.net+=n(i.net_sales);if(has(i.cogs))x.cogs+=n(i.cogs);else x.covered=false}));const rows=Object.values(map).map(x=>({...x,orders:x.orders.size,gp:x.covered?x.net-x.cogs:null,gm:x.covered&&x.net?(x.net-x.cogs)/x.net:null})).sort((a,b)=>b.net-a.net);return `${controls()}<div class="cards">${card('Products / variants',rows.length)}${card('Units sold',rows.reduce((s,x)=>s+x.units,0))}${card('Product net sales',money(rows.reduce((s,x)=>s+x.net,0)))}</div><div class="table-wrap"><table><thead><tr><th>Product</th><th>Variant</th><th>SKU</th><th>Orders</th><th>Units</th><th>Net sales</th><th>COGS</th><th>GP</th><th>GM</th></tr></thead><tbody>${rows.map(x=>`<tr><td>${esc(x.product)}</td><td>${esc(x.variant||'—')}</td><td>${esc(x.sku||'—')}</td><td>${x.orders}</td><td>${x.units}</td><td>${money(x.net)}</td><td>${money(x.covered?x.cogs:null)}</td><td>${money(x.gp)}</td><td>${pct(x.gm)}</td></tr>`).join('')}</tbody></table></div>`}
+function customersView(){const map={};selected().forEach(r=>{const k=r.customer_email||'Unknown';map[k]??={customer:k,orders:0,net:0,last:null};map[k].orders++;map[k].net+=n(r.net_sales);if(!map[k].last||new Date(r.created_at)>new Date(map[k].last))map[k].last=r.created_at});const rows=Object.values(map).map(x=>({...x,aov:x.orders?x.net/x.orders:0})).sort((a,b)=>b.net-a.net);return `${controls()}<div class="cards">${card('Customers',rows.length)}${card('Repeat customers',rows.filter(x=>x.orders>1).length)}${card('Repeat rate',pct(rows.length?rows.filter(x=>x.orders>1).length/rows.length:0))}</div><div class="table-wrap"><table><thead><tr><th>Customer</th><th>Orders</th><th>Total purchased</th><th>AOV</th><th>Last order</th></tr></thead><tbody>${rows.map(x=>`<tr><td>${esc(x.customer)}</td><td>${x.orders}</td><td>${money(x.net)}</td><td>${money(x.aov)}</td><td>${dt(x.last)}</td></tr>`).join('')}</tbody></table></div>`}
+function renewalsView(){const rows=state.summary.upcoming_renewals||[];return `<div class="section"><h2>Queued subscription renewals</h2><p>Future billing dates from the Smartrr customer lookup data. Revenue is shown only when a subscription item price was available.</p></div><div class="cards">${card('Upcoming subscriptions',rows.length)}${card('Revenue estimate',money(rows.reduce((s,x)=>s+(has(x.estimated_revenue)?n(x.estimated_revenue):0),0)))}${card('Revenue coverage',pct(rows.length?rows.filter(x=>has(x.estimated_revenue)).length/rows.length:0),'Renewals with an available price')}</div><div class="table-wrap"><table><thead><tr><th>Next billing</th><th>Subscription</th><th>Customer</th><th>Status</th><th>Estimated revenue</th></tr></thead><tbody>${rows.map(x=>`<tr><td>${dt(x.next_order_date)}</td><td>${esc(x.subscription_id||'—')}</td><td>${esc(x.customer_email||'—')}</td><td><span class="badge">${esc(x.status||'unknown')}</span></td><td>${money(x.estimated_revenue)}</td></tr>`).join('')}</tbody></table></div>`}
+function chart(id,labels,values,type='bar',fmt=v=>String(Math.round(v))){const h=document.getElementById(id);if(!h)return;if(!labels.length){h.innerHTML='<div class="empty">No data available.</div>';return}const W=700,H=245,p={l:65,r:18,t:12,b:40},iw=W-p.l-p.r,ih=H-p.t-p.b,max=Math.max(...values.map(n),0),top=max?max*1.12:1,Y=v=>p.t+ih-n(v)/top*ih;let o=`<svg viewBox="0 0 ${W} ${H}">`;for(let i=0;i<=4;i++){const yy=p.t+ih*i/4,v=top*(1-i/4);o+=`<line class="grid" x1="${p.l}" y1="${yy}" x2="${W-p.r}" y2="${yy}"/><text class="axis" x="${p.l-7}" y="${yy+4}" text-anchor="end">${esc(fmt(v))}</text>`}const gap=iw/labels.length;if(type==='bar'){labels.forEach((l,i)=>{const cx=p.l+gap*(i+.5),yy=Y(values[i]),bw=Math.min(54,gap*.6);o+=`<rect class="bar" x="${cx-bw/2}" y="${yy}" width="${bw}" height="${Math.max(p.t+ih-yy,1)}" rx="4"/><text class="axis" x="${cx}" y="${H-13}" text-anchor="middle">${esc(l)}</text>`})}else{const X=i=>labels.length===1?p.l+iw/2:p.l+i/(labels.length-1)*iw,pts=values.map((v,i)=>`${X(i)},${Y(v)}`).join(' ');o+=`<polygon class="area" points="${p.l},${p.t+ih} ${pts} ${X(values.length-1)},${p.t+ih}"/><polyline class="line" points="${pts}"/>`;labels.forEach((l,i)=>o+=`<circle class="dot" cx="${X(i)}" cy="${Y(values[i])}" r="4"/><text class="axis" x="${X(i)}" y="${H-13}" text-anchor="middle">${esc(l)}</text>`)}h.innerHTML=o+'</svg>'}
+function draw(){if(state.view!=='overview')return;const rows=selected(),mo=monthly(rows),c=rows.find(r=>r.currency)?.currency||'USD',re=state.summary.renewals_by_month||[];chart('sales',mo.map(x=>x.label),mo.map(x=>x.net),'line',v=>money(v,c));chart('ordersChart',mo.map(x=>x.label),mo.map(x=>x.orders),'bar',v=>String(Math.round(v)));chart('renewals',re.map(x=>x.month),re.map(x=>x.subscriptions),'bar',v=>String(Math.round(v)))}
+function bind(){document.getElementById('search')?.addEventListener('input',e=>{state.text=e.target.value;render()});document.getElementById('year')?.addEventListener('change',e=>{state.year=e.target.value;render()});document.getElementById('month')?.addEventListener('change',e=>{state.month=e.target.value;render()})}
+function render(){document.getElementById('tabs').innerHTML=views.map(([id,l])=>`<button class="tab ${state.view===id?'active':''}" data-view="${id}">${l}</button>`).join('');document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{state.view=b.dataset.view;state.text='';render()});document.getElementById('content').innerHTML={overview,orders:ordersView,products:productsView,customers:customersView,renewals:renewalsView}[state.view]();bind();draw()}
+async function load(){for(const[k,u]of Object.entries(URLS)){try{const r=await fetch(`${u}?v=${Date.now()}`,{cache:'no-store'});if(!r.ok)throw Error(r.status);state[k]=await r.json()}catch(e){console.error(u,e);state[k]=k==='summary'?{}:[]}}const stamps=[...state.orders,...state.subscriptions,state.summary].map(x=>new Date(x.report_updated_at)).filter(x=>!Number.isNaN(x));document.getElementById('updated').textContent=stamps.length?`Last updated ${new Date(Math.max(...stamps)).toLocaleString('en-US')}`:'No report data available';render()}
+const t=document.getElementById('theme');function theme(v){document.documentElement.dataset.theme=v;t.textContent=v==='dark'?'Light mode':'Dark mode';localStorage.setItem('smartpay-theme',v)}t.onclick=()=>theme(document.documentElement.dataset.theme==='dark'?'light':'dark');theme(localStorage.getItem('smartpay-theme')||'light');load();
+</script>
 </body>
 </html>
