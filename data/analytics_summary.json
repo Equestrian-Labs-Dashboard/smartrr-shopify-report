@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-08-03T12:18:04+00:00",
+  "report_updated_at": "2026-08-04T07:13:36+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1881,
-    "subscription_orders": 72,
-    "subscription_order_share": 0.03827751196172249,
-    "total_net_sales": 295676.36,
-    "subscription_net_sales": 6971.78
+    "total_orders": 3243,
+    "subscription_orders": 166,
+    "subscription_order_share": 0.05118717237126118,
+    "total_net_sales": 548799.98,
+    "subscription_net_sales": 14176.39
   },
   "subscriptions": {
     "records": 191,
     "customers": 159,
     "confirmed_active": 0,
-    "inferred_active": 50,
-    "operational_active": 50,
+    "inferred_active": 51,
+    "operational_active": 51,
     "paused": 0,
     "confirmed_cancelled": 87,
-    "unknown": 54,
-    "status_coverage": 0.7172774869109948,
-    "upcoming_all": 50,
-    "upcoming_90_days": 35,
-    "upcoming_revenue_estimate": NaN,
-    "upcoming_revenue_coverage": 1,
-    "derived_cltv": 43.85
+    "unknown": 53,
+    "status_coverage": 0.7225130890052356,
+    "upcoming_all": 51,
+    "upcoming_90_days": 37,
+    "upcoming_revenue_estimate": 0,
+    "upcoming_revenue_coverage": 0,
+    "derived_cltv": 89.16
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -41,12 +41,12 @@
     {
       "month": "2026-09",
       "subscriptions": 9,
-      "estimated_revenue": NaN,
-      "revenue_coverage": 1
+      "estimated_revenue": 0.0,
+      "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 6,
+      "subscriptions": 7,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -77,24 +77,16 @@
   ],
   "upcoming_renewals": [
     {
-      "subscription_id": "7b87ba2e-18fc-4a6f-a5b3-8264e33cf6f9",
-      "customer_email": "laurenbritton33@gmail.com",
-      "next_order_date": "2026-08-03T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "77a23feb-c0bf-4e7a-8913-0a8248939843",
-      "customer_email": "cameron.stout.miller@gmail.com",
+      "subscription_id": "1e37edd0-79a9-4d35-ac3e-452abcb56031",
+      "customer_email": "mandy.akins@gmail.com",
       "next_order_date": "2026-08-04T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
-      "subscription_id": "1e37edd0-79a9-4d35-ac3e-452abcb56031",
-      "customer_email": "mandy.akins@gmail.com",
+      "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
+      "customer_email": "michelle@mywisconsinrealtor.com",
       "next_order_date": "2026-08-04T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
@@ -237,6 +229,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "7b87ba2e-18fc-4a6f-a5b3-8264e33cf6f9",
+      "customer_email": "laurenbritton33@gmail.com",
+      "next_order_date": "2026-08-31T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "22089931-45ef-4f5f-931c-7073a52c8049",
       "customer_email": "victiriam221@gmail.com",
       "next_order_date": "2026-09-01T14:00:00.000Z",
@@ -297,7 +297,7 @@
       "customer_email": "lakamer@aol.com",
       "next_order_date": "2026-09-26T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": NaN,
+      "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
@@ -328,6 +328,14 @@
       "subscription_id": "49278d66-f02d-49d8-a778-8732f20ae003",
       "customer_email": "sonart.mhr@gmail.com",
       "next_order_date": "2026-10-01T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "77a23feb-c0bf-4e7a-8913-0a8248939843",
+      "customer_email": "cameron.stout.miller@gmail.com",
+      "next_order_date": "2026-10-04T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
