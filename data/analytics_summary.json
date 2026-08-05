@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-08-04T11:20:45+00:00",
+  "report_updated_at": "2026-08-05T11:16:47+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1888,
-    "subscription_orders": 73,
-    "subscription_order_share": 0.03866525423728814,
-    "total_net_sales": 295819.08,
-    "subscription_net_sales": 7151.77
+    "total_orders": 1884,
+    "subscription_orders": 74,
+    "subscription_order_share": 0.03927813163481953,
+    "total_net_sales": 296532.14,
+    "subscription_net_sales": 7304.75
   },
   "subscriptions": {
     "records": 191,
     "customers": 159,
     "confirmed_active": 0,
-    "inferred_active": 51,
-    "operational_active": 51,
+    "inferred_active": 50,
+    "operational_active": 50,
     "paused": 0,
-    "confirmed_cancelled": 87,
+    "confirmed_cancelled": 88,
     "unknown": 53,
     "status_coverage": 0.7225130890052356,
-    "upcoming_all": 51,
-    "upcoming_90_days": 37,
+    "upcoming_all": 50,
+    "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 44.98
+    "derived_cltv": 45.94
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,13 +34,13 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 20,
+      "subscriptions": 18,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 9,
+      "subscriptions": 10,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,30 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "1e37edd0-79a9-4d35-ac3e-452abcb56031",
-      "customer_email": "mandy.akins@gmail.com",
-      "next_order_date": "2026-08-04T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
-      "customer_email": "michelle@mywisconsinrealtor.com",
-      "next_order_date": "2026-08-04T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "2f5cb716-906a-43eb-92e0-5a24d5bac501",
-      "customer_email": "tammysmith8863@gmails.com",
-      "next_order_date": "2026-08-04T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "bc20aed7-e7cf-45de-977d-6d7e3fb4788a",
       "customer_email": "heartofthehorsetherapy@gmail.com",
@@ -173,6 +149,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
+      "customer_email": "michelle@mywisconsinrealtor.com",
+      "next_order_date": "2026-08-18T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "b3d24be8-238d-4459-abd9-f331de7abba0",
       "customer_email": "bbfarm10501@gmail.com",
       "next_order_date": "2026-08-19T14:00:00.000Z",
@@ -232,6 +216,14 @@
       "subscription_id": "7b87ba2e-18fc-4a6f-a5b3-8264e33cf6f9",
       "customer_email": "laurenbritton33@gmail.com",
       "next_order_date": "2026-08-31T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "2f5cb716-906a-43eb-92e0-5a24d5bac501",
+      "customer_email": "tammysmith8863@gmails.com",
+      "next_order_date": "2026-09-01T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
