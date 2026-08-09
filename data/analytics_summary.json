@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-08-08T09:32:30+00:00",
+  "report_updated_at": "2026-08-09T09:34:26+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1887,
-    "subscription_orders": 74,
-    "subscription_order_share": 0.0392156862745098,
-    "total_net_sales": 295196.11,
-    "subscription_net_sales": 7304.75
+    "total_orders": 1889,
+    "subscription_orders": 75,
+    "subscription_order_share": 0.03970354685018528,
+    "total_net_sales": 294457.74,
+    "subscription_net_sales": 7437.31
   },
   "subscriptions": {
-    "records": 191,
+    "records": 192,
     "customers": 159,
     "confirmed_active": 0,
-    "inferred_active": 50,
-    "operational_active": 50,
+    "inferred_active": 51,
+    "operational_active": 51,
     "paused": 0,
     "confirmed_cancelled": 88,
     "unknown": 53,
-    "status_coverage": 0.7225130890052356,
-    "upcoming_all": 50,
+    "status_coverage": 0.7239583333333334,
+    "upcoming_all": 51,
     "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 45.94
+    "derived_cltv": 46.78
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -52,7 +52,7 @@
     },
     {
       "month": "2026-11",
-      "subscriptions": 5,
+      "subscriptions": 6,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -360,6 +360,14 @@
       "subscription_id": "d455e746-2cd6-45fe-b721-ad576fa88dc0",
       "customer_email": "briar_glen_riding@yahoo.com",
       "next_order_date": "2026-11-01T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "662c680e-4d04-404c-a4ec-55f23fa6f61a",
+      "customer_email": "lakamer@aol.com",
+      "next_order_date": "2026-11-09T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
