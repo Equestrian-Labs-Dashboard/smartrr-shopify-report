@@ -1,25 +1,25 @@
 {
-  "report_updated_at": "2026-08-09T09:34:26+00:00",
+  "report_updated_at": "2026-08-10T10:13:00+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1889,
+    "total_orders": 1888,
     "subscription_orders": 75,
-    "subscription_order_share": 0.03970354685018528,
-    "total_net_sales": 294457.74,
+    "subscription_order_share": 0.03972457627118644,
+    "total_net_sales": 294204.88,
     "subscription_net_sales": 7437.31
   },
   "subscriptions": {
     "records": 192,
     "customers": 159,
     "confirmed_active": 0,
-    "inferred_active": 51,
-    "operational_active": 51,
+    "inferred_active": 48,
+    "operational_active": 48,
     "paused": 0,
     "confirmed_cancelled": 88,
-    "unknown": 53,
-    "status_coverage": 0.7239583333333334,
-    "upcoming_all": 51,
-    "upcoming_90_days": 36,
+    "unknown": 56,
+    "status_coverage": 0.7083333333333334,
+    "upcoming_all": 48,
+    "upcoming_90_days": 34,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
     "derived_cltv": 46.78
@@ -34,7 +34,7 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 17,
+      "subscriptions": 16,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -46,13 +46,13 @@
     },
     {
       "month": "2026-10",
-      "subscriptions": 7,
+      "subscriptions": 6,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-11",
-      "subscriptions": 6,
+      "subscriptions": 5,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,14 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "625a5ee2-3671-4368-8c6d-318efb97d452",
-      "customer_email": "kathagatto@gmail.com",
-      "next_order_date": "2026-08-09T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "5f38fda8-642d-4153-a6d0-549f350b87f8",
       "customer_email": "kiley.dill@gmail.com",
@@ -261,6 +253,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "625a5ee2-3671-4368-8c6d-318efb97d452",
+      "customer_email": "kathagatto@gmail.com",
+      "next_order_date": "2026-09-06T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "c8e1f0c1-4435-4f3e-b17f-a19af1263e81",
       "customer_email": "rose.gagnon@yahoo.com",
       "next_order_date": "2026-09-13T14:00:00.000Z",
@@ -285,14 +285,6 @@
       "subscription_items": "[]"
     },
     {
-      "subscription_id": "5d75d03a-b7ae-4a37-b010-eadb8818e565",
-      "customer_email": "lakamer@aol.com",
-      "next_order_date": "2026-09-26T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
       "subscription_id": "4de6eafb-c554-4c9f-9289-995b4a2a8489",
       "customer_email": "allison.postier@me.com",
       "next_order_date": "2026-09-30T14:00:00.000Z",
@@ -302,14 +294,6 @@
     },
     {
       "subscription_id": "d9a3df7f-ba4b-4b94-bb34-9a4f0eccf39c",
-      "customer_email": "hltreiner@icloud.com",
-      "next_order_date": "2026-10-01T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "71884844-aba2-4825-bc60-fe036fe65c1c",
       "customer_email": "hltreiner@icloud.com",
       "next_order_date": "2026-10-01T14:00:00.000Z",
       "status": "active_inferred",
@@ -360,14 +344,6 @@
       "subscription_id": "d455e746-2cd6-45fe-b721-ad576fa88dc0",
       "customer_email": "briar_glen_riding@yahoo.com",
       "next_order_date": "2026-11-01T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "662c680e-4d04-404c-a4ec-55f23fa6f61a",
-      "customer_email": "lakamer@aol.com",
-      "next_order_date": "2026-11-09T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
