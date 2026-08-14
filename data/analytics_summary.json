@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-08-13T09:59:13+00:00",
+  "report_updated_at": "2026-08-14T09:55:45+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1863,
-    "subscription_orders": 74,
-    "subscription_order_share": 0.03972088030059045,
-    "total_net_sales": 289312.98,
-    "subscription_net_sales": 7385.13
+    "total_orders": 1853,
+    "subscription_orders": 75,
+    "subscription_order_share": 0.040474905558553695,
+    "total_net_sales": 287874.35,
+    "subscription_net_sales": 7538.12
   },
   "subscriptions": {
     "records": 193,
@@ -19,10 +19,10 @@
     "unknown": 54,
     "status_coverage": 0.7202072538860104,
     "upcoming_all": 51,
-    "upcoming_90_days": 36,
+    "upcoming_90_days": 37,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 46.16
+    "derived_cltv": 47.11
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,7 +34,7 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 16,
+      "subscriptions": 15,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -46,7 +46,7 @@
     },
     {
       "month": "2026-10",
-      "subscriptions": 6,
+      "subscriptions": 7,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,14 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "5f38fda8-642d-4153-a6d0-549f350b87f8",
-      "customer_email": "kiley.dill@gmail.com",
-      "next_order_date": "2026-08-13T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "4d8e1014-2071-4167-91d3-da2601e2b108",
       "customer_email": "clarkandclark@yahoo.com",
@@ -328,6 +320,14 @@
       "subscription_id": "7d9871bb-303f-48e9-9e36-481f498a9896",
       "customer_email": "rose.gagnon@yahoo.com",
       "next_order_date": "2026-10-04T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "5f38fda8-642d-4153-a6d0-549f350b87f8",
+      "customer_email": "kiley.dill@gmail.com",
+      "next_order_date": "2026-10-08T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
