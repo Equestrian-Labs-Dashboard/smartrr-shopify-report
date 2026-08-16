@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-08-15T09:20:53+00:00",
+  "report_updated_at": "2026-08-16T09:22:06+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1842,
-    "subscription_orders": 74,
-    "subscription_order_share": 0.04017372421281216,
-    "total_net_sales": 285866.07,
-    "subscription_net_sales": 7363.12
+    "total_orders": 1833,
+    "subscription_orders": 75,
+    "subscription_order_share": 0.04091653027823241,
+    "total_net_sales": 283547.83,
+    "subscription_net_sales": 7492.12
   },
   "subscriptions": {
     "records": 193,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 37,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 46.02
+    "derived_cltv": 46.83
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,19 +34,19 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 15,
+      "subscriptions": 13,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 12,
+      "subscriptions": 13,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 7,
+      "subscriptions": 8,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -77,14 +77,6 @@
   ],
   "upcoming_renewals": [
     {
-      "subscription_id": "4d8e1014-2071-4167-91d3-da2601e2b108",
-      "customer_email": "clarkandclark@yahoo.com",
-      "next_order_date": "2026-08-15T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
       "subscription_id": "78e0e8c3-c4b7-4359-8795-dd5afc735f99",
       "customer_email": "belindapb97@me.com",
       "next_order_date": "2026-08-17T14:00:00.000Z",
@@ -104,14 +96,6 @@
       "subscription_id": "00bc3a17-0ba3-4963-84e2-5ba42475dae6",
       "customer_email": "jhenigman1@gmail.com",
       "next_order_date": "2026-08-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
-      "customer_email": "cameron.wyman19@gmail.com",
-      "next_order_date": "2026-08-18T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
@@ -192,6 +176,14 @@
       "subscription_id": "7b87ba2e-18fc-4a6f-a5b3-8264e33cf6f9",
       "customer_email": "laurenbritton33@gmail.com",
       "next_order_date": "2026-08-31T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
+      "customer_email": "cameron.wyman19@gmail.com",
+      "next_order_date": "2026-09-01T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
@@ -328,6 +320,14 @@
       "subscription_id": "5f38fda8-642d-4153-a6d0-549f350b87f8",
       "customer_email": "kiley.dill@gmail.com",
       "next_order_date": "2026-10-08T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "4d8e1014-2071-4167-91d3-da2601e2b108",
+      "customer_email": "clarkandclark@yahoo.com",
+      "next_order_date": "2026-10-10T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
