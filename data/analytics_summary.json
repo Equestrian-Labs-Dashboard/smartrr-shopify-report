@@ -1,11 +1,11 @@
 {
-  "report_updated_at": "2026-08-17T09:35:36+00:00",
+  "report_updated_at": "2026-08-18T09:27:03+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1820,
+    "total_orders": 1816,
     "subscription_orders": 75,
-    "subscription_order_share": 0.04120879120879121,
-    "total_net_sales": 280715.57,
+    "subscription_order_share": 0.04129955947136564,
+    "total_net_sales": 280622.08,
     "subscription_net_sales": 7492.12
   },
   "subscriptions": {
@@ -34,19 +34,19 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 13,
+      "subscriptions": 10,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 13,
+      "subscriptions": 15,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 8,
+      "subscriptions": 9,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,30 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "78e0e8c3-c4b7-4359-8795-dd5afc735f99",
-      "customer_email": "belindapb97@me.com",
-      "next_order_date": "2026-08-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "a185df9c-c91d-400e-b6de-529c95c90add",
-      "customer_email": "gretchenfavaloro@yahoo.com",
-      "next_order_date": "2026-08-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "00bc3a17-0ba3-4963-84e2-5ba42475dae6",
-      "customer_email": "jhenigman1@gmail.com",
-      "next_order_date": "2026-08-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
       "customer_email": "michelle@mywisconsinrealtor.com",
@@ -253,6 +229,22 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "78e0e8c3-c4b7-4359-8795-dd5afc735f99",
+      "customer_email": "belindapb97@me.com",
+      "next_order_date": "2026-09-14T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "00bc3a17-0ba3-4963-84e2-5ba42475dae6",
+      "customer_email": "jhenigman1@gmail.com",
+      "next_order_date": "2026-09-14T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "b7d5bedf-c449-4d47-9910-c18fd0518abb",
       "customer_email": "jami.brokaw@me.com",
       "next_order_date": "2026-09-15T14:00:00.000Z",
@@ -328,6 +320,14 @@
       "subscription_id": "4d8e1014-2071-4167-91d3-da2601e2b108",
       "customer_email": "clarkandclark@yahoo.com",
       "next_order_date": "2026-10-10T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "a185df9c-c91d-400e-b6de-529c95c90add",
+      "customer_email": "gretchenfavaloro@yahoo.com",
+      "next_order_date": "2026-10-12T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
