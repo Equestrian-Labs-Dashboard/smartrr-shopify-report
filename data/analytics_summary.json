@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-08-18T09:27:03+00:00",
+  "report_updated_at": "2026-08-19T09:28:23+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1816,
-    "subscription_orders": 75,
-    "subscription_order_share": 0.04129955947136564,
-    "total_net_sales": 280622.08,
-    "subscription_net_sales": 7492.12
+    "total_orders": 1803,
+    "subscription_orders": 77,
+    "subscription_order_share": 0.04270660011092623,
+    "total_net_sales": 277537.32,
+    "subscription_net_sales": 7693.45
   },
   "subscriptions": {
     "records": 193,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 37,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 46.83
+    "derived_cltv": 48.08
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,13 +34,13 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 10,
+      "subscriptions": 9,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 15,
+      "subscriptions": 16,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -76,14 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
-      "customer_email": "michelle@mywisconsinrealtor.com",
-      "next_order_date": "2026-08-18T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "b3d24be8-238d-4459-abd9-f331de7abba0",
       "customer_email": "bbfarm10501@gmail.com",
@@ -159,6 +151,14 @@
     {
       "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
       "customer_email": "cameron.wyman19@gmail.com",
+      "next_order_date": "2026-09-01T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "8c351dbd-6178-441d-9c8f-9af569f98070",
+      "customer_email": "michelle@mywisconsinrealtor.com",
       "next_order_date": "2026-09-01T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
