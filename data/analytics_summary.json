@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-08-21T09:31:28+00:00",
+  "report_updated_at": "2026-08-22T09:22:03+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1771,
-    "subscription_orders": 72,
-    "subscription_order_share": 0.040654997176736304,
-    "total_net_sales": 255023.82,
-    "subscription_net_sales": 6853.66
+    "total_orders": 1758,
+    "subscription_orders": 71,
+    "subscription_order_share": 0.040386803185438,
+    "total_net_sales": 253152.56,
+    "subscription_net_sales": 6807.53
   },
   "subscriptions": {
     "records": 193,
@@ -19,10 +19,10 @@
     "unknown": 54,
     "status_coverage": 0.7202072538860104,
     "upcoming_all": 50,
-    "upcoming_90_days": 38,
+    "upcoming_90_days": 39,
     "upcoming_revenue_estimate": NaN,
     "upcoming_revenue_coverage": 1,
-    "derived_cltv": 42.84
+    "derived_cltv": 42.55
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,21 +34,21 @@
   "renewals_by_month": [
     {
       "month": "2026-08",
-      "subscriptions": 6,
+      "subscriptions": 5,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-09",
-      "subscriptions": 18,
-      "estimated_revenue": NaN,
-      "revenue_coverage": 1
+      "subscriptions": 19,
+      "estimated_revenue": 0.0,
+      "revenue_coverage": 0
     },
     {
       "month": "2026-10",
       "subscriptions": 9,
-      "estimated_revenue": 0.0,
-      "revenue_coverage": 0
+      "estimated_revenue": NaN,
+      "revenue_coverage": 1
     },
     {
       "month": "2026-11",
@@ -76,14 +76,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "a5df1967-16ea-4d57-847e-d74bdf33bdaf",
-      "customer_email": "sherryharker@yahoo.com",
-      "next_order_date": "2026-08-21T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "23cf68b2-92da-4407-9371-b31d275f6259",
       "customer_email": "trudymnoll@gmail.com",
@@ -161,7 +153,7 @@
       "customer_email": "akbock621@gmail.com",
       "next_order_date": "2026-09-03T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": NaN,
+      "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
@@ -245,6 +237,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "a5df1967-16ea-4d57-847e-d74bdf33bdaf",
+      "customer_email": "sherryharker@yahoo.com",
+      "next_order_date": "2026-09-18T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "03a722fd-c9e0-4741-a49e-46ab02dac7de",
       "customer_email": "equihands2@gmail.com",
       "next_order_date": "2026-09-20T14:00:00.000Z",
@@ -305,7 +305,7 @@
       "customer_email": "kiley.dill@gmail.com",
       "next_order_date": "2026-10-08T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": null,
+      "estimated_revenue": NaN,
       "subscription_items": "[]"
     },
     {
