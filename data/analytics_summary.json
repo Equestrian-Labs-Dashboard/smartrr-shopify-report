@@ -1,11 +1,11 @@
 {
-  "report_updated_at": "2026-08-23T09:23:04+00:00",
+  "report_updated_at": "2026-08-24T09:41:36+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1734,
+    "total_orders": 1716,
     "subscription_orders": 71,
-    "subscription_order_share": 0.040945790080738176,
-    "total_net_sales": 249555.88,
+    "subscription_order_share": 0.041375291375291376,
+    "total_net_sales": 246747.12,
     "subscription_net_sales": 6807.53
   },
   "subscriptions": {
