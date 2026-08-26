@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-08-25T09:30:21+00:00",
+  "report_updated_at": "2026-08-26T09:35:40+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1709,
-    "subscription_orders": 70,
-    "subscription_order_share": 0.04095962551199532,
-    "total_net_sales": 245455.14,
-    "subscription_net_sales": 6781.44
+    "total_orders": 1696,
+    "subscription_orders": 69,
+    "subscription_order_share": 0.04068396226415094,
+    "total_net_sales": 244214.88,
+    "subscription_net_sales": 6770.16
   },
   "subscriptions": {
     "records": 193,
@@ -20,9 +20,9 @@
     "status_coverage": 0.7202072538860104,
     "upcoming_all": 50,
     "upcoming_90_days": 39,
-    "upcoming_revenue_estimate": NaN,
-    "upcoming_revenue_coverage": 2,
-    "derived_cltv": 42.38
+    "upcoming_revenue_estimate": 0,
+    "upcoming_revenue_coverage": 0,
+    "derived_cltv": 42.31
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -47,8 +47,8 @@
     {
       "month": "2026-10",
       "subscriptions": 9,
-      "estimated_revenue": NaN,
-      "revenue_coverage": 1
+      "estimated_revenue": 0.0,
+      "revenue_coverage": 0
     },
     {
       "month": "2026-11",
@@ -65,8 +65,8 @@
     {
       "month": "2027-01",
       "subscriptions": 8,
-      "estimated_revenue": NaN,
-      "revenue_coverage": 1
+      "estimated_revenue": 0.0,
+      "revenue_coverage": 0
     },
     {
       "month": "2027-06",
@@ -297,7 +297,7 @@
       "customer_email": "kiley.dill@gmail.com",
       "next_order_date": "2026-10-08T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": NaN,
+      "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
@@ -433,7 +433,7 @@
       "customer_email": "madjalark786@gmail.com",
       "next_order_date": "2027-01-19T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": NaN,
+      "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
