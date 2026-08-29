@@ -1,11 +1,11 @@
 {
-  "report_updated_at": "2026-08-28T20:38:20+00:00",
+  "report_updated_at": "2026-08-29T14:07:59+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1662,
+    "total_orders": 1644,
     "subscription_orders": 66,
-    "subscription_order_share": 0.039711191335740074,
-    "total_net_sales": 239578.9,
+    "subscription_order_share": 0.040145985401459854,
+    "total_net_sales": 236255.29,
     "subscription_net_sales": 5992.3
   },
   "subscriptions": {
@@ -20,8 +20,8 @@
     "status_coverage": 0.7098445595854922,
     "upcoming_all": 48,
     "upcoming_90_days": 38,
-    "upcoming_revenue_estimate": NaN,
-    "upcoming_revenue_coverage": 1,
+    "upcoming_revenue_estimate": 0,
+    "upcoming_revenue_coverage": 0,
     "derived_cltv": 37.45
   },
   "official_metrics": {
@@ -65,8 +65,8 @@
     {
       "month": "2027-01",
       "subscriptions": 8,
-      "estimated_revenue": NaN,
-      "revenue_coverage": 1
+      "estimated_revenue": 0.0,
+      "revenue_coverage": 0
     },
     {
       "month": "2027-06",
@@ -409,7 +409,7 @@
       "customer_email": "jbsoucy@icloud.com",
       "next_order_date": "2027-01-13T14:00:00.000Z",
       "status": "active_inferred",
-      "estimated_revenue": NaN,
+      "estimated_revenue": null,
       "subscription_items": "[]"
     },
     {
