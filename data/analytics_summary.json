@@ -1,11 +1,11 @@
 {
-  "report_updated_at": "2026-09-03T13:12:02+00:00",
+  "report_updated_at": "2026-09-04T13:05:49+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1597,
+    "total_orders": 1591,
     "subscription_orders": 66,
-    "subscription_order_share": 0.041327489041953665,
-    "total_net_sales": 227914.41,
+    "subscription_order_share": 0.041483343808925204,
+    "total_net_sales": 227816.53,
     "subscription_net_sales": 6220.88
   },
   "subscriptions": {
@@ -70,14 +70,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "68a3884b-5207-4283-8785-553ce684d86a",
-      "customer_email": "nisawood@hotmail.com",
-      "next_order_date": "2026-09-03T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "49961de6-ff94-496c-b1f0-830db709a5a1",
       "customer_email": "jaimetorrediaz@gmail.com",
@@ -145,6 +137,14 @@
     {
       "subscription_id": "abcfe048-fdb5-45b2-a891-b16bf722c038",
       "customer_email": "mdavis6383@gmail.com",
+      "next_order_date": "2026-09-17T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "68a3884b-5207-4283-8785-553ce684d86a",
+      "customer_email": "nisawood@hotmail.com",
       "next_order_date": "2026-09-17T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
