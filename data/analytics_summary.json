@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-09-05T12:18:40+00:00",
+  "report_updated_at": "2026-09-06T12:33:45+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1595,
-    "subscription_orders": 66,
-    "subscription_order_share": 0.041379310344827586,
-    "total_net_sales": 227029.87,
-    "subscription_net_sales": 6220.88
+    "total_orders": 1596,
+    "subscription_orders": 67,
+    "subscription_order_share": 0.041979949874686714,
+    "total_net_sales": 227902.46,
+    "subscription_net_sales": 6255.79
   },
   "subscriptions": {
     "records": 195,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 38.64
+    "derived_cltv": 38.86
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,7 +34,7 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 19,
+      "subscriptions": 18,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -46,7 +46,7 @@
     },
     {
       "month": "2026-11",
-      "subscriptions": 7,
+      "subscriptions": 8,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -70,14 +70,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "49961de6-ff94-496c-b1f0-830db709a5a1",
-      "customer_email": "jaimetorrediaz@gmail.com",
-      "next_order_date": "2026-09-05T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "625a5ee2-3671-4368-8c6d-318efb97d452",
       "customer_email": "kathagatto@gmail.com",
@@ -298,6 +290,14 @@
       "subscription_id": "e51efd71-776a-43e8-8b95-dbd374bbcfa4",
       "customer_email": "porathk@outlook.com",
       "next_order_date": "2026-10-26T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "49961de6-ff94-496c-b1f0-830db709a5a1",
+      "customer_email": "jaimetorrediaz@gmail.com",
+      "next_order_date": "2026-11-05T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
