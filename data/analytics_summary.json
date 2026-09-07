@@ -1,11 +1,11 @@
 {
-  "report_updated_at": "2026-09-06T12:33:45+00:00",
+  "report_updated_at": "2026-09-07T14:43:03+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1596,
+    "total_orders": 1603,
     "subscription_orders": 67,
-    "subscription_order_share": 0.041979949874686714,
-    "total_net_sales": 227902.46,
+    "subscription_order_share": 0.041796631316281974,
+    "total_net_sales": 226993.84,
     "subscription_net_sales": 6255.79
   },
   "subscriptions": {
@@ -34,13 +34,13 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 18,
+      "subscriptions": 17,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 10,
+      "subscriptions": 11,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -70,14 +70,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "625a5ee2-3671-4368-8c6d-318efb97d452",
-      "customer_email": "kathagatto@gmail.com",
-      "next_order_date": "2026-09-06T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
       "customer_email": "cameron.wyman19@gmail.com",
@@ -233,6 +225,14 @@
     {
       "subscription_id": "77a23feb-c0bf-4e7a-8913-0a8248939843",
       "customer_email": "cameron.stout.miller@gmail.com",
+      "next_order_date": "2026-10-04T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "625a5ee2-3671-4368-8c6d-318efb97d452",
+      "customer_email": "kathagatto@gmail.com",
       "next_order_date": "2026-10-04T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
