@@ -1,25 +1,25 @@
 {
-  "report_updated_at": "2026-09-08T13:15:06+00:00",
+  "report_updated_at": "2026-09-09T13:20:18+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1598,
+    "total_orders": 1587,
     "subscription_orders": 65,
-    "subscription_order_share": 0.040675844806007506,
-    "total_net_sales": 227692.6,
+    "subscription_order_share": 0.04095778197857593,
+    "total_net_sales": 226035.72,
     "subscription_net_sales": 6139.16
   },
   "subscriptions": {
     "records": 195,
     "customers": 161,
     "confirmed_active": 0,
-    "inferred_active": 46,
-    "operational_active": 46,
+    "inferred_active": 47,
+    "operational_active": 47,
     "paused": 0,
     "confirmed_cancelled": 92,
-    "unknown": 57,
-    "status_coverage": 0.7076923076923077,
-    "upcoming_all": 46,
-    "upcoming_90_days": 36,
+    "unknown": 56,
+    "status_coverage": 0.7128205128205128,
+    "upcoming_all": 47,
+    "upcoming_90_days": 37,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
     "derived_cltv": 38.13
@@ -34,19 +34,19 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 17,
+      "subscriptions": 16,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 11,
+      "subscriptions": 12,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-11",
-      "subscriptions": 8,
+      "subscriptions": 9,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -70,14 +70,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
-      "customer_email": "cameron.wyman19@gmail.com",
-      "next_order_date": "2026-09-08T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "c8e1f0c1-4435-4f3e-b17f-a19af1263e81",
       "customer_email": "rose.gagnon@yahoo.com",
@@ -247,6 +239,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
+      "customer_email": "cameron.wyman19@gmail.com",
+      "next_order_date": "2026-10-06T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "5f38fda8-642d-4153-a6d0-549f350b87f8",
       "customer_email": "kiley.dill@gmail.com",
       "next_order_date": "2026-10-08T14:00:00.000Z",
@@ -290,6 +290,14 @@
       "subscription_id": "e51efd71-776a-43e8-8b95-dbd374bbcfa4",
       "customer_email": "porathk@outlook.com",
       "next_order_date": "2026-10-26T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "8591212b-38ca-434e-9870-5825a9c1d0b3",
+      "customer_email": "bansbachequestrian@gmail.com",
+      "next_order_date": "2026-11-04T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
