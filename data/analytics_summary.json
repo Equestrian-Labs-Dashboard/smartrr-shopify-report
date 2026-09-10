@@ -1,28 +1,28 @@
 {
-  "report_updated_at": "2026-09-09T13:20:18+00:00",
+  "report_updated_at": "2026-09-10T13:17:01+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1587,
-    "subscription_orders": 65,
-    "subscription_order_share": 0.04095778197857593,
-    "total_net_sales": 226035.72,
-    "subscription_net_sales": 6139.16
+    "total_orders": 1586,
+    "subscription_orders": 64,
+    "subscription_order_share": 0.0403530895334174,
+    "total_net_sales": 227112.01,
+    "subscription_net_sales": 5981.92
   },
   "subscriptions": {
     "records": 195,
     "customers": 161,
     "confirmed_active": 0,
-    "inferred_active": 47,
-    "operational_active": 47,
+    "inferred_active": 46,
+    "operational_active": 46,
     "paused": 0,
-    "confirmed_cancelled": 92,
+    "confirmed_cancelled": 93,
     "unknown": 56,
     "status_coverage": 0.7128205128205128,
-    "upcoming_all": 47,
-    "upcoming_90_days": 37,
+    "upcoming_all": 46,
+    "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 38.13
+    "derived_cltv": 37.15
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,7 +34,7 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 16,
+      "subscriptions": 15,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -90,14 +90,6 @@
       "subscription_id": "00bc3a17-0ba3-4963-84e2-5ba42475dae6",
       "customer_email": "jhenigman1@gmail.com",
       "next_order_date": "2026-09-14T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "b7d5bedf-c449-4d47-9910-c18fd0518abb",
-      "customer_email": "jami.brokaw@me.com",
-      "next_order_date": "2026-09-15T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
