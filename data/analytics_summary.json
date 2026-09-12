@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-09-11T13:11:19+00:00",
+  "report_updated_at": "2026-09-12T12:35:13+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1589,
-    "subscription_orders": 63,
-    "subscription_order_share": 0.039647577092511016,
-    "total_net_sales": 227417.7,
-    "subscription_net_sales": 5926.48
+    "total_orders": 1592,
+    "subscription_orders": 62,
+    "subscription_order_share": 0.038944723618090454,
+    "total_net_sales": 226535.42,
+    "subscription_net_sales": 5856.6
   },
   "subscriptions": {
     "records": 195,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 36.81
+    "derived_cltv": 36.38
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -34,13 +34,13 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 15,
+      "subscriptions": 16,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 12,
+      "subscriptions": 11,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -70,6 +70,14 @@
     }
   ],
   "upcoming_renewals": [
+    {
+      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
+      "customer_email": "cameron.wyman19@gmail.com",
+      "next_order_date": "2026-09-12T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
     {
       "subscription_id": "c8e1f0c1-4435-4f3e-b17f-a19af1263e81",
       "customer_email": "rose.gagnon@yahoo.com",
@@ -226,14 +234,6 @@
       "subscription_id": "7d9871bb-303f-48e9-9e36-481f498a9896",
       "customer_email": "rose.gagnon@yahoo.com",
       "next_order_date": "2026-10-04T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
-      "customer_email": "cameron.wyman19@gmail.com",
-      "next_order_date": "2026-10-06T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
