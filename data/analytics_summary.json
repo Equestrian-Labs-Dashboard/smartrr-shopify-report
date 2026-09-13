@@ -1,12 +1,12 @@
 {
-  "report_updated_at": "2026-09-12T12:35:13+00:00",
+  "report_updated_at": "2026-09-13T13:35:58+00:00",
   "data_scope_start": "",
   "shopify": {
-    "total_orders": 1592,
-    "subscription_orders": 62,
-    "subscription_order_share": 0.038944723618090454,
-    "total_net_sales": 226535.42,
-    "subscription_net_sales": 5856.6
+    "total_orders": 1599,
+    "subscription_orders": 61,
+    "subscription_order_share": 0.03814884302689181,
+    "total_net_sales": 227898.85,
+    "subscription_net_sales": 5820.61
   },
   "subscriptions": {
     "records": 195,
@@ -22,7 +22,7 @@
     "upcoming_90_days": 36,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 36.38
+    "derived_cltv": 36.15
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -73,7 +73,7 @@
     {
       "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
       "customer_email": "cameron.wyman19@gmail.com",
-      "next_order_date": "2026-09-12T14:00:00.000Z",
+      "next_order_date": "2026-09-13T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
