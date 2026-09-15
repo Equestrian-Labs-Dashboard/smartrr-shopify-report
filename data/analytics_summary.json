@@ -1,12 +1,113 @@
 {
-  "report_updated_at": "2026-09-14T15:35:47+00:00",
+  "report_updated_at": "2026-09-15T06:41:45+00:00",
   "data_scope_start": "",
+  "ytd_channel": {
+    "year": 2026,
+    "period_start": "2026-01-01",
+    "period_end": "2026-08-31",
+    "period_label": "Jan 1 – Aug 31, 2026",
+    "closed_months_only": true,
+    "currency": "USD",
+    "orders": 178,
+    "customers": 89,
+    "gross_sales": 16162.08,
+    "discounts": 11.86,
+    "returns": 682.07,
+    "net_sales": 15468.15,
+    "aov": 86.9,
+    "first_orders": 48,
+    "first_net_sales": 6659.26,
+    "recurring_orders": 130,
+    "recurring_net_sales": 8808.89,
+    "monthly": [
+      {
+        "month": "2026-01",
+        "label": "Jan",
+        "orders": 48,
+        "gross_sales": 3159.99,
+        "discounts": 0.0,
+        "returns": 114.25,
+        "net_sales": 3045.74
+      },
+      {
+        "month": "2026-02",
+        "label": "Feb",
+        "orders": 23,
+        "gross_sales": 2168.44,
+        "discounts": 5.39,
+        "returns": 114.36,
+        "net_sales": 2048.69
+      },
+      {
+        "month": "2026-03",
+        "label": "Mar",
+        "orders": 18,
+        "gross_sales": 1801.44,
+        "discounts": 1.7,
+        "returns": 67.49,
+        "net_sales": 1732.25
+      },
+      {
+        "month": "2026-04",
+        "label": "Apr",
+        "orders": 19,
+        "gross_sales": 2229.77,
+        "discounts": 0.0,
+        "returns": 0.0,
+        "net_sales": 2229.77
+      },
+      {
+        "month": "2026-05",
+        "label": "May",
+        "orders": 23,
+        "gross_sales": 1558.3,
+        "discounts": 0.0,
+        "returns": 71.01,
+        "net_sales": 1487.29
+      },
+      {
+        "month": "2026-06",
+        "label": "Jun",
+        "orders": 13,
+        "gross_sales": 1438.34,
+        "discounts": 0.0,
+        "returns": 0.0,
+        "net_sales": 1438.34
+      },
+      {
+        "month": "2026-07",
+        "label": "Jul",
+        "orders": 19,
+        "gross_sales": 1657.3,
+        "discounts": 0.0,
+        "returns": 0.0,
+        "net_sales": 1657.3
+      },
+      {
+        "month": "2026-08",
+        "label": "Aug",
+        "orders": 15,
+        "gross_sales": 2148.5,
+        "discounts": 4.77,
+        "returns": 314.96,
+        "net_sales": 1828.77
+      }
+    ],
+    "partial_current_month": {
+      "orders": 4,
+      "net_sales": 479.31,
+      "gross_sales": 479.31,
+      "discounts": 0.0,
+      "returns": 0.0
+    },
+    "methodology": "Smartrr channel revenue is measured from Shopify subscription orders. Net Sales = Gross Sales - Discounts - Returns. Current partial month is excluded from headline YTD; Smartrr remains the source for subscription lifecycle/status data."
+  },
   "shopify": {
-    "total_orders": 1601,
-    "subscription_orders": 63,
-    "subscription_order_share": 0.03935040599625234,
-    "total_net_sales": 225432.34,
-    "subscription_net_sales": 6085.02
+    "total_orders": 3623,
+    "subscription_orders": 182,
+    "subscription_order_share": 0.05023461219983439,
+    "total_net_sales": 600659.09,
+    "subscription_net_sales": 15947.46
   },
   "subscriptions": {
     "records": 196,
@@ -22,7 +123,7 @@
     "upcoming_90_days": 35,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 37.8
+    "derived_cltv": 99.05
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -435,106 +536,5 @@
     "active": "Official Smartrr value when configured; otherwise confirmed active plus subscriptions inferred active from a future billing date.",
     "churn": "Not calculated from customer lookup records. Churn requires the official Advanced Analytics value or historical beginning/ending snapshots.",
     "cltv": "Official Smartrr CLTV when configured; otherwise subscription net sales divided by distinct subscription customers in the loaded Shopify history."
-  },
-  "ytd_channel": {
-    "year": 2026,
-    "period_start": "2026-01-01",
-    "period_end": "2026-08-31",
-    "period_label": "Jan 1 – Aug 31, 2026",
-    "closed_months_only": true,
-    "currency": "USD",
-    "orders": 178,
-    "customers": 89,
-    "gross_sales": 16162.08,
-    "discounts": 11.86,
-    "returns": 611.06,
-    "net_sales": 15539.16,
-    "aov": 87.3,
-    "first_orders": 48,
-    "first_net_sales": 6659.26,
-    "recurring_orders": 130,
-    "recurring_net_sales": 8879.9,
-    "monthly": [
-      {
-        "month": "2026-01",
-        "label": "Jan",
-        "orders": 48,
-        "gross_sales": 3159.99,
-        "discounts": 0.0,
-        "returns": 114.25,
-        "net_sales": 3045.74
-      },
-      {
-        "month": "2026-02",
-        "label": "Feb",
-        "orders": 23,
-        "gross_sales": 2168.44,
-        "discounts": 5.39,
-        "returns": 114.36,
-        "net_sales": 2048.69
-      },
-      {
-        "month": "2026-03",
-        "label": "Mar",
-        "orders": 18,
-        "gross_sales": 1801.44,
-        "discounts": 1.7,
-        "returns": 67.49,
-        "net_sales": 1732.25
-      },
-      {
-        "month": "2026-04",
-        "label": "Apr",
-        "orders": 19,
-        "gross_sales": 2229.77,
-        "discounts": 0.0,
-        "returns": 0.0,
-        "net_sales": 2229.77
-      },
-      {
-        "month": "2026-05",
-        "label": "May",
-        "orders": 23,
-        "gross_sales": 1558.3,
-        "discounts": 0.0,
-        "returns": 0.0,
-        "net_sales": 1558.3
-      },
-      {
-        "month": "2026-06",
-        "label": "Jun",
-        "orders": 13,
-        "gross_sales": 1438.34,
-        "discounts": 0.0,
-        "returns": 0.0,
-        "net_sales": 1438.34
-      },
-      {
-        "month": "2026-07",
-        "label": "Jul",
-        "orders": 19,
-        "gross_sales": 1657.3,
-        "discounts": 0.0,
-        "returns": 0.0,
-        "net_sales": 1657.3
-      },
-      {
-        "month": "2026-08",
-        "label": "Aug",
-        "orders": 15,
-        "gross_sales": 2148.5,
-        "discounts": 4.77,
-        "returns": 314.96,
-        "net_sales": 1828.77
-      }
-    ],
-    "partial_current_month": {
-      "orders": 4,
-      "net_sales": 479.31,
-      "gross_sales": 479.31,
-      "discounts": 0.0,
-      "returns": 0.0
-    },
-    "methodology": "Smartrr channel revenue is measured from Shopify subscription orders. Net Sales = Gross Sales - Discounts - Returns. Current partial month is excluded from headline YTD; Smartrr remains the source for subscription lifecycle/status data."
   }
 }
