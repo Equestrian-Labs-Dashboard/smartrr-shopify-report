@@ -274,6 +274,141 @@ def optional_number(name: str) -> float | None:
         return None
 
 
+def build_ytd_channel_summary(
+    orders_frame: pd.DataFrame,
+    now: dt.datetime,
+) -> dict:
+    """Build closed-month YTD Smartrr channel financials from Shopify subscription orders.
+
+    Shopify order history is the financial source of truth. The current partial month is
+    intentionally excluded from the headline YTD figures so the result is comparable and
+    presentation-ready.
+    """
+    configured_year = (os.environ.get("YTD_REPORT_YEAR") or "").strip()
+    year = int(configured_year) if configured_year.isdigit() else now.year
+
+    if year < now.year:
+        cutoff = pd.Timestamp(dt.datetime(year + 1, 1, 1, tzinfo=dt.timezone.utc))
+    elif year == now.year:
+        cutoff = pd.Timestamp(dt.datetime(year, now.month, 1, tzinfo=dt.timezone.utc))
+    else:
+        cutoff = pd.Timestamp(dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc))
+
+    start = pd.Timestamp(dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc))
+    closed_through = cutoff - pd.Timedelta(days=1) if cutoff > start else None
+
+    frame = orders_frame.copy()
+    if frame.empty or "created_at" not in frame.columns:
+        frame = pd.DataFrame(columns=[
+            "created_at", "gross_sales", "discounts", "returns", "net_sales",
+            "customer_email", "subscription_order_type", "currency",
+        ])
+
+    created = pd.to_datetime(frame.get("created_at", pd.Series(dtype=str)), errors="coerce", utc=True)
+    ytd = frame.loc[(created >= start) & (created < cutoff)].copy() if cutoff > start else frame.iloc[0:0].copy()
+    ytd_created = pd.to_datetime(ytd.get("created_at", pd.Series(dtype=str)), errors="coerce", utc=True)
+
+    def numeric_sum(column: str) -> float:
+        if column not in ytd.columns:
+            return 0.0
+        return float(pd.to_numeric(ytd[column], errors="coerce").fillna(0).sum())
+
+    orders = int(len(ytd))
+    gross = numeric_sum("gross_sales")
+    discounts = numeric_sum("discounts")
+    returns = numeric_sum("returns")
+    net = numeric_sum("net_sales")
+    customers = int(
+        ytd.get("customer_email", pd.Series(dtype=str))
+        .fillna("")
+        .astype(str)
+        .str.strip()
+        .replace("", pd.NA)
+        .dropna()
+        .nunique()
+    )
+    currency_values = (
+        ytd.get("currency", pd.Series(dtype=str)).fillna("").astype(str).str.strip()
+    )
+    currency = next((value for value in currency_values if value), "USD")
+
+    order_type = ytd.get("subscription_order_type", pd.Series(dtype=str)).fillna("").astype(str).str.lower()
+    first_mask = order_type.eq("first")
+    recurring_mask = order_type.eq("recurring")
+    net_series = pd.to_numeric(ytd.get("net_sales", pd.Series(dtype=float)), errors="coerce").fillna(0)
+
+    first_orders = int(first_mask.sum())
+    recurring_orders = int(recurring_mask.sum())
+    first_net = float(net_series[first_mask].sum()) if len(net_series) else 0.0
+    recurring_net = float(net_series[recurring_mask].sum()) if len(net_series) else 0.0
+
+    monthly = []
+    if cutoff > start:
+        for month in range(1, cutoff.month if year == now.year else 13):
+            month_start = pd.Timestamp(dt.datetime(year, month, 1, tzinfo=dt.timezone.utc))
+            month_end = (
+                pd.Timestamp(dt.datetime(year + 1, 1, 1, tzinfo=dt.timezone.utc))
+                if month == 12
+                else pd.Timestamp(dt.datetime(year, month + 1, 1, tzinfo=dt.timezone.utc))
+            )
+            mask = (ytd_created >= month_start) & (ytd_created < month_end)
+            month_rows = ytd.loc[mask]
+            def month_sum(column: str) -> float:
+                if column not in month_rows.columns:
+                    return 0.0
+                return float(pd.to_numeric(month_rows[column], errors="coerce").fillna(0).sum())
+            monthly.append({
+                "month": month_start.strftime("%Y-%m"),
+                "label": month_start.strftime("%b"),
+                "orders": int(len(month_rows)),
+                "gross_sales": round(month_sum("gross_sales"), 2),
+                "discounts": round(month_sum("discounts"), 2),
+                "returns": round(month_sum("returns"), 2),
+                "net_sales": round(month_sum("net_sales"), 2),
+            })
+
+    # Keep the current partial month visible for context, but never mix it into closed-month YTD.
+    partial = {"orders": 0, "net_sales": 0.0, "gross_sales": 0.0, "discounts": 0.0, "returns": 0.0}
+    if year == now.year and "created_at" in frame.columns:
+        partial_mask = (created >= cutoff) & (created < pd.Timestamp(now))
+        partial_rows = frame.loc[partial_mask]
+        partial["orders"] = int(len(partial_rows))
+        for column in ("net_sales", "gross_sales", "discounts", "returns"):
+            if column in partial_rows.columns:
+                partial[column] = round(float(pd.to_numeric(partial_rows[column], errors="coerce").fillna(0).sum()), 2)
+
+    return {
+        "year": year,
+        "period_start": start.strftime("%Y-%m-%d"),
+        "period_end": closed_through.strftime("%Y-%m-%d") if closed_through is not None else None,
+        "period_label": (
+            f"Jan 1 – {closed_through.strftime('%b %d, %Y')}"
+            if closed_through is not None
+            else f"{year} — no closed month yet"
+        ),
+        "closed_months_only": True,
+        "currency": currency,
+        "orders": orders,
+        "customers": customers,
+        "gross_sales": round(gross, 2),
+        "discounts": round(discounts, 2),
+        "returns": round(returns, 2),
+        "net_sales": round(net, 2),
+        "aov": round(net / orders, 2) if orders else 0.0,
+        "first_orders": first_orders,
+        "first_net_sales": round(first_net, 2),
+        "recurring_orders": recurring_orders,
+        "recurring_net_sales": round(recurring_net, 2),
+        "monthly": monthly,
+        "partial_current_month": partial,
+        "methodology": (
+            "Smartrr channel revenue is measured from Shopify subscription orders. "
+            "Net Sales = Gross Sales - Discounts - Returns. Current partial month is excluded "
+            "from headline YTD; Smartrr remains the source for subscription lifecycle/status data."
+        ),
+    }
+
+
 def create_analytics_summary(
     all_shopify_orders: list[dict],
     orders_frame: pd.DataFrame,
@@ -360,6 +495,8 @@ def create_analytics_summary(
         else None
     )
 
+    ytd_channel = build_ytd_channel_summary(orders_frame, now)
+
     renewals_by_month: dict[str, dict] = {}
     for row in upcoming_rows:
         parsed = pd.to_datetime(row["next_order_date"], errors="coerce", utc=True)
@@ -380,6 +517,7 @@ def create_analytics_summary(
         "data_scope_start": os.environ.get(
             "SUBSCRIPTION_HISTORY_START", "2025-01-01T00:00:00Z"
         ),
+        "ytd_channel": ytd_channel,
         "shopify": {
             "total_orders": total_orders,
             "subscription_orders": subscription_orders,

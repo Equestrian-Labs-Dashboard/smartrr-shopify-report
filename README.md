@@ -33,3 +33,21 @@ Run the workflow for:
 2. `2026`
 
 Set `SUBSCRIPTION_HISTORY_START=2025-01-01T00:00:00Z`.
+
+## YTD Channel view (added 2026-09-15)
+
+The dashboard now includes a **YTD Channel** tab created for the management request to treat Smartrr as a sales channel.
+
+- **Financial source of truth:** Shopify subscription orders.
+- **Subscription lifecycle/status source:** Smartrr.
+- **Headline YTD rule:** January 1 through the last fully closed month. The current partial month is shown only for context and is excluded from headline YTD.
+- **Net Sales:** Gross Sales - Discounts - Returns.
+- The view includes Gross Sales, Discounts, Returns, Net Sales, Orders, Customers, AOV, First vs. Recurring subscription revenue, and monthly detail.
+
+For the September 15, 2026 delivery, the headline period is **January 1-August 31, 2026**.
+
+### Refresh after deploying this change
+
+Run **Actions -> Subscriptions ETL -> Run workflow** and set `report_year` to `2026`.
+
+This performs a full 2026 Shopify rebuild before refreshing the Smartrr subscription data and committing the updated JSON/CSV report files. The normal daily scheduled action can continue afterward.
