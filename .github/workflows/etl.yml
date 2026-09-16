@@ -42,6 +42,7 @@ jobs:
           python -m json.tool data/orders_report.json >/dev/null
           python -m json.tool data/subscriptions_report.json >/dev/null
           python -m json.tool data/analytics_summary.json >/dev/null
+          python -m json.tool data/shopify_acquisition_summary.json >/dev/null
       - name: Commit report data
         run: |
           git config user.name "github-actions[bot]"
