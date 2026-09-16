@@ -1,0 +1,241 @@
+{
+  "report_name": "Shopify Performance by Referring Channel",
+  "period_start": "2026-01-01",
+  "period_end": "2026-08-31",
+  "period_label": "Jan 1 \u2013 Aug 31, 2026",
+  "currency": "USD",
+  "attribution_model": "Last non-direct click",
+  "source": "Shopify export provided 2026-09-15",
+  "total_sales": 609744.47,
+  "total_orders": 3414,
+  "traffic_types": {
+    "paid": {
+      "sessions": 102991,
+      "sales": 223518.69,
+      "orders": 1407,
+      "new_customers": 923,
+      "returning_customers": 453
+    },
+    "organic": {
+      "sessions": 48529,
+      "sales": 87667.37,
+      "orders": 504,
+      "new_customers": 259,
+      "returning_customers": 228
+    },
+    "direct": {
+      "sessions": 1234289,
+      "sales": 56441.98,
+      "orders": 304,
+      "new_customers": 130,
+      "returning_customers": 132
+    },
+    "unknown": {
+      "sessions": 19414,
+      "sales": 20566.94,
+      "orders": 115,
+      "new_customers": 80,
+      "returning_customers": 34
+    },
+    "unclassified": {
+      "sessions": 0,
+      "sales": 221549.49,
+      "orders": 1084,
+      "new_customers": 354,
+      "returning_customers": 335
+    },
+    "unattributed": {
+      "sessions": 33,
+      "sales": 0.0,
+      "orders": 0,
+      "new_customers": 0,
+      "returning_customers": 0
+    }
+  },
+  "paid_sales": 223518.69,
+  "organic_sales": 87667.37,
+  "direct_sales": 56441.98,
+  "other_unclassified_sales": 242116.43,
+  "paid_organic_share": 0.510355,
+  "direct_other_share": 0.489645,
+  "klaviyo_within_paid": {
+    "sales": 19580.41,
+    "orders": 134,
+    "sessions": 13982,
+    "share_of_total_sales": 0.032112,
+    "share_of_paid_sales": 0.087601
+  },
+  "top_paid_channels": [
+    {
+      "traffic_type": "paid",
+      "referring_channel": "google",
+      "sessions": 26162,
+      "sales": 116248.12,
+      "orders": 716
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "facebook",
+      "sessions": 39038,
+      "sales": 49099.8,
+      "orders": 339
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "instagram",
+      "sessions": 15536,
+      "sales": 26814.79,
+      "orders": 135
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "klaviyo",
+      "sessions": 13982,
+      "sales": 19580.41,
+      "orders": 134
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "meta",
+      "sessions": 7962,
+      "sales": 10505.65,
+      "orders": 76
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "gmail",
+      "sessions": 37,
+      "sales": 967.19,
+      "orders": 5
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "pinterest",
+      "sessions": 6,
+      "sales": 184.86,
+      "orders": 1
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "android",
+      "sessions": 0,
+      "sales": 117.87,
+      "orders": 1
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "syndicatedsearch",
+      "sessions": 18,
+      "sales": 0.0,
+      "orders": 0
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "back-in-stock",
+      "sessions": 1,
+      "sales": 0.0,
+      "orders": 0
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "earthlink",
+      "sessions": 2,
+      "sales": 0.0,
+      "orders": 0
+    },
+    {
+      "traffic_type": "paid",
+      "referring_channel": "shop_campaigns",
+      "sessions": 1,
+      "sales": 0.0,
+      "orders": 0
+    }
+  ],
+  "top_organic_channels": [
+    {
+      "traffic_type": "organic",
+      "referring_channel": "google",
+      "sessions": 14292,
+      "sales": 46040.3,
+      "orders": 281
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "capitaloneshopping",
+      "sessions": 280,
+      "sales": 15111.38,
+      "orders": 73
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "shopify",
+      "sessions": 284,
+      "sales": 5527.74,
+      "orders": 36
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "facebook",
+      "sessions": 4580,
+      "sales": 3807.76,
+      "orders": 22
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "simplycodes",
+      "sessions": 111,
+      "sales": 2981.65,
+      "orders": 19
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "duckduckgo",
+      "sessions": 501,
+      "sales": 2087.27,
+      "orders": 13
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "yahoo!",
+      "sessions": 587,
+      "sales": 1721.96,
+      "orders": 9
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "brave",
+      "sessions": 82,
+      "sales": 1696.95,
+      "orders": 3
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "coupongrizzly",
+      "sessions": 13,
+      "sales": 1433.49,
+      "orders": 5
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "instagram",
+      "sessions": 413,
+      "sales": 1023.2,
+      "orders": 6
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "coupono",
+      "sessions": 17,
+      "sales": 1013.7,
+      "orders": 2
+    },
+    {
+      "traffic_type": "organic",
+      "referring_channel": "rakuten",
+      "sessions": 401,
+      "sales": 930.93,
+      "orders": 6
+    }
+  ],
+  "methodology": "Traffic type and referring channel are Shopify classifications from the Performance by Referring Channel report. Sales are attributed using Last non-direct click. Paid and Organic are acquisition classifications; Smartrr is a subscription overlay and must not be added as a mutually exclusive sales bucket. Klaviyo appears inside Shopify Paid in this export and is shown separately for review."
+}

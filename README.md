@@ -34,9 +34,9 @@ Run the workflow for:
 
 Set `SUBSCRIPTION_HISTORY_START=2025-01-01T00:00:00Z`.
 
-## YTD Channel view (added 2026-09-15)
+## Smartrr YTD view (added 2026-09-15; renamed 2026-09-16)
 
-The dashboard now includes a **YTD Channel** tab created for the management request to treat Smartrr as a sales channel.
+The dashboard includes a **Smartrr YTD** tab for closed-month subscription revenue. It was originally labeled YTD Channel and was renamed to prevent confusion with total Shopify e-commerce revenue.
 
 - **Financial source of truth:** Shopify subscription orders.
 - **Subscription lifecycle/status source:** Smartrr.
@@ -51,3 +51,20 @@ For the September 15, 2026 delivery, the headline period is **January 1-August 3
 Run **Actions -> Subscriptions ETL -> Run workflow** and set `report_year` to `2026`.
 
 This performs a full 2026 Shopify rebuild before refreshing the Smartrr subscription data and committing the updated JSON/CSV report files. The normal daily scheduled action can continue afterward.
+
+## Management acquisition split (added 2026-09-16)
+
+The dashboard now includes a **Shopify Acquisition** tab based on the exported Shopify **Performance by Referring Channel** report for **Jan 1-Aug 31, 2026** using **Last non-direct click** attribution.
+
+Current management snapshot:
+
+- Paid attributed sales: **$223,518.69**
+- Organic attributed sales: **$87,667.37**
+- Direct: **$56,441.98**
+- Other / Unclassified: **$242,116.43**
+- Total Shopify sales in the attribution export: **$609,744.47**
+- Klaviyo within Shopify Paid: **$19,580.41**
+
+Important reporting rule: **Smartrr is a subscription overlay, not a mutually exclusive acquisition bucket.** A Smartrr order can also be Paid, Organic, Direct or Other. The acquisition view therefore keeps Smartrr visually separate to avoid double counting.
+
+The requested extension from sales by channel down to **OPEX and EBITDA** is deliberately not fabricated in this repository. It requires the general Sales Report / Financial Model channel cost-allocation logic and channel-level COGS/OPEX inputs.
