@@ -1,5 +1,5 @@
 {
-  "report_updated_at": "2026-09-16T05:40:59+00:00",
+  "report_updated_at": "2026-09-16T13:59:28+00:00",
   "data_scope_start": "",
   "ytd_channel": {
     "year": 2026,
@@ -103,27 +103,27 @@
     "methodology": "Smartrr channel revenue is measured from Shopify subscription orders. Net Sales = Gross Sales - Discounts - Returns. Current partial month is excluded from headline YTD; Smartrr remains the source for subscription lifecycle/status data."
   },
   "shopify": {
-    "total_orders": 3635,
-    "subscription_orders": 182,
-    "subscription_order_share": 0.050068775790921595,
-    "total_net_sales": 602814.82,
-    "subscription_net_sales": 15947.46
+    "total_orders": 1605,
+    "subscription_orders": 61,
+    "subscription_order_share": 0.038006230529595016,
+    "total_net_sales": 224845.79,
+    "subscription_net_sales": 6017.29
   },
   "subscriptions": {
     "records": 196,
     "customers": 161,
     "confirmed_active": 0,
-    "inferred_active": 45,
-    "operational_active": 45,
+    "inferred_active": 44,
+    "operational_active": 44,
     "paused": 0,
     "confirmed_cancelled": 94,
-    "unknown": 57,
-    "status_coverage": 0.7091836734693877,
-    "upcoming_all": 45,
-    "upcoming_90_days": 35,
+    "unknown": 58,
+    "status_coverage": 0.7040816326530612,
+    "upcoming_all": 44,
+    "upcoming_90_days": 34,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 99.05
+    "derived_cltv": 37.37
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -141,7 +141,7 @@
     },
     {
       "month": "2026-10",
-      "subscriptions": 13,
+      "subscriptions": 12,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -319,14 +319,6 @@
       "subscription_id": "4d8e1014-2071-4167-91d3-da2601e2b108",
       "customer_email": "clarkandclark@yahoo.com",
       "next_order_date": "2026-10-10T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
-      "customer_email": "cameron.wyman19@gmail.com",
-      "next_order_date": "2026-10-11T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
