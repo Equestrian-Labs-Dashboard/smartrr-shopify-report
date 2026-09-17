@@ -1,5 +1,5 @@
 {
-  "report_updated_at": "2026-09-16T13:59:28+00:00",
+  "report_updated_at": "2026-09-17T14:03:21+00:00",
   "data_scope_start": "",
   "ytd_channel": {
     "year": 2026,
@@ -104,10 +104,10 @@
   },
   "shopify": {
     "total_orders": 1605,
-    "subscription_orders": 61,
-    "subscription_order_share": 0.038006230529595016,
-    "total_net_sales": 224845.79,
-    "subscription_net_sales": 6017.29
+    "subscription_orders": 59,
+    "subscription_order_share": 0.0367601246105919,
+    "total_net_sales": 224251.33,
+    "subscription_net_sales": 5851.46
   },
   "subscriptions": {
     "records": 196,
@@ -123,7 +123,7 @@
     "upcoming_90_days": 34,
     "upcoming_revenue_estimate": 0,
     "upcoming_revenue_coverage": 0,
-    "derived_cltv": 37.37
+    "derived_cltv": 36.34
   },
   "official_metrics": {
     "active_subscriptions": null,
@@ -135,13 +135,13 @@
   "renewals_by_month": [
     {
       "month": "2026-09",
-      "subscriptions": 12,
+      "subscriptions": 9,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
     {
       "month": "2026-10",
-      "subscriptions": 12,
+      "subscriptions": 15,
       "estimated_revenue": 0.0,
       "revenue_coverage": 0
     },
@@ -171,30 +171,6 @@
     }
   ],
   "upcoming_renewals": [
-    {
-      "subscription_id": "b3d24be8-238d-4459-abd9-f331de7abba0",
-      "customer_email": "bbfarm10501@gmail.com",
-      "next_order_date": "2026-09-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "abcfe048-fdb5-45b2-a891-b16bf722c038",
-      "customer_email": "mdavis6383@gmail.com",
-      "next_order_date": "2026-09-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
-    {
-      "subscription_id": "68a3884b-5207-4283-8785-553ce684d86a",
-      "customer_email": "nisawood@hotmail.com",
-      "next_order_date": "2026-09-17T14:00:00.000Z",
-      "status": "active_inferred",
-      "estimated_revenue": null,
-      "subscription_items": "[]"
-    },
     {
       "subscription_id": "a5df1967-16ea-4d57-847e-d74bdf33bdaf",
       "customer_email": "sherryharker@yahoo.com",
@@ -276,6 +252,14 @@
       "subscription_items": "[]"
     },
     {
+      "subscription_id": "68a3884b-5207-4283-8785-553ce684d86a",
+      "customer_email": "nisawood@hotmail.com",
+      "next_order_date": "2026-10-01T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
       "subscription_id": "49278d66-f02d-49d8-a778-8732f20ae003",
       "customer_email": "sonart.mhr@gmail.com",
       "next_order_date": "2026-10-01T14:00:00.000Z",
@@ -343,6 +327,22 @@
       "subscription_id": "00bc3a17-0ba3-4963-84e2-5ba42475dae6",
       "customer_email": "jhenigman1@gmail.com",
       "next_order_date": "2026-10-12T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "270350f5-948f-476a-938b-1312a6c21558",
+      "customer_email": "cameron.wyman19@gmail.com",
+      "next_order_date": "2026-10-14T14:00:00.000Z",
+      "status": "active_inferred",
+      "estimated_revenue": null,
+      "subscription_items": "[]"
+    },
+    {
+      "subscription_id": "b3d24be8-238d-4459-abd9-f331de7abba0",
+      "customer_email": "bbfarm10501@gmail.com",
+      "next_order_date": "2026-10-15T14:00:00.000Z",
       "status": "active_inferred",
       "estimated_revenue": null,
       "subscription_items": "[]"
